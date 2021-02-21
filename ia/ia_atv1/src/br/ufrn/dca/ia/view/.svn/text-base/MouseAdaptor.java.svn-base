@@ -1,0 +1,58 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package br.ufrn.dca.ia.view;
+
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseMotionAdapter;
+import javax.swing.JTable;
+
+/**
+ *
+ * @author n3kr0n
+ */
+public class MouseAdaptor extends MouseMotionAdapter {
+
+//    int itsRow =0;
+//    int itsColumn = 0;
+//
+//    public int getItsColumn() {
+//        return itsColumn;
+//    }
+//
+//    public void setItsColumn(int itsColumn) {
+//        this.itsColumn = itsColumn;
+//    }
+//
+//    public int getItsRow() {
+//        return itsRow;
+//    }
+//
+//    public void setItsRow(int itsRow) {
+//        this.itsRow = itsRow;
+//    }
+
+    public CellRederizador cRenderer = new CellRederizador();
+
+    public CellRederizador getCRenderer() {
+        return cRenderer;
+    }
+
+    public void setCRenderer(CellRederizador cRenderer) {
+        this.cRenderer = cRenderer;
+    }
+
+    public MouseAdaptor() {
+    }
+    public MouseAdaptor(CellRederizador cRenderer) {
+        setCRenderer(cRenderer);
+    }
+    
+    public void MouseMoved(MouseEvent e) {
+        JTable aTable = (JTable) e.getSource();
+        cRenderer.setItsRow(aTable.rowAtPoint(e.getPoint()));
+        cRenderer.setItsColumn(aTable.columnAtPoint(e.getPoint()));
+        aTable.repaint();
+    }
+}

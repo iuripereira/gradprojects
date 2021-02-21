@@ -1,0 +1,74 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package br.ufrn.dca.ia.model;
+
+/**
+ *
+ * @author Marco Olimpio
+ */
+public class nodeMap {
+
+    int coordX;
+    int coordY;
+
+    boolean end;
+    boolean start;
+
+    int value;
+
+    public nodeMap(int coordX, int coordY, boolean end, boolean start, int value) {
+        setCoordX(coordX);
+        setCoordY(coordY);
+        setValue(value);
+        if(end == true && start == true)
+            throw new UnsupportedOperationException("A node can´t be start and end at the same time");
+        setEnd(end);
+        setStart(start);
+    }
+
+    public int getCoordX() {
+        return coordX;
+    }
+
+    public void setCoordX(int coordX) {
+        this.coordX = coordX;
+    }
+
+    public int getCoordY() {
+        return coordY;
+    }
+
+    public void setCoordY(int coordY) {
+        this.coordY = coordY;
+    }
+
+    public boolean isEnd() {
+        return end;
+    }
+
+    public void setEnd(boolean end) {
+        this.end = end;
+    }
+
+    public boolean isStart() {
+        return start;
+    }
+
+    public void setStart(boolean start) {
+        this.start = start;
+    }
+
+    public int getValue() {
+        return value;
+    }
+
+    public void setValue(int value) {
+        this.value = value;
+    }
+
+
+
+}

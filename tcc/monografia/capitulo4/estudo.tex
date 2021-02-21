@@ -1,0 +1,253 @@
+%%
+%% Capítulo 4: Estudo de Caso
+%%
+
+\mychapter{Estudo de Caso}
+\label{Cap:estudo}
+Neste capítulo será mostrada a metodologia de desenvolvimento usada para a criação do simulador computacional, o ambiente de produção utilizado, e a modelagem e implementação da camada de persistência com comentários em cada etapa encontrada.
+
+\section{Processo de Desenvolvimento de Software}
+Com o objetivo de se obter um diferencial qualitativo do \textit{software}, o mesmo foi desenvolvido utilizando o processo de desenvolvimento XP (\textit{eXtreme Programming}), que é considerado um processo de desenvolvimento ágil. O XP não gera tanta documentação e nem deixa a desejar na análise de \textit{design}, se destacando como um poderoso processo de análise de \textit{software}. 
+
+~\cite{boehm-turner} definem um ambiente ideal para um desenvolvimento ágil da seguinte forma:
+\begin{itemize}
+	\item Baixa criticidade;
+	\item Desenvolvedores sênior;
+	\item Mudanças freqüentes de requisitos;
+	\item Pequeno número de desenvolvedores;
+	\item Cultura que tem sucesso no caos.
+\end{itemize}
+
+Os processos ágeis usam o \textit{feedback}, mais que o planejamento. O \textit{feedback} é produzido por testes regulares e versões do \textit{software} envolvido, onde cada versão inclui todas as atividades de um projeto de desenvolvimento convencional, gerando um produto de \textit{software} funcional.
+
+\section{Ambiente de Desenvolvimento}
+As tabelas abaixo mostram o ambiente de desenvolvimento utilizado para realizar a modelagem e implementação da camada de persistência do simulador computacional \textit{Plunger Lift} que é o foco do estudo de caso.
+
+\begin{table}[htbp]
+	\begin{tabularx}{\linewidth}{|X|p{1cm}|} \hline
+		\textbf{Descrição} & \textbf{Qtd} \\ \hline
+		Microcomputador PC para desenvolvimento, testes e simulações. Configuração: Intel Core 2 Duo 
+		14" 1.5GHz 1GB 120GB, com conexão à Internet & 01 \\ \hline		
+	\end{tabularx}
+	\caption{Recursos de \textit{Hardware}}
+	\label{Tab:recursos-hardware}
+\end{table}
+
+\begin{table}[htbp]
+	\begin{tabularx}{\linewidth}{|X|p{1cm}|} \hline
+		\textbf{Descrição} & \textbf{Qtd} \\ \hline
+		Sistema Operacional Linux Ubuntu 10.04 Lucid Lynx & 01 \\ \hline	
+		Linguagem de Programação C++ & 01 \\ \hline	
+		Ferramenta de Modelagem UML Astah Community 6.1 & 01 \\ \hline	
+		Ferramenta para Desenvolvimento IDE Qt Creator & 01 \\ \hline	
+		Sistema Gerenciador de Bancos de Dados Relacional, \textit{Firebird} & 01 \\ \hline	
+		Biblioteca IBPP de acesso ao \textit{Firebird} & 01 \\ \hline		
+	\end{tabularx}
+	\caption{Recursos de \textit{Software}}
+	\label{Tab:recursos-software}
+\end{table}
+
+\section{Formalização dos Resultados}
+\subsection{Contexto}
+O acesso aos dados pode variar de acordo com a fonte dos dados. O acesso aos dispositivos de armazenamento, como por exemplo, um banco de dados, depende do tipo de armazenamento (arquivos, bancos de dados relacionais, bancos de dados orientados a objetos e assim por diante).
+
+\subsection{Problema}
+O simulador precisa persistir os dados provenientes da simulação em algum momento. Para muitas aplicações deste tipo, os dispositivos de armazenamento são implementados usando diferentes mecanismos, e ainda por cima existem as diferenças nas APIs (\textit{Application Programming Interface}) usadas para o acesso a estes dispositivos. O simulador usa a biblioteca IBPP para poder trabalhar com instruções SQL do \textit{Firebird}, que são consideradas o meio padrão para acessar as tabelas do banco de dados relacional da nossa aplicação. Entretanto, a sintaxe e o formato das instruções SQL podem variar dependendo do tipo de banco de dados relacional que se esteja usando.
+
+Há uma variação ainda maior com os diferentes tipos de mecanismos de persistência. Modos de acesso, recursos e APIs utilizadas variam entre os diferentes tipos de armazenamento, tais como arquivos, banco de dados relacionais, bancos de dados orientados a objetos, etc. Aplicações que precisam acessar dados de um sistema legado ou algum outro sistema diferente são muitas vezes obrigados a usar APIs proprietárias. Diferentes tipos de acessos nos vários tipos de fontes de dados oferecem desafios para a aplicação e pode potencialmente criar uma dependência direta entre o código do simulador e o código de acesso a dados.
+
+Incluir código de acesso aos dados e conectividade ao simulador acaba provocando uma baixa coesão e um alto acoplamento entre as suas outras camadas e a fonte de dados. Entende-se por acoplamento como sendo uma propriedade indesejável de um componente que demonstra falta de coerência conceitual e física no relacionamento com outros componentes que formam um módulo ou sistema de \textit{software}. Associada à interdependência mal desenhada entre módulos. Por sua vez, a coesão é uma propriedade desejável de um componente, que demonstra coerência ou unidade conceitual no relacionamento com os outros componentes que formam um módulo ou sistema de \textit{software}. A coesão depende do ocultamento de informações, ou isolamento de detalhes internos da implementação do componente. Um módulo coeso deve idealmente possuir uma única responsabilidade, que pode ser cumprida através de uma interface pública de serviços com o meio externo. 
+
+Sendo assim, tais dependências de código entre os componentes tornam a tarefa difícil e tediosa ao migrar a aplicação de um tipo de fonte de dados para outra. Quando a fonte de dados muda, os componentes precisam ser mudados também para lidar com o novo tipo de fonte de dados.
+
+\subsection{Motivação}
+\begin{itemize}
+\item O simulador precisa armazenar e recuperar as informações dos mecanismos de persistência e pode vir precisar de dados armazenados em outras fontes de dados como, por exemplo, arquivos de texto.
+\item APIs para os mecanismos de persistências podem variar dependendo da fonte de dados. Outras fontes de dados podem ter APIs que são proprietárias e/ou não padronizadas. Estas APIs e suas funcionalidades também podem variar de acordo com o tipo de persistência.
+\item Componentes normalmente usam APIs proprietárias para acesso externo e/ou sistemas legados para recuperar e armazenar dados.
+\item A portabilidade dos componentes é diretamente afetada quando os mecanismos específicos de acesso e APIs são incluídos nos componentes.
+\item Componentes precisam ser transparentes para o armazenamento persistente atual ou a aplicação da fonte de dados para fornecer fácil migração para produtos de diferentes fornecedores, tipos de armazenamento diferentes, e diferentes tipos de fonte de dados.
+\end{itemize}
+
+
+\subsection{Soluções}
+Usar o padrão de projetos \textit{Data Access Object} (DAO) para abstrair e encapsular todo o acesso à fonte de dados. O DAO gerencia a conexão com a fonte de dados para obter e armazenar dados.
+
+O DAO implementa o mecanismo de acesso necessário para trabalhar com a fonte de dados. Ela pode ser bancos de dados relacionais, orientados a objetos, arquivos, etc. O \textit{DataManager} do simulador que depende do DAO, simplesmente usa a interface exposta pelo DAO para seus clientes. O DAO oculta completamente os detalhes de implementação da fonte de dados dos seus clientes. Como a interface exposta pelo DAO para seus clientes não se altera quando detalhes de implementação da fonte de dados mudam, este padrão permite que o DAO se adapte a diferentes esquemas de armazenamentos sem afetar os seus clientes. Essencialmente, o DAO age como um adaptador entre o \textit{DataManager} e a fonte de dados.
+
+\subsection{Estrutura}
+A Figura \ref{Fig:classdiagramdao} mostra o diagrama de classes que representa as relações para o padrão DAO.
+
+\begin{figure}[htbp!]
+	\begin{center}
+		\fbox{\includegraphics[width=1\linewidth]
+		{figuras/1classdiagramdao}}
+		\caption{Diagrama de Classes do Padrão de Projeto DAO.}
+		\label{Fig:classdiagramdao}
+	\end{center}
+\end{figure}
+%------------------------------------------------------------------------------------------
+\subsubsection{Participantes e Responsabilidades}
+A Figura \ref{Fig:sequencediagramdao} contém o diagrama de seqüência que mostra a interação entre os vários participantes deste padrão.
+
+\begin{figure}[htbp!]
+	\begin{center}
+		\fbox{\includegraphics[width=1\linewidth]
+		{figuras/2sequencediagramdao}}
+		\caption{Diagrama de Sequência do Padrão de Projeto DAO.}
+		\label{Fig:sequencediagramdao}
+	\end{center}
+\end{figure}
+
+\begin{itemize}
+\item \textbf{\textit{DataManager}}: O \textit{DataManager} representa o cliente. É o objeto que requer acesso à fonte de dados para obter e armazenar os dados. O \textit{DataManager} é responsável por atuar como intermediário entre a camada de visualização e a camada de simulação.
+\item \textbf{\textit{DataAccessObject}}: O \textit{DataAccessObject} é o objeto principal desse padrão. O \textit{DataAccessObject} abstrai a implementação no acesso aos dados para o \textit{DataManager} de forma transparente à fonte de dados. O \textit{DataManager} também delega operações para o \textit{DataAccessObject} de carregamento e armazenamento de dados.
+\item \textbf{\textit{DataSource}}: O objeto \textit{DataSource} representa uma implementação da fonte de dados. Uma fonte de dados pode ser um arquivo, repositório XML, banco de dados relacional, banco de dados orientado a objetos, etc.
+\item \textbf{\textit{TransferObject}}: O objeto \textit{TransferObject} é usado para transportar os dados. O \textit{DataAccessObject} pode usar um \textit{TransferObject} para retornar os dados para seus clientes ou como pode também usá-lo para receber os dados do cliente e atualizar a fonte de dados.
+\end{itemize}
+%------------------------------------------------------------------------------------------
+\subsection{Estratégia}
+\subsubsection*{Fábrica de DAOs}
+O padrão de projeto DAO pode se tornar altamente flexível adotando os padrões de projeto \textit{Abstract Factory} (GoF) e o \textit{Factory Method} (GoF).
+
+Quando a forma de armazenamento não está sujeita a mudar de uma aplicação para outra, esta estratégia pode ser implementada usando o padrão \textit{Factory Method} para produzir uma série de DAOs necessários para a aplicação. O diagrama de classes para este caso está mostrado na Figura \ref{Fig:strategiesclassdiagramfactorymethod}.
+
+\begin{figure}[htbp!]
+	\begin{center}
+		\fbox{\includegraphics[width=0.5\linewidth]
+		{figuras/3strategiesclassdiagramfactorymethod}}
+		\caption{Diagrama de Classes representando a estratégia usada pelo Padrão \textit{Factory Method}.}
+		\label{Fig:strategiesclassdiagramfactorymethod}
+	\end{center}
+\end{figure}
+
+Porém, quando a forma de armazenamento está sujeita a mudar de uma aplicação para outra, esta estratégia pode ser implementada usando o padrão \textit{Abstract Factory}. O \textit{Abstract Factory} pode por sua vez usa o \textit{Factory Method}, como sugerido em~\cite{gamma-et-al}. Neste caso, esta estratégia fornece um objeto da fábrica abstrata de DAOs (\textit{Abstract Factory}), que podem construir vários tipos de fábricas concretas de DAOs, sendo que cada fábrica é responsável por um tipo de mecanismo de persistência. 
+Para controlar a quantidade de fábricas de DAOs geradas, utilizamos o padrão \textit{Singleton}. Sendo assim, o \textit{Singleton} garante a existência de apenas uma instância de um objeto fábrica.
+
+Depois de obter uma fábrica de DAO concreta para uma implementação específica, podemos usá-la para produzir DAOs específicos para aquele tipo de implementação. O diagrama de classes para essa estratégia é mostrado na Figura \ref{Fig:strategiesclassdiagramabstractfactory}. 
+
+Este diagrama de classes mostra uma fábrica base de DAOs, sendo representada pela classe abstrata que é herdada e implementada por diferentes fábricas de DAOs e cada uma destas dá suporte a diferentes tipos de implementações para persistência. O cliente (\textit{DataManager}) pode obter a implementação de uma fábrica concreta, como por exemplo, \textit{FirebirdDAOFactory} e usá-la para obter DAOs que trabalham com um tipo de implementação de persistência especifica.
+
+Por exemplo, o \textit{DataManager} pode obter uma fábrica \textit{FirebirdDAOFactory} e usá-la para obter DAOs específicos, tais como \textit{FirebirdDAO1}, \textit{FirebirdDAO2}, e assim por diante. Os DAOs podem estender e implementar uma classe base genérica (mostrada na figura como \textit{DAO1} e \textit{DAO2}) que descrevem especificamente as regras dos objetos de negócio representados pelos \textit{TransferObjects}. Cada objeto DAO concreto é responsável por conectar a fonte de dados e obter e manipular de objetos de negócio que ele suporta.
+
+\begin{figure}[htbp!]
+	\begin{center}
+		\fbox{\includegraphics[width=1\linewidth]
+		{figuras/4strategiesclassdiagramabstractfactory}}
+		\caption{Diagrama de Classes representando a estratégia usada pelo Padrão \textit{Abstract Factory}.}
+		\label{Fig:strategiesclassdiagramabstractfactory}
+	\end{center}
+\end{figure}
+
+O diagrama de seqüência que descreve as interações para essa estratégia é mostrada na Figura \ref{Fig:strategiessequencediagramabstractfactory}.
+
+\begin{figure}[htbp!]
+	\begin{center}
+		\fbox{\includegraphics[width=1\linewidth]
+		{figuras/5strategiessequencediagramabstractfactory}}
+		\caption{Diagrama de Seqüência representando a estratégia usada pelo Padrão \textit{Abstract 
+		Factory}.}
+		\label{Fig:strategiessequencediagramabstractfactory}
+	\end{center}
+\end{figure}
+%------------------------------------------------------------------------------------------
+\subsection{Conseqüências}
+\subsubsection{Permitir transparência}
+O \textit{DataManager} usa a fonte de dados sem conhecer detalhes específicos de sua implementação. O acesso agora se torna transparente porque os detalhes da implementação estão todos escondidos dentro do padrão DAO.
+
+\subsubsection{Facilidade na migração}
+Uma camada de DAOs torna mais fácil para o simulador migrar para uma outra fonte de dados diferente. O \textit{DataManager} não tem conhecimento do tipo de implementação da fonte de dados. Assim, para realizar a migração, temos que apenas realizar alterações na camada do padrão DAO. Além disso, ao utilizar a estratégia de fábrica é possível fornecer uma implementação concreta para cada mecanismo de persistência. Neste caso, migrar de um mecanismo de persistência para outro, significa simplesmente fornecer uma nova implementação de fábrica para o simulador.
+
+\subsubsection{Redução na complexidade do código}
+Como os DAOs abstraem toda a complexidade no acesso aos dados, eles simplificam o código presente no \textit{DataManager}. Todo o código específico de acesso à fonte de dados estão centralizados nos DAOs e não no \textit{DataManager}. Isso melhora a legibilidade do código e a produtividade de desenvolvimento.
+
+\subsubsection{Centraliza o acesso a dados em uma camada separada}
+Como todas as operações de acesso a dados agora estão atribuídas aos DAOs, ela pode ser vista como uma camada que isola o restante da aplicação dá lógica de acesso à fonte de dados. Esta centralização faz com que a aplicação fique mais fácil de se manter e gerenciar.
+
+\subsubsection{Adição de uma nova camada}
+O padrão DAO cria uma camada adicional de objetos entre o cliente (\textit{DataManager}) e a fonte de dados aproveitando os benefícios desse padrão. Mas o benefício em se escolher esta abordagem compensa o esforço adicional futuro, se o padrão não fosse utilizado.
+
+\subsubsection{Necessidade de projetar uma hierarquia de classes}
+Ao se utilizar a estratégia de fábricas, a hierarquia de fábricas concretas e a hierarquia de produtos produzidos por estas fábricas precisam ser projetados e implementados. Esse esforço adicional precisa ser considerado se o objetivo for garantir a flexibilidade.
+%------------------------------------------------------------------------------------------
+\subsection{Alguns Exemplos}
+
+\subsubsection{Implementando o Padrão DAO}
+A representação do objeto persistente que representa as informações de um \textit{Plunger} é mostrado no Código Fonte \ref{codigo02}. A forma como o \textit{DataManager} usa este DAO é mostrado no Código Fonte \ref{codigo01}.
+O diagrama de classes para este exemplo é mostrado na Figura \ref{Fig:exampleClassDiagramFirebirdPlungerDAO}.
+
+\begin{figure}[htbp!]
+	\begin{center}
+		\fbox{\includegraphics[width=1\linewidth]
+		{figuras/6exampleClassDiagramFirebirdPlungerDAO}}
+		\caption{Diagrama de Classes do Padrão de Projeto DAO aplicado a Camada de Persistência.}
+		\label{Fig:exampleClassDiagramFirebirdPlungerDAO}
+	\end{center}
+\end{figure}
+
+
+
+%------------------------------------------------------------------------------------------
+
+\subsubsection{Implementando a fábrica - Usando o Padrão \textit{Factory Method}}
+
+Vamos considerar um exemplo onde foi implementado a estratégia em que uma fábrica DAO produz vários DAOs para uma única fonte de dados (ex:. \textit{Firebird}). A fábrica produz DAOs dos tipos \textit{FirebirdCasingDAO}, \textit{FirebirdTubingDAO}, \textit{FirebirdPlungerDAO}, \textit{FirebirdValveDAO}, e assim por diante. O diagrama de classe para esta abordagem é mostrado na figura \ref{Fig:exampleClassDiagramFirebirdDAOFactory_FactoryMethod}. A fábrica de DAO pode ser vista no Código Fonte \ref{codigo03h} e \ref{codigo03cpp}.
+
+\begin{figure}[htbp!]
+	\begin{center}
+		\fbox{\includegraphics[width=0.7\linewidth]		
+		{figuras/7exampleClassDiagramFirebirdDAOFactory_FactoryMethod}}
+		\caption{Diagrama de Classes do Padrão de Projeto \textit{Factory Method} aplicado a Camada de 
+		Persistência.}
+		\label{Fig:exampleClassDiagramFirebirdDAOFactory_FactoryMethod}
+	\end{center}
+\end{figure}
+
+
+%------------------------------------------------------------------------------------------
+
+\subsubsection{Implementando a fábrica - Usando o Padrão \textit{Abstract Factory}}
+
+Vamos considerar agora um cenário onde estamos implementando esta estratégia para três tipos de bancos de dados diferentes (ex:. \textit{Firebird}, \textit{Postgres} e \textit{MySQL}). Neste caso, o padrão \textit{Abstract Factory} é aplicado. O diagrama de classes para este cenário pode ser visto na Figura \ref{Fig:exampleClassDiagramFirebirdDAO_AbstractFactory}. A classe abstrata DAOFactory pode ser vista no Código Fonte \ref{codigo04h} e \ref{codigo04cpp}. Esta fábrica produz vários DAOs, como por exemplo, CasingDAO, TubingDAO, PlungerDAO, ValveDAO e assim por diante. Esta estratégia usa o \textit{Factory Method} nas fábricas produzidas pelo \textit{Abstract Factory}.
+
+\begin{figure}[htbp!]
+	\begin{center}
+		\fbox{\includegraphics[width=0.8\linewidth]		
+		{figuras/8exampleClassDiagramFirebirdDAO_AbstractFactory}}
+		\caption{Diagrama de Classes do Padrão de Projeto \textit{Abstract Factory} aplicado a Camada de 
+		Persistência.}
+		\label{Fig:exampleClassDiagramFirebirdDAO_AbstractFactory}
+	\end{center}
+\end{figure}
+
+\lstinputlisting[
+language=C++, 
+label=codigo01,
+caption={``Usando o DAO e a fábrica de DAOs - DataManager.cpp''}]{codigo01.cpp}
+
+\lstinputlisting[
+language=C++, 
+label=codigo02,
+caption={``Implementação da interface \textit{PlungerDAO} - FirebirdPlungerDAO.h''}]{codigo02.h}
+
+\lstinputlisting[
+language=C++, 
+label=codigo03h,
+caption={``Fábrica de DAOs concreta para o \textit{Firebird} - FirebirdDAOFactory.h''}]{codigo03.h}
+
+\lstinputlisting[
+language=C++, 
+label=codigo03cpp,
+caption={``Fábrica de DAOs concreta para o \textit{Firebird} - FirebirdDAOFactory.cpp''}]{codigo03.cpp}
+
+\lstinputlisting[
+language=C++, 
+label=codigo04h,
+caption={``Classe abstrata \textit{DAOFactory} - DAOFactory.h''}]{codigo04.h}
+
+\lstinputlisting[
+language=C++, 
+label=codigo04cpp,
+caption={``Classe abstrata \textit{DAOFactory} - DAOFactory.cpp''}]{codigo04.cpp}
+
+%------------------------------------------------------------------------------------------

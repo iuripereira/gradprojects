@@ -1,0 +1,55 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package br.ufrn.dca.ia.control;
+
+import java.util.ArrayList;
+/**
+ *  A greedy algorithm
+ * @author Marco
+ */
+public class glutton {
+    ArrayList map = new ArrayList();
+    int vVertHor;
+    int vDiagonal;
+
+
+    public glutton(int vVertHor, int vDiagonal){
+        setVVertHor(vVertHor);
+        setVDiagonal(vDiagonal);
+
+    }
+
+    public ArrayList getMap() {
+        return map;
+    }
+
+    public void setMap(ArrayList map) {
+        this.map = map;
+    }
+
+    public int getVDiagonal() {
+        return vDiagonal;
+    }
+
+    public void setVDiagonal(int vDiagonal) {
+        this.vDiagonal = vDiagonal;
+    }
+
+    public int getVVertHor() {
+        return vVertHor;
+    }
+
+    public void setVVertHor(int vVertHor) {
+        this.vVertHor = vVertHor;
+    }
+
+
+    public void gluttomise(){
+
+    }
+
+
+}

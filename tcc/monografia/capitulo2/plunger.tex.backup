@@ -1,0 +1,106 @@
+%%
+%% Capítulo 2: O IEEE 802.15.4
+%%
+
+\mychapter{O IEEE 802.15.4}
+\label{Cap:ieee802.15.4}
+
+O padrão IEEE 802.15.4, liberado em maio de 2003, é um padrão que define a camada de comunicação em dois níveis no modelo OSI. Especifica a
+camada física e a camada MAC (Media Access Control) para dispotisitivos que não precisem de alta taxa de dados e que necessitem de baixa
+latência e baixo custo de energia, tais como nas LR-WPANs (Low Rate Wireless Personal Area Network).
+
+Foi criada e é mantida pela IEEE (Institute of Electrical and Eletronics Engineers). Instituição que tem como finalidade definir padrões
+para desenvolvimento tecnológico.
+
+O 802.15.4 é, portanto, um protocolo de pacote de dados para rede sem fio. Utiliza como canal de acesso ao meio o protocolo CSMA-CA (Carrie
+Sense Multiple Access - Collision Avoidance), que é o mesmo utilizado pelo padrão 802.11 (Wi-Fi) e visa a deteção e abstenção de colisão de
+pacotes. Além do CSMA-CA o 802.15.4 ainda possui time slotting opcional, reconhecimento de mensagem e uma estrutura sinalizadora, chamada 
+beacon. A segurança é feita em multi-camada e será abordada mais adiante neste documento.
+
+%Inserir imagem da camada MAC para o padrão 802.15.4
+
+\section{Entendento o padrão 802.15.4}
+
+Como já foi dito anteriormente este protocolo reside no segundo nível do modelo OSI. Esta camada é denominada de Data Link. Aqui os bits
+contendo as unidades de informação digital são manuseados e organizados de forma se tornarem impulsos eletromagnéticos para a camada física
+logo abaixo. Esta camada é similar as demais de outros padrões como o 802.11, mais conhecido como WiFi ou o 802.3 (Ethernet). As frequências
+definidas no padrão são espalhadas através de 27 canais diferentes divididas em três bandas principais:
+
+\begin{itemize}
+	\item Europa - 868.0 à 868.6 MHz (1 canal)
+	\item EEUU - 902.0 à 928.0 MHz (10 canais)
+	\item Resto do mundo - 2.40 à 2.48 GHz (16 canais)
+\end{itemize}
+
+As taxas de dados são respectivamente:
+
+\begin{itemize}
+	\item 868.0 à 868.6 MHz - 20/100/250 Kb/s
+	\item 902.0 à 928.0 MHz - 40/250 Kb/s
+	\item 2.40 à 2.48 GHz - 250 Kb/s
+\end{itemize}
+
+
+\section{Por que o 802.15.4 é bom contra ruído?}
+
+O 802.15.4 utiliza DSSS (Direct Sequence Spread Spectrum) que é a sequência direta de espalhamento do espectro
+
+
+\begin{figure}[htbp!]
+	\begin{center}
+		\fbox{\includegraphics[width=0.45\linewidth]
+		{figuras/plunger_lift_convencional}}
+		\caption{Esquema de um poço convencional de \textit{Plunger Lift}.}~\cite{castro}
+		\label{Fig:plungerliftconvencional}
+	\end{center}
+\end{figure} 
+
+A principal diferença entre estes dois métodos é que o PL usa um pistão que funciona como uma interface entre o líquido (acima) e o gás (abaixo), procurando evitar que o líquido retorne ao fundo do poço no momento de sua elevação (\textit{fallback}), além da possibilidade de se operar o poço sem a necessidade de uma fonte externa de gás. O método possui aplicações em poços de petróleo com alta razão gás-óleo ou poços de petróleo para prevenção da deposição de parafina, onde um pistão atua como um removedor mecânico poupando custos extras com a limpeza da coluna de produção~\cite{castro}.
+
+O \textit{Plunger Lift} é um método intermitente, ele opera em ciclos e cada um destes ciclos são divididos em etapas diferentes~\cite{baruzzi}: subida do pistão, subdividida em subida e produção da golfada; pós-fluxo (Afterflow), caracterizado pela produção de gás após o pistão chegar à superfície e crescimento da pressão no poço (\textit{Build-Up}). A queda do pistão acontece no começo da etapa de \textit{Build-Up}. O modelo criado para o simulador não trata esse movimento descendente do pistão e esta etapa deve ser estudada futuramente~\cite{castro}.
+
+\subsection{Funcionamento}
+A etapa de \textit{Build-Up} (Figura \ref{Fig:etapasplunger}d) é caracterizada pelo acúmulo de pressões. O gás produzido pelo reservatório começa a se acumular no anular (\textit{casing}) quando a linha de produção é fechada e o pistão está no fundo da coluna de produção (\textit{tubing}). A pressão sobe de forma contínua com o acumulo desse gás. Uma parte do líquido produzido pelo reservatório se acumula na coluna de produção acima do pistão, formando uma coluna de líquido a ser produzida.
+
+Em seguida, quando a comunicação com a linha de produção é liberada, ocorre uma queda brusca na pressão no topo da coluna de produção. Essa queda de pressão é transmitida até o gás acumulado abaixo do pistão. Então o gás tende a se expandir e a escapar pela coluna de produção, que possui o pistão no seu interior, funcionando assim, como uma barreira impedindo a passagem do gás. Com isso, a energia acumulada do gás pressurizado do anular é transmitida para o pistão, fazendo com que ele adquira energia cinética suficiente para elevar o óleo acumulado sobre ele durante a etapa de \textit{Build-Up}. Temos então, a etapa de subida do pistão. Enquanto o topo da golfada de líquido não alcança a linha de produção, ocorre a subida da golfada (Figura \ref{Fig:etapasplunger}a), e logo depois temos a produção da golfada (Figura \ref{Fig:etapasplunger}b).
+
+\begin{figure}[htbp!]
+	\begin{center}
+		\fbox{\includegraphics[width=0.7\linewidth]
+		{figuras/etapas_plunger}}
+		\caption{Etapas do \textit{Plunger Lift} convencional.}~\cite{castro}
+		\label{Fig:etapasplunger}
+	\end{center}
+\end{figure} 
+
+Após toda a coluna de líquido ter sido produzida, a força do gás abaixo do pistão eleva o mesmo até o lubrificador (\textit{Lubricator}), onde o pistão é amortecido por uma mola e então, o gás abaixo do pistão começa a ser, também, produzido. Assim sendo, o gás permanece em produção enquanto possuir a pressão necessária para vencer a força peso do pistão e mantê-lo no lubricador. Essa etapa é chamada de \textit{Afterflow} (Figura \ref{Fig:etapasplunger}c).
+
+O fim do \textit{Afterflow} é determinado pelo fechamento da válvula motora. O gás pára de fluir pela coluna de produção e não há mais pressão suficiente forçando o pistão a se manter no topo da coluna de produção. Assim começa o processo de queda do pistão pela coluna de produção, primeiramente na coluna de gás e depois na coluna de líquido que foi se formou no fundo do \textit{tubing} devido a produção do reservatório durante as etapas anteriores. O pistão é então também amortecido por uma mola posicionada no fundo da coluna e um novo ciclo tem início.
+
+Em alguns ciclos, a pressão (energia) acumulada na etapa de \textit{Build-Up} não é suficiente para elevar o pistão e a coluna de líquido à superfície, nesses ciclos não há as etapas de produção de líquido e de \textit{Afterflow}. Se essa situação persiste indefinidamente, é dito que o poço afogou~\cite{castro}.
+
+\section{Simulação Computacional}
+A técnica de Simulação Computacional consiste em estabelecer um modelo capaz de descrever ou representar o problema real a ser submetido a manipulação experimental em um computador. Em outras palavras, Simulação Computacional consiste em conduzir experimentos em um computador, envolvendo relações de conteúdo lógico e matemático, necessários à descrição do comportamento e da estrutura de um problema real, em períodos de tempo bem definidos~\cite{abreu-rangel}.
+
+A partir da simulação computacional é possível a análise de diferentes tipos de sistemas, possibilitando:
+\begin{itemize}
+	\item um maior domínio e conhecimento na operação dos sistemas;
+	\item o teste de novos conceitos ou técnicas antes da implementação física;
+	\item a obtenção de informações sem perturbar o sistema real, e
+	\item a observação da evolução de fenômenos em velocidades maiores ou menores do que a velocidade de 
+	fenômenos reais.
+\end{itemize}
+
+Segundo~\cite{chung}, através de simuladores é possível a visualização das principais etapas de um processo, examinando-se as suas formas de operação e entendendo-se suas principais conexões com ambientes externos, sem a necessidade de parar-se o processo real, o que poderia resultar em perturbações inconvenientes ao sistema. Assim, a análise de sistemas em ambientes computacionalmente simulados pode cooperar na melhoria de processos e no emprego de novas técnicas, sem possíveis desgastes do sistema real.
+
+Embora os simuladores possuam inúmeras vantagens, existem também algumas limitações, as quais não estão relacionadas ao modelo imposto no simulador, e sim a expectativas geradas sobre o simulador ~\cite{nascimento}. As limitações podem ser:
+
+\begin{itemize}
+	\item uma simulação não pode dar resultados precisos quando os dados de entrada foram imprecisos;
+	\item a simulação não pode dar respostas fáceis a problemas complexos;
+	\item a simulação não pode solucionar problemas por si só.
+\end{itemize}
+
+Neste contexto foi desenvolvido um simulador para o método de elevação artificial de petróleo \textit{Plunger Lift}, cujo objetivo é apresentar de forma clara e simples, os fenômenos que ocorrem em um sistema de PL, viabilizando uma melhor compreensão dos fenômenos e facilitando o estudo do método. A implementação de um modelo desenvolvido para o método \textit{Plunger Lift} com a finalidade de prover um simulador computacional pode ser encontrado no trabalho de ~\cite{castro}. E mais uma vez, o presente trabalho tem como objetivo mostrar uma modelagem e implementação para a camada de persistência desse simulador. 
+
+No próximo capítulo será mostrado a fundamentação teórica necessária para poder dar início a construção da camada de persistência.

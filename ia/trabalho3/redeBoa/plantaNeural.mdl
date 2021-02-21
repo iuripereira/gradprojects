@@ -1,0 +1,3384 @@
+Model {
+  Name			  "plantaNeural"
+  Version		  7.4
+  MdlSubVersion		  0
+  GraphicalInterface {
+    NumRootInports	    0
+    NumRootOutports	    0
+    ParameterArgumentNames  ""
+    ComputedModelVersion    "1.3"
+    NumModelReferences	    0
+    NumTestPointedSignals   0
+  }
+  SavedCharacterEncoding  "windows-1252"
+  SaveDefaultBlockParams  on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  DataTypeOverride	  "UseLocalSettings"
+  MinMaxOverflowLogging	  "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  MaxMDLFileLineLength	  120
+  Created		  "Tue Dec 15 02:46:11 2009"
+  Creator		  "marco"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "marco"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Wed Dec 16 00:10:51 2009"
+  RTWModifiedTimeStamp	  182822270
+  ModelVersionFormat	  "1.%<AutoIncrement:3>"
+  ConfigurationManager	  "None"
+  SampleTimeColors	  off
+  SampleTimeAnnotations	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowSignalResolutionIcons on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  SimulationMode	  "normal"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  CovForceBlockReductionOff on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeVarName	  "covCumulativeData"
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  CovModelRefEnable	  "Off"
+  CovExternalEMLEnable	  off
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  BufferReuse		  on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      1
+      Version		      "1.6.0"
+      Array {
+	Type			"Handle"
+	Dimension		9
+	Simulink.SolverCC {
+	  $ObjectID		  2
+	  Version		  "1.6.0"
+	  StartTime		  "0.0"
+	  StopTime		  "10000"
+	  AbsTol		  "auto"
+	  FixedStep		  "auto"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ZcThreshold		  "auto"
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-3"
+	  SolverMode		  "Auto"
+	  Solver		  "ode45"
+	  SolverName		  "ode45"
+	  ShapePreserveControl	  "DisableAll"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  ZeroCrossAlgorithm	  "Nonadaptive"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  InsertRTBMode		  "Whenever possible"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  3
+	  Version		  "1.6.0"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveCompleteFinalSimState off
+	  SaveFormat		  "Array"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SignalLogging		  on
+	  InspectSignalLogs	  off
+	  SaveTime		  on
+	  ReturnWorkspaceOutputs  off
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  ReturnWorkspaceOutputsName "out"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  4
+	  Version		  "1.6.0"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    7
+	    Cell		    "BooleansAsBitfields"
+	    Cell		    "PassReuseOutputArgsAs"
+	    Cell		    "PassReuseOutputArgsThreshold"
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    PropName		    "DisabledProps"
+	  }
+	  BlockReduction	  on
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  InlineParams		  off
+	  UseIntDivNetSlope	  off
+	  InlineInvariantSignals  off
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnhancedBackFolding	  off
+	  StrengthReduction	  off
+	  EnforceIntegerDowncast  on
+	  ExpressionFolding	  on
+	  BooleansAsBitfields	  off
+	  EnableMemcpy		  on
+	  MemcpyThreshold	  64
+	  PassReuseOutputArgsAs	  "Structure reference"
+	  ExpressionDepthLimit	  2147483647
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  off
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  EfficientMapNaN2IntZero on
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	  BufferReusableBoundary  on
+	  SimCompilerOptimization "Off"
+	  AccelVerboseBuild	  off
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  5
+	  Version		  "1.6.0"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  SignalRangeChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  SaveWithDisabledLinksMsg "warning"
+	  SaveWithParameterizedLinksMsg	"warning"
+	  CheckSSInitialOutputMsg on
+	  UnderspecifiedInitializationDetection	"Classic"
+	  MergeDetectMultiDrivingBlocksExec "none"
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "UseLocalSettings"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  SolverPrmCheckMsg	  "warning"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "error"
+	  MultiTaskCondExecSysMsg "error"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  ParameterTunabilityLossMsg "warning"
+	  FixptConstUnderflowMsg  "none"
+	  FixptConstOverflowMsg	  "none"
+	  FixptConstPrecisionLossMsg "none"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "Use local settings"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "warning"
+	  SimStateInterfaceChecksumMismatchMsg "warning"
+	  StrictBusMsg		  "Warning"
+	  LoggingUnavailableSignals "error"
+	  BlockIODiagnostic	  "none"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  6
+	  Version		  "1.6.0"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdIntDivRoundTo	  "Undefined"
+	  ProdEndianess		  "Unspecified"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "32-bit Generic"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  7
+	  Version		  "1.6.0"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	}
+	Simulink.SFSimCC {
+	  $ObjectID		  8
+	  Version		  "1.6.0"
+	  SFSimEnableDebug	  on
+	  SFSimOverflowDetection  on
+	  SFSimEcho		  on
+	  SimBlas		  on
+	  SimCtrlC		  on
+	  SimExtrinsic		  on
+	  SimIntegrity		  on
+	  SimUseLocalCustomCode	  off
+	  SimBuildMode		  "sf_incremental_build"
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  9
+	  Version		  "1.6.0"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    6
+	    Cell		    "IncludeHyperlinkInReport"
+	    Cell		    "GenerateTraceInfo"
+	    Cell		    "GenerateTraceReport"
+	    Cell		    "GenerateTraceReportSl"
+	    Cell		    "GenerateTraceReportSf"
+	    Cell		    "GenerateTraceReportEml"
+	    PropName		    "DisabledProps"
+	  }
+	  SystemTargetFile	  "grt.tlc"
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  TemplateMakefile	  "grt_default_tmf"
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ConfigAtBuild		  off
+	  RTWUseLocalCustomCode	  off
+	  RTWUseSimCustomCode	  off
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  IncludeERTFirstTime	  off
+	  GenerateTraceInfo	  off
+	  GenerateTraceReport	  off
+	  GenerateTraceReportSl	  off
+	  GenerateTraceReportSf	  off
+	  GenerateTraceReportEml  off
+	  GenerateCodeInfo	  off
+	  RTWCompilerOptimization "Off"
+	  CheckMdlBeforeBuild	  "Off"
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      10
+	      Version		      "1.6.0"
+	      Array {
+		Type			"Cell"
+		Dimension		19
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"IgnoreTestpoints"
+		Cell			"InsertBlockDesc"
+		Cell			"SFDataObjDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		Cell			"CustomSymbolStrGlobalVar"
+		Cell			"CustomSymbolStrType"
+		Cell			"CustomSymbolStrField"
+		Cell			"CustomSymbolStrFcn"
+		Cell			"CustomSymbolStrFcnArg"
+		Cell			"CustomSymbolStrBlkIO"
+		Cell			"CustomSymbolStrTmpVar"
+		Cell			"CustomSymbolStrMacro"
+		Cell			"ReqsInCode"
+		PropName		"DisabledProps"
+	      }
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses on
+	      IgnoreTestpoints	      off
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      IncDataTypeInIds	      off
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrFcnArg   "rt$I$N$M"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      SimulinkBlockComments   on
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	      UseSimReservedNames     off
+	    }
+	    Simulink.GRTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      11
+	      Version		      "1.6.0"
+	      Array {
+		Type			"Cell"
+		Dimension		17
+		Cell			"GeneratePreprocessorConditionals"
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"CombineOutputUpdateFcns"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"GenerateTestInterfaces"
+		Cell			"ModelStepFunctionPrototypeControlCompliant"
+		Cell			"CPPClassGenCompliant"
+		Cell			"MultiInstanceERTCode"
+		Cell			"PurelyIntegerCode"
+		Cell			"SupportNonFinite"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"SupportNonInlinedSFcns"
+		Cell			"PortableWordSizes"
+		PropName		"DisabledProps"
+	      }
+	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      TargetFunctionLibrary   "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      ERTMultiwordTypeDef     "System defined"
+	      ERTMultiwordLength      256
+	      MultiwordLength	      2048
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   off
+	      GenerateTestInterfaces  off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant on
+	      ParMdlRefBuildCompliant on
+	      CompOptLevelCompliant   on
+	      IncludeMdlTerminateFcn  on
+	      GeneratePreprocessorConditionals "Disable all"
+	      CombineOutputUpdateFcns off
+	      SuppressErrorStatus     off
+	      ERTFirstTimeCompliant   off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      SupportVariableSizeSignals off
+	      EnableShiftOperators    on
+	      ParenthesesLevel	      "Nominal"
+	      PortableWordSizes	      off
+	      ModelStepFunctionPrototypeControlCompliant off
+	      CPPClassGenCompliant    off
+	      AutosarCompliant	      off
+	      UseMalloc		      off
+	      ExtMode		      off
+	      ExtModeStaticAlloc      off
+	      ExtModeTesting	      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTransport	      0
+	      ExtModeMexFile	      "ext_comm"
+	      ExtModeIntrfLevel	      "Level1"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      GenerateASAP2	      off
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	hdlcoderui.hdlcc {
+	  $ObjectID		  12
+	  Version		  "1.6.0"
+	  Description		  "HDL Coder custom configuration component"
+	  Name			  "HDL Coder"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    1
+	    Cell		    ""
+	    PropName		    "HDLConfigFile"
+	  }
+	  HDLCActiveTab		  "0"
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      CurrentDlgPage	      "Solver"
+      ConfigPrmDlgPosition    " [ 0, 0, 880, 630 ] "
+    }
+    PropName		    "ConfigurationSets"
+  }
+  Simulink.ConfigSet {
+    $PropName		    "ActiveConfigurationSet"
+    $ObjectID		    1
+  }
+  BlockDefaults {
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+    BlockRotation	    0
+    BlockMirror		    off
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Concatenate
+      NumInputs		      "2"
+      ConcatenateDimension    "1"
+    }
+    Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      SamplingMode	      "Sample based"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Inherit from 'Constant value'"
+      OutDataType	      "fixdt(1,16,0)"
+      ConRadixGroup	      "Use specified scaling"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: Inherit from 'Constant value'"
+      LockScale		      off
+      SampleTime	      "inf"
+      FramePeriod	      "inf"
+    }
+    Block {
+      BlockType		      From
+      IconDisplay	      "Tag"
+      TagVisibility	      "local"
+    }
+    Block {
+      BlockType		      Goto
+      IconDisplay	      "Tag"
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      DataType		      "auto"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchByCopyingInsideSignal off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Mux
+      Inputs		      "4"
+      DisplayOption	      "none"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      NonVirtualBus	      off
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      DataType		      "auto"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      SourceOfInitialOutputValue "Dialog"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      RandomNumber
+      Mean		      "0"
+      Variance		      "1"
+      Seed		      "0"
+      SampleTime	      "-1"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Saturate
+      UpperLimit	      "0.5"
+      LowerLimit	      "-0.5"
+      LinearizeAsGain	      on
+      ZeroCross		      on
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Same as input"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: Same as input"
+      LockScale		      off
+      RndMeth		      "Floor"
+    }
+    Block {
+      BlockType		      Scope
+      ModelBased	      off
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      CheckFcnCallInpInsideContextMsg off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      MinMaxOverflowLogging   "UseLocalSettings"
+    }
+    Block {
+      BlockType		      Sum
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      CollapseMode	      "All dimensions"
+      CollapseDim	      "1"
+      InputSameDT	      on
+      AccumDataTypeStr	      "Inherit: Inherit via internal rule"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Same as first input"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: Same as first input"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      ToWorkspace
+      VariableName	      "simulink_output"
+      MaxDataPoints	      "1000"
+      Decimation	      "1"
+      SampleTime	      "0"
+      FixptAsFi		      off
+    }
+  }
+  System {
+    Name		    "plantaNeural"
+    Location		    [2, 82, 1014, 552]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    SIDHighWatermark	    424
+    Block {
+      BlockType		      SubSystem
+      Name		      "Neural Network"
+      SID		      323
+      Ports		      [1, 1]
+      Position		      [175, 100, 235, 140]
+      BackgroundColor	      "lightBlue"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"Neural Network"
+	Location		[480, 93, 1016, 386]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "x{1}"
+	  SID			  324
+	  Position		  [40, 40, 60, 60]
+	  BackgroundColor	  "magenta"
+	  IconDisplay		  "Port number"
+	  PortDimensions	  "2"
+	  SampleTime		  "1"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  " a{1} "
+	  SID			  325
+	  Position		  [40, 120, 60, 140]
+	  GotoTag		  "feedback1"
+	  MaskDisplay		  "plot(cos(0:.1:2*pi),sin(0:.1:2*pi))"
+	  MaskIconFrame		  off
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  " a{2} "
+	  SID			  326
+	  Position		  [40, 160, 60, 180]
+	  GotoTag		  "feedback2"
+	  MaskDisplay		  "plot(cos(0:.1:2*pi),sin(0:.1:2*pi))"
+	  MaskIconFrame		  off
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Layer 1"
+	  SID			  327
+	  Ports			  [1, 1]
+	  Position		  [190, 40, 250, 60]
+	  BackgroundColor	  "lightBlue"
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "Layer 1"
+	    Location		    [480, 93, 1016, 386]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "p{1}"
+	      SID		      328
+	      Position		      [40, 40, 60, 60]
+	      BackgroundColor	      "magenta"
+	      IconDisplay	      "Port number"
+	      PortDimensions	      "2"
+	      SampleTime	      "1"
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Delays 1"
+	      SID		      329
+	      Ports		      [1, 1]
+	      Position		      [100, 40, 120, 60]
+	      BackgroundColor	      "lightBlue"
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      MaskDisplay	      "disp('TDL')"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      on
+	      MaskIconRotate	      "none"
+	      MaskPortRotate	      "default"
+	      MaskIconUnits	      "autoscale"
+	      System {
+		Name			"Delays 1"
+		Location		[480, 93, 1016, 386]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "p{1}"
+		  SID			  330
+		  Position		  [60, 40, 80, 60]
+		  BlockRotation		  270
+		  BlockMirror		  on
+		  BackgroundColor	  "magenta"
+		  NamePlacement		  "alternate"
+		  IconDisplay		  "Port number"
+		  PortDimensions	  "2"
+		  SampleTime		  "1"
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "mux"
+		  SID			  331
+		  Ports			  [1, 1]
+		  Position		  [200, 60, 240, 80]
+		  BackgroundColor	  "lightBlue"
+		  Inputs		  "1"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "pd{1,1}"
+		  SID			  332
+		  Position		  [300, 60, 320, 80]
+		  BackgroundColor	  "magenta"
+		  IconDisplay		  "Port number"
+		}
+		Line {
+		  SrcBlock		  "p{1}"
+		  SrcPort		  1
+		  DstBlock		  "mux"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "mux"
+		  SrcPort		  1
+		  DstBlock		  "pd{1,1}"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "IW{1,1}"
+	      SID		      333
+	      Ports		      [1, 1]
+	      Position		      [160, 40, 200, 60]
+	      BackgroundColor	      "lightBlue"
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      MaskDisplay	      "disp('weight')"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      on
+	      MaskIconRotate	      "none"
+	      MaskPortRotate	      "default"
+	      MaskIconUnits	      "autoscale"
+	      System {
+		Name			"IW{1,1}"
+		Location		[480, 93, 1016, 386]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "pd{1,1}"
+		  SID			  334
+		  Position		  [40, 330, 60, 350]
+		  BackgroundColor	  "magenta"
+		  IconDisplay		  "Port number"
+		  PortDimensions	  "2"
+		  SampleTime		  "1"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "IW{1,1}(1,:)'"
+		  SID			  335
+		  Position		  [140, 40, 180, 60]
+		  BackgroundColor	  "lightBlue"
+		  Value			  "[-59.679360375161757;-4.8111786171684079]"
+		  MaskDisplay		  "disp('weights')"
+		  MaskIconFrame		  on
+		  MaskIconOpaque	  on
+		  MaskIconRotate	  "none"
+		  MaskPortRotate	  "default"
+		  MaskIconUnits		  "autoscale"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "IW{1,1}(10,:)'"
+		  SID			  336
+		  Position		  [140, 580, 180, 600]
+		  BackgroundColor	  "lightBlue"
+		  Value			  "[8.2725481721899286;5.0327508067740778]"
+		  MaskDisplay		  "disp('weights')"
+		  MaskIconFrame		  on
+		  MaskIconOpaque	  on
+		  MaskIconRotate	  "none"
+		  MaskPortRotate	  "default"
+		  MaskIconUnits		  "autoscale"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "IW{1,1}(2,:)'"
+		  SID			  337
+		  Position		  [140, 100, 180, 120]
+		  BackgroundColor	  "lightBlue"
+		  Value			  "[18.205840117067901;5.9058291423514095]"
+		  MaskDisplay		  "disp('weights')"
+		  MaskIconFrame		  on
+		  MaskIconOpaque	  on
+		  MaskIconRotate	  "none"
+		  MaskPortRotate	  "default"
+		  MaskIconUnits		  "autoscale"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "IW{1,1}(3,:)'"
+		  SID			  338
+		  Position		  [140, 160, 180, 180]
+		  BackgroundColor	  "lightBlue"
+		  Value			  "[12.26124921081548;-38.296639443322178]"
+		  MaskDisplay		  "disp('weights')"
+		  MaskIconFrame		  on
+		  MaskIconOpaque	  on
+		  MaskIconRotate	  "none"
+		  MaskPortRotate	  "default"
+		  MaskIconUnits		  "autoscale"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "IW{1,1}(4,:)'"
+		  SID			  339
+		  Position		  [140, 220, 180, 240]
+		  BackgroundColor	  "lightBlue"
+		  Value			  "[57.318936140845892;31.62733045906155]"
+		  MaskDisplay		  "disp('weights')"
+		  MaskIconFrame		  on
+		  MaskIconOpaque	  on
+		  MaskIconRotate	  "none"
+		  MaskPortRotate	  "default"
+		  MaskIconUnits		  "autoscale"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "IW{1,1}(5,:)'"
+		  SID			  340
+		  Position		  [140, 280, 180, 300]
+		  BackgroundColor	  "lightBlue"
+		  Value			  "[79.966910841416151;7.5822271987457865]"
+		  MaskDisplay		  "disp('weights')"
+		  MaskIconFrame		  on
+		  MaskIconOpaque	  on
+		  MaskIconRotate	  "none"
+		  MaskPortRotate	  "default"
+		  MaskIconUnits		  "autoscale"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "IW{1,1}(6,:)'"
+		  SID			  341
+		  Position		  [140, 340, 180, 360]
+		  BackgroundColor	  "lightBlue"
+		  Value			  "[5.2025971547884202;3.5113921836752238]"
+		  MaskDisplay		  "disp('weights')"
+		  MaskIconFrame		  on
+		  MaskIconOpaque	  on
+		  MaskIconRotate	  "none"
+		  MaskPortRotate	  "default"
+		  MaskIconUnits		  "autoscale"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "IW{1,1}(7,:)'"
+		  SID			  342
+		  Position		  [140, 400, 180, 420]
+		  BackgroundColor	  "lightBlue"
+		  Value			  "[21.355087097600556;-11.678516741269773]"
+		  MaskDisplay		  "disp('weights')"
+		  MaskIconFrame		  on
+		  MaskIconOpaque	  on
+		  MaskIconRotate	  "none"
+		  MaskPortRotate	  "default"
+		  MaskIconUnits		  "autoscale"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "IW{1,1}(8,:)'"
+		  SID			  343
+		  Position		  [140, 460, 180, 480]
+		  BackgroundColor	  "lightBlue"
+		  Value			  "[72.17693056814872;-24.423507323515931]"
+		  MaskDisplay		  "disp('weights')"
+		  MaskIconFrame		  on
+		  MaskIconOpaque	  on
+		  MaskIconRotate	  "none"
+		  MaskPortRotate	  "default"
+		  MaskIconUnits		  "autoscale"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "IW{1,1}(9,:)'"
+		  SID			  344
+		  Position		  [140, 520, 180, 540]
+		  BackgroundColor	  "lightBlue"
+		  Value			  "[0.048606894072706332;12.298129220452573]"
+		  MaskDisplay		  "disp('weights')"
+		  MaskIconFrame		  on
+		  MaskIconOpaque	  on
+		  MaskIconRotate	  "none"
+		  MaskPortRotate	  "default"
+		  MaskIconUnits		  "autoscale"
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux"
+		  SID			  345
+		  Ports			  [10, 1]
+		  Position		  [340, 320, 380, 365]
+		  Inputs		  "10"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "dotprod1"
+		  SID			  346
+		  Ports			  [2, 1]
+		  Position		  [240, 40, 260, 80]
+		  BackgroundColor	  "lightBlue"
+		  LibraryVersion	  "1.36"
+		  SourceBlock		  "neural/Weight Functions/dotprod"
+		  SourceType		  ""
+		  ShowPortLabels	  "FromPortIcon"
+		  SystemSampleTime	  "-1"
+		  FunctionWithSeparateData off
+		  RTWMemSecFuncInitTerm	  "Inherit from model"
+		  RTWMemSecFuncExecute	  "Inherit from model"
+		  RTWMemSecDataConstants  "Inherit from model"
+		  RTWMemSecDataInternal	  "Inherit from model"
+		  RTWMemSecDataParameters "Inherit from model"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "dotprod10"
+		  SID			  347
+		  Ports			  [2, 1]
+		  Position		  [240, 580, 260, 620]
+		  BackgroundColor	  "lightBlue"
+		  LibraryVersion	  "1.36"
+		  SourceBlock		  "neural/Weight Functions/dotprod"
+		  SourceType		  ""
+		  ShowPortLabels	  "FromPortIcon"
+		  SystemSampleTime	  "-1"
+		  FunctionWithSeparateData off
+		  RTWMemSecFuncInitTerm	  "Inherit from model"
+		  RTWMemSecFuncExecute	  "Inherit from model"
+		  RTWMemSecDataConstants  "Inherit from model"
+		  RTWMemSecDataInternal	  "Inherit from model"
+		  RTWMemSecDataParameters "Inherit from model"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "dotprod2"
+		  SID			  348
+		  Ports			  [2, 1]
+		  Position		  [240, 100, 260, 140]
+		  BackgroundColor	  "lightBlue"
+		  LibraryVersion	  "1.36"
+		  SourceBlock		  "neural/Weight Functions/dotprod"
+		  SourceType		  ""
+		  ShowPortLabels	  "FromPortIcon"
+		  SystemSampleTime	  "-1"
+		  FunctionWithSeparateData off
+		  RTWMemSecFuncInitTerm	  "Inherit from model"
+		  RTWMemSecFuncExecute	  "Inherit from model"
+		  RTWMemSecDataConstants  "Inherit from model"
+		  RTWMemSecDataInternal	  "Inherit from model"
+		  RTWMemSecDataParameters "Inherit from model"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "dotprod3"
+		  SID			  349
+		  Ports			  [2, 1]
+		  Position		  [240, 160, 260, 200]
+		  BackgroundColor	  "lightBlue"
+		  LibraryVersion	  "1.36"
+		  SourceBlock		  "neural/Weight Functions/dotprod"
+		  SourceType		  ""
+		  ShowPortLabels	  "FromPortIcon"
+		  SystemSampleTime	  "-1"
+		  FunctionWithSeparateData off
+		  RTWMemSecFuncInitTerm	  "Inherit from model"
+		  RTWMemSecFuncExecute	  "Inherit from model"
+		  RTWMemSecDataConstants  "Inherit from model"
+		  RTWMemSecDataInternal	  "Inherit from model"
+		  RTWMemSecDataParameters "Inherit from model"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "dotprod4"
+		  SID			  350
+		  Ports			  [2, 1]
+		  Position		  [240, 220, 260, 260]
+		  BackgroundColor	  "lightBlue"
+		  LibraryVersion	  "1.36"
+		  SourceBlock		  "neural/Weight Functions/dotprod"
+		  SourceType		  ""
+		  ShowPortLabels	  "FromPortIcon"
+		  SystemSampleTime	  "-1"
+		  FunctionWithSeparateData off
+		  RTWMemSecFuncInitTerm	  "Inherit from model"
+		  RTWMemSecFuncExecute	  "Inherit from model"
+		  RTWMemSecDataConstants  "Inherit from model"
+		  RTWMemSecDataInternal	  "Inherit from model"
+		  RTWMemSecDataParameters "Inherit from model"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "dotprod5"
+		  SID			  351
+		  Ports			  [2, 1]
+		  Position		  [240, 280, 260, 320]
+		  BackgroundColor	  "lightBlue"
+		  LibraryVersion	  "1.36"
+		  SourceBlock		  "neural/Weight Functions/dotprod"
+		  SourceType		  ""
+		  ShowPortLabels	  "FromPortIcon"
+		  SystemSampleTime	  "-1"
+		  FunctionWithSeparateData off
+		  RTWMemSecFuncInitTerm	  "Inherit from model"
+		  RTWMemSecFuncExecute	  "Inherit from model"
+		  RTWMemSecDataConstants  "Inherit from model"
+		  RTWMemSecDataInternal	  "Inherit from model"
+		  RTWMemSecDataParameters "Inherit from model"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "dotprod6"
+		  SID			  352
+		  Ports			  [2, 1]
+		  Position		  [240, 340, 260, 380]
+		  BackgroundColor	  "lightBlue"
+		  LibraryVersion	  "1.36"
+		  SourceBlock		  "neural/Weight Functions/dotprod"
+		  SourceType		  ""
+		  ShowPortLabels	  "FromPortIcon"
+		  SystemSampleTime	  "-1"
+		  FunctionWithSeparateData off
+		  RTWMemSecFuncInitTerm	  "Inherit from model"
+		  RTWMemSecFuncExecute	  "Inherit from model"
+		  RTWMemSecDataConstants  "Inherit from model"
+		  RTWMemSecDataInternal	  "Inherit from model"
+		  RTWMemSecDataParameters "Inherit from model"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "dotprod7"
+		  SID			  353
+		  Ports			  [2, 1]
+		  Position		  [240, 400, 260, 440]
+		  BackgroundColor	  "lightBlue"
+		  LibraryVersion	  "1.36"
+		  SourceBlock		  "neural/Weight Functions/dotprod"
+		  SourceType		  ""
+		  ShowPortLabels	  "FromPortIcon"
+		  SystemSampleTime	  "-1"
+		  FunctionWithSeparateData off
+		  RTWMemSecFuncInitTerm	  "Inherit from model"
+		  RTWMemSecFuncExecute	  "Inherit from model"
+		  RTWMemSecDataConstants  "Inherit from model"
+		  RTWMemSecDataInternal	  "Inherit from model"
+		  RTWMemSecDataParameters "Inherit from model"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "dotprod8"
+		  SID			  354
+		  Ports			  [2, 1]
+		  Position		  [240, 460, 260, 500]
+		  BackgroundColor	  "lightBlue"
+		  LibraryVersion	  "1.36"
+		  SourceBlock		  "neural/Weight Functions/dotprod"
+		  SourceType		  ""
+		  ShowPortLabels	  "FromPortIcon"
+		  SystemSampleTime	  "-1"
+		  FunctionWithSeparateData off
+		  RTWMemSecFuncInitTerm	  "Inherit from model"
+		  RTWMemSecFuncExecute	  "Inherit from model"
+		  RTWMemSecDataConstants  "Inherit from model"
+		  RTWMemSecDataInternal	  "Inherit from model"
+		  RTWMemSecDataParameters "Inherit from model"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "dotprod9"
+		  SID			  355
+		  Ports			  [2, 1]
+		  Position		  [240, 520, 260, 560]
+		  BackgroundColor	  "lightBlue"
+		  LibraryVersion	  "1.36"
+		  SourceBlock		  "neural/Weight Functions/dotprod"
+		  SourceType		  ""
+		  ShowPortLabels	  "FromPortIcon"
+		  SystemSampleTime	  "-1"
+		  FunctionWithSeparateData off
+		  RTWMemSecFuncInitTerm	  "Inherit from model"
+		  RTWMemSecFuncExecute	  "Inherit from model"
+		  RTWMemSecDataConstants  "Inherit from model"
+		  RTWMemSecDataInternal	  "Inherit from model"
+		  RTWMemSecDataParameters "Inherit from model"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "iz{1,1}"
+		  SID			  356
+		  Position		  [420, 330, 440, 350]
+		  BackgroundColor	  "magenta"
+		  IconDisplay		  "Port number"
+		}
+		Line {
+		  SrcBlock		  "IW{1,1}(1,:)'"
+		  SrcPort		  1
+		  DstBlock		  "dotprod1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "pd{1,1}"
+		  SrcPort		  1
+		  Points		  [0, 0]
+		  Branch {
+		    DstBlock		    "dotprod1"
+		    DstPort		    2
+		  }
+		  Branch {
+		    DstBlock		    "dotprod2"
+		    DstPort		    2
+		  }
+		  Branch {
+		    DstBlock		    "dotprod3"
+		    DstPort		    2
+		  }
+		  Branch {
+		    DstBlock		    "dotprod4"
+		    DstPort		    2
+		  }
+		  Branch {
+		    DstBlock		    "dotprod5"
+		    DstPort		    2
+		  }
+		  Branch {
+		    DstBlock		    "dotprod6"
+		    DstPort		    2
+		  }
+		  Branch {
+		    DstBlock		    "dotprod7"
+		    DstPort		    2
+		  }
+		  Branch {
+		    DstBlock		    "dotprod8"
+		    DstPort		    2
+		  }
+		  Branch {
+		    DstBlock		    "dotprod9"
+		    DstPort		    2
+		  }
+		  Branch {
+		    DstBlock		    "dotprod10"
+		    DstPort		    2
+		  }
+		}
+		Line {
+		  SrcBlock		  "dotprod1"
+		  SrcPort		  1
+		  DstBlock		  "Mux"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "IW{1,1}(2,:)'"
+		  SrcPort		  1
+		  DstBlock		  "dotprod2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "dotprod2"
+		  SrcPort		  1
+		  DstBlock		  "Mux"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "IW{1,1}(3,:)'"
+		  SrcPort		  1
+		  DstBlock		  "dotprod3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "dotprod3"
+		  SrcPort		  1
+		  DstBlock		  "Mux"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "IW{1,1}(4,:)'"
+		  SrcPort		  1
+		  DstBlock		  "dotprod4"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "dotprod4"
+		  SrcPort		  1
+		  DstBlock		  "Mux"
+		  DstPort		  4
+		}
+		Line {
+		  SrcBlock		  "IW{1,1}(5,:)'"
+		  SrcPort		  1
+		  DstBlock		  "dotprod5"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "dotprod5"
+		  SrcPort		  1
+		  DstBlock		  "Mux"
+		  DstPort		  5
+		}
+		Line {
+		  SrcBlock		  "IW{1,1}(6,:)'"
+		  SrcPort		  1
+		  DstBlock		  "dotprod6"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "dotprod6"
+		  SrcPort		  1
+		  DstBlock		  "Mux"
+		  DstPort		  6
+		}
+		Line {
+		  SrcBlock		  "IW{1,1}(7,:)'"
+		  SrcPort		  1
+		  DstBlock		  "dotprod7"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "dotprod7"
+		  SrcPort		  1
+		  DstBlock		  "Mux"
+		  DstPort		  7
+		}
+		Line {
+		  SrcBlock		  "IW{1,1}(8,:)'"
+		  SrcPort		  1
+		  DstBlock		  "dotprod8"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "dotprod8"
+		  SrcPort		  1
+		  DstBlock		  "Mux"
+		  DstPort		  8
+		}
+		Line {
+		  SrcBlock		  "IW{1,1}(9,:)'"
+		  SrcPort		  1
+		  DstBlock		  "dotprod9"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "dotprod9"
+		  SrcPort		  1
+		  DstBlock		  "Mux"
+		  DstPort		  9
+		}
+		Line {
+		  SrcBlock		  "IW{1,1}(10,:)'"
+		  SrcPort		  1
+		  DstBlock		  "dotprod10"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "dotprod10"
+		  SrcPort		  1
+		  DstBlock		  "Mux"
+		  DstPort		  10
+		}
+		Line {
+		  SrcBlock		  "Mux"
+		  SrcPort		  1
+		  DstBlock		  "iz{1,1}"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "b{1}"
+	      SID		      357
+	      Position		      [160, 80, 200, 100]
+	      BackgroundColor	      "lightBlue"
+	      Value		      "[-41.600663462015341;-13.867070844846031;-1.0368982298681877;-25.663752606811631;65.0287960996807"
+	      "04;3.5608850337005888;6.4712500253222389;61.743011559162341;7.1136119483346736;9.914776981395935]"
+	      MaskDisplay	      "disp('bias')"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      on
+	      MaskIconRotate	      "none"
+	      MaskPortRotate	      "default"
+	      MaskIconUnits	      "autoscale"
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "netsum"
+	      SID		      358
+	      Ports		      [2, 1]
+	      Position		      [240, 60, 260, 80]
+	      BackgroundColor	      "lightBlue"
+	      Inputs		      "2"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "tansig"
+	      SID		      359
+	      Ports		      [1, 1]
+	      Position		      [300, 60, 320, 80]
+	      BackgroundColor	      "lightBlue"
+	      LibraryVersion	      "1.36"
+	      SourceBlock	      "neural/Transfer Functions/tansig"
+	      SourceType	      ""
+	      ShowPortLabels	      "FromPortIcon"
+	      SystemSampleTime	      "-1"
+	      FunctionWithSeparateData off
+	      RTWMemSecFuncInitTerm   "Inherit from model"
+	      RTWMemSecFuncExecute    "Inherit from model"
+	      RTWMemSecDataConstants  "Inherit from model"
+	      RTWMemSecDataInternal   "Inherit from model"
+	      RTWMemSecDataParameters "Inherit from model"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "a{1}"
+	      SID		      360
+	      Position		      [360, 60, 380, 80]
+	      BackgroundColor	      "magenta"
+	      IconDisplay	      "Port number"
+	      InitialOutput	      "[0;0;0;0;0;0;0;0;0;0]"
+	    }
+	    Line {
+	      SrcBlock		      "p{1}"
+	      SrcPort		      1
+	      DstBlock		      "Delays 1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Delays 1"
+	      SrcPort		      1
+	      DstBlock		      "IW{1,1}"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "IW{1,1}"
+	      SrcPort		      1
+	      DstBlock		      "netsum"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "b{1}"
+	      SrcPort		      1
+	      DstBlock		      "netsum"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "netsum"
+	      SrcPort		      1
+	      DstBlock		      "tansig"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "tansig"
+	      SrcPort		      1
+	      DstBlock		      "a{1}"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Layer 2"
+	  SID			  361
+	  Ports			  [1, 1]
+	  Position		  [190, 80, 250, 100]
+	  BackgroundColor	  "lightBlue"
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "Layer 2"
+	    Location		    [480, 93, 1016, 386]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "a{1} "
+	      SID		      362
+	      Position		      [40, 40, 60, 60]
+	      BackgroundColor	      "magenta"
+	      IconDisplay	      "Port number"
+	      PortDimensions	      "10"
+	      SampleTime	      "1"
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Delays 1"
+	      SID		      363
+	      Ports		      [1, 1]
+	      Position		      [100, 40, 120, 60]
+	      BackgroundColor	      "lightBlue"
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      MaskDisplay	      "disp('TDL')"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      on
+	      MaskIconRotate	      "none"
+	      MaskPortRotate	      "default"
+	      MaskIconUnits	      "autoscale"
+	      System {
+		Name			"Delays 1"
+		Location		[480, 93, 1016, 386]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "p{2}"
+		  SID			  364
+		  Position		  [60, 40, 80, 60]
+		  BlockRotation		  270
+		  BlockMirror		  on
+		  BackgroundColor	  "magenta"
+		  NamePlacement		  "alternate"
+		  IconDisplay		  "Port number"
+		  PortDimensions	  "10"
+		  SampleTime		  "1"
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "mux"
+		  SID			  365
+		  Ports			  [1, 1]
+		  Position		  [200, 60, 240, 80]
+		  BackgroundColor	  "lightBlue"
+		  Inputs		  "1"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "pd{2,1}"
+		  SID			  366
+		  Position		  [300, 60, 320, 80]
+		  BackgroundColor	  "magenta"
+		  IconDisplay		  "Port number"
+		}
+		Line {
+		  SrcBlock		  "p{2}"
+		  SrcPort		  1
+		  DstBlock		  "mux"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "mux"
+		  SrcPort		  1
+		  DstBlock		  "pd{2,1}"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "LW{2,1}"
+	      SID		      367
+	      Ports		      [1, 1]
+	      Position		      [160, 40, 200, 60]
+	      BackgroundColor	      "lightBlue"
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      MaskDisplay	      "disp('weight')"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      on
+	      MaskIconRotate	      "none"
+	      MaskPortRotate	      "default"
+	      MaskIconUnits	      "autoscale"
+	      System {
+		Name			"LW{2,1}"
+		Location		[480, 93, 1016, 386]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "ad{2,1}"
+		  SID			  368
+		  Position		  [40, 330, 60, 350]
+		  BackgroundColor	  "magenta"
+		  IconDisplay		  "Port number"
+		  PortDimensions	  "10"
+		  SampleTime		  "1"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "IW{2,1}(1,:)'"
+		  SID			  369
+		  Position		  [140, 40, 180, 60]
+		  BackgroundColor	  "lightBlue"
+		  Value			  "[21.443354619468462;-1.3006422170219611;7.8955057727334754;-4.7979796157139463;-25.898773850093161;-3.1"
+		  "265477241198587;-33.886964502007594;7.8665509727248129;5.0238934577656122;-9.5970801855898298]"
+		  MaskDisplay		  "disp('weights')"
+		  MaskIconFrame		  on
+		  MaskIconOpaque	  on
+		  MaskIconRotate	  "none"
+		  MaskPortRotate	  "default"
+		  MaskIconUnits		  "autoscale"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "IW{2,1}(10,:)'"
+		  SID			  370
+		  Position		  [140, 580, 180, 600]
+		  BackgroundColor	  "lightBlue"
+		  Value			  "[-14.238547593274664;42.105928129329328;-77.196582677683395;-27.448455327920765;38.673784847710017;75.5"
+		  "47984645249272;66.867314859757926;26.392337906608308;-6.9796643502251374;16.253575711879545]"
+		  MaskDisplay		  "disp('weights')"
+		  MaskIconFrame		  on
+		  MaskIconOpaque	  on
+		  MaskIconRotate	  "none"
+		  MaskPortRotate	  "default"
+		  MaskIconUnits		  "autoscale"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "IW{2,1}(2,:)'"
+		  SID			  371
+		  Position		  [140, 100, 180, 120]
+		  BackgroundColor	  "lightBlue"
+		  Value			  "[-32.962392075897931;-20.153864455929828;-9.7633107877471623;39.465729228039216;-9.5385756012289811;-72"
+		  ".215836359371636;5.1870396695462837;17.760679452039696;-62.831055912876309;-4.2965705268645538]"
+		  MaskDisplay		  "disp('weights')"
+		  MaskIconFrame		  on
+		  MaskIconOpaque	  on
+		  MaskIconRotate	  "none"
+		  MaskPortRotate	  "default"
+		  MaskIconUnits		  "autoscale"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "IW{2,1}(3,:)'"
+		  SID			  372
+		  Position		  [140, 160, 180, 180]
+		  BackgroundColor	  "lightBlue"
+		  Value			  "[-0.93925917415433302;-2.1121683627624659;18.321533288736973;-2.1121350388538596;-32.64063375843083;-0."
+		  "082227510725482206;-0.053308046914458243;2.1867023554264611;-1.8934095863755567;-3.5080978044898292]"
+		  MaskDisplay		  "disp('weights')"
+		  MaskIconFrame		  on
+		  MaskIconOpaque	  on
+		  MaskIconRotate	  "none"
+		  MaskPortRotate	  "default"
+		  MaskIconUnits		  "autoscale"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "IW{2,1}(4,:)'"
+		  SID			  373
+		  Position		  [140, 220, 180, 240]
+		  BackgroundColor	  "lightBlue"
+		  Value			  "[-4.5575332687997614;6.564948030885378;6.2249388677457649;-12.19791938596962;8.7687324360660952;13.2984"
+		  "88776720923;1.1606561206397161;7.0780288866158694;-1.7261832076371659;-9.3462026761567856]"
+		  MaskDisplay		  "disp('weights')"
+		  MaskIconFrame		  on
+		  MaskIconOpaque	  on
+		  MaskIconRotate	  "none"
+		  MaskPortRotate	  "default"
+		  MaskIconUnits		  "autoscale"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "IW{2,1}(5,:)'"
+		  SID			  374
+		  Position		  [140, 280, 180, 300]
+		  BackgroundColor	  "lightBlue"
+		  Value			  "[19.954541699244142;-82.519813861266172;7.5863885346027748;17.78262506166444;35.871696191680805;-4.3259"
+		  "342125193072;7.9743771576504381;-19.930082687281338;5.6241815886969349;7.3477252968242706]"
+		  MaskDisplay		  "disp('weights')"
+		  MaskIconFrame		  on
+		  MaskIconOpaque	  on
+		  MaskIconRotate	  "none"
+		  MaskPortRotate	  "default"
+		  MaskIconUnits		  "autoscale"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "IW{2,1}(6,:)'"
+		  SID			  375
+		  Position		  [140, 340, 180, 360]
+		  BackgroundColor	  "lightBlue"
+		  Value			  "[3.1304242177289074;-34.579832915356235;2.9437994208273297;8.865101748692048;5.2342992632779382;-11.465"
+		  "825065558862;2.4837998140417357;-2.2714157367541423;-3.2081770594202146;5.9689722809848051]"
+		  MaskDisplay		  "disp('weights')"
+		  MaskIconFrame		  on
+		  MaskIconOpaque	  on
+		  MaskIconRotate	  "none"
+		  MaskPortRotate	  "default"
+		  MaskIconUnits		  "autoscale"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "IW{2,1}(7,:)'"
+		  SID			  376
+		  Position		  [140, 400, 180, 420]
+		  BackgroundColor	  "lightBlue"
+		  Value			  "[24.642815187128299;-21.698895502716027;-5.2629617573667575;17.413853751335953;-33.363267640689564;104."
+		  "84978734729668;-18.080830187475989;-19.048008231174531;50.250486908270815;20.138044565360087]"
+		  MaskDisplay		  "disp('weights')"
+		  MaskIconFrame		  on
+		  MaskIconOpaque	  on
+		  MaskIconRotate	  "none"
+		  MaskPortRotate	  "default"
+		  MaskIconUnits		  "autoscale"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "IW{2,1}(8,:)'"
+		  SID			  377
+		  Position		  [140, 460, 180, 480]
+		  BackgroundColor	  "lightBlue"
+		  Value			  "[2.0597818187068966;-0.31382842787036613;-0.0050154807493239589;0.13974099503462253;0.99054211211615395"
+		  ";-0.18124225565312488;0.41232083732936464;-1.8036724102957487;-5.0426437994966982;0.50734031052215978]"
+		  MaskDisplay		  "disp('weights')"
+		  MaskIconFrame		  on
+		  MaskIconOpaque	  on
+		  MaskIconRotate	  "none"
+		  MaskPortRotate	  "default"
+		  MaskIconUnits		  "autoscale"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "IW{2,1}(9,:)'"
+		  SID			  378
+		  Position		  [140, 520, 180, 540]
+		  BackgroundColor	  "lightBlue"
+		  Value			  "[21.527091006027007;-7.8145360671285333;4.9067209119409743;15.62613610401363;136.61659342280001;-20.511"
+		  "573746758557;-11.485462041142192;-49.047173900407266;-2.3604346155640461;2.8436829272729147]"
+		  MaskDisplay		  "disp('weights')"
+		  MaskIconFrame		  on
+		  MaskIconOpaque	  on
+		  MaskIconRotate	  "none"
+		  MaskPortRotate	  "default"
+		  MaskIconUnits		  "autoscale"
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux"
+		  SID			  379
+		  Ports			  [10, 1]
+		  Position		  [340, 320, 380, 365]
+		  Inputs		  "10"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "dotprod1"
+		  SID			  380
+		  Ports			  [2, 1]
+		  Position		  [240, 40, 260, 80]
+		  BackgroundColor	  "lightBlue"
+		  LibraryVersion	  "1.36"
+		  SourceBlock		  "neural/Weight Functions/dotprod"
+		  SourceType		  ""
+		  ShowPortLabels	  "FromPortIcon"
+		  SystemSampleTime	  "-1"
+		  FunctionWithSeparateData off
+		  RTWMemSecFuncInitTerm	  "Inherit from model"
+		  RTWMemSecFuncExecute	  "Inherit from model"
+		  RTWMemSecDataConstants  "Inherit from model"
+		  RTWMemSecDataInternal	  "Inherit from model"
+		  RTWMemSecDataParameters "Inherit from model"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "dotprod10"
+		  SID			  381
+		  Ports			  [2, 1]
+		  Position		  [240, 580, 260, 620]
+		  BackgroundColor	  "lightBlue"
+		  LibraryVersion	  "1.36"
+		  SourceBlock		  "neural/Weight Functions/dotprod"
+		  SourceType		  ""
+		  ShowPortLabels	  "FromPortIcon"
+		  SystemSampleTime	  "-1"
+		  FunctionWithSeparateData off
+		  RTWMemSecFuncInitTerm	  "Inherit from model"
+		  RTWMemSecFuncExecute	  "Inherit from model"
+		  RTWMemSecDataConstants  "Inherit from model"
+		  RTWMemSecDataInternal	  "Inherit from model"
+		  RTWMemSecDataParameters "Inherit from model"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "dotprod2"
+		  SID			  382
+		  Ports			  [2, 1]
+		  Position		  [240, 100, 260, 140]
+		  BackgroundColor	  "lightBlue"
+		  LibraryVersion	  "1.36"
+		  SourceBlock		  "neural/Weight Functions/dotprod"
+		  SourceType		  ""
+		  ShowPortLabels	  "FromPortIcon"
+		  SystemSampleTime	  "-1"
+		  FunctionWithSeparateData off
+		  RTWMemSecFuncInitTerm	  "Inherit from model"
+		  RTWMemSecFuncExecute	  "Inherit from model"
+		  RTWMemSecDataConstants  "Inherit from model"
+		  RTWMemSecDataInternal	  "Inherit from model"
+		  RTWMemSecDataParameters "Inherit from model"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "dotprod3"
+		  SID			  383
+		  Ports			  [2, 1]
+		  Position		  [240, 160, 260, 200]
+		  BackgroundColor	  "lightBlue"
+		  LibraryVersion	  "1.36"
+		  SourceBlock		  "neural/Weight Functions/dotprod"
+		  SourceType		  ""
+		  ShowPortLabels	  "FromPortIcon"
+		  SystemSampleTime	  "-1"
+		  FunctionWithSeparateData off
+		  RTWMemSecFuncInitTerm	  "Inherit from model"
+		  RTWMemSecFuncExecute	  "Inherit from model"
+		  RTWMemSecDataConstants  "Inherit from model"
+		  RTWMemSecDataInternal	  "Inherit from model"
+		  RTWMemSecDataParameters "Inherit from model"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "dotprod4"
+		  SID			  384
+		  Ports			  [2, 1]
+		  Position		  [240, 220, 260, 260]
+		  BackgroundColor	  "lightBlue"
+		  LibraryVersion	  "1.36"
+		  SourceBlock		  "neural/Weight Functions/dotprod"
+		  SourceType		  ""
+		  ShowPortLabels	  "FromPortIcon"
+		  SystemSampleTime	  "-1"
+		  FunctionWithSeparateData off
+		  RTWMemSecFuncInitTerm	  "Inherit from model"
+		  RTWMemSecFuncExecute	  "Inherit from model"
+		  RTWMemSecDataConstants  "Inherit from model"
+		  RTWMemSecDataInternal	  "Inherit from model"
+		  RTWMemSecDataParameters "Inherit from model"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "dotprod5"
+		  SID			  385
+		  Ports			  [2, 1]
+		  Position		  [240, 280, 260, 320]
+		  BackgroundColor	  "lightBlue"
+		  LibraryVersion	  "1.36"
+		  SourceBlock		  "neural/Weight Functions/dotprod"
+		  SourceType		  ""
+		  ShowPortLabels	  "FromPortIcon"
+		  SystemSampleTime	  "-1"
+		  FunctionWithSeparateData off
+		  RTWMemSecFuncInitTerm	  "Inherit from model"
+		  RTWMemSecFuncExecute	  "Inherit from model"
+		  RTWMemSecDataConstants  "Inherit from model"
+		  RTWMemSecDataInternal	  "Inherit from model"
+		  RTWMemSecDataParameters "Inherit from model"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "dotprod6"
+		  SID			  386
+		  Ports			  [2, 1]
+		  Position		  [240, 340, 260, 380]
+		  BackgroundColor	  "lightBlue"
+		  LibraryVersion	  "1.36"
+		  SourceBlock		  "neural/Weight Functions/dotprod"
+		  SourceType		  ""
+		  ShowPortLabels	  "FromPortIcon"
+		  SystemSampleTime	  "-1"
+		  FunctionWithSeparateData off
+		  RTWMemSecFuncInitTerm	  "Inherit from model"
+		  RTWMemSecFuncExecute	  "Inherit from model"
+		  RTWMemSecDataConstants  "Inherit from model"
+		  RTWMemSecDataInternal	  "Inherit from model"
+		  RTWMemSecDataParameters "Inherit from model"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "dotprod7"
+		  SID			  387
+		  Ports			  [2, 1]
+		  Position		  [240, 400, 260, 440]
+		  BackgroundColor	  "lightBlue"
+		  LibraryVersion	  "1.36"
+		  SourceBlock		  "neural/Weight Functions/dotprod"
+		  SourceType		  ""
+		  ShowPortLabels	  "FromPortIcon"
+		  SystemSampleTime	  "-1"
+		  FunctionWithSeparateData off
+		  RTWMemSecFuncInitTerm	  "Inherit from model"
+		  RTWMemSecFuncExecute	  "Inherit from model"
+		  RTWMemSecDataConstants  "Inherit from model"
+		  RTWMemSecDataInternal	  "Inherit from model"
+		  RTWMemSecDataParameters "Inherit from model"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "dotprod8"
+		  SID			  388
+		  Ports			  [2, 1]
+		  Position		  [240, 460, 260, 500]
+		  BackgroundColor	  "lightBlue"
+		  LibraryVersion	  "1.36"
+		  SourceBlock		  "neural/Weight Functions/dotprod"
+		  SourceType		  ""
+		  ShowPortLabels	  "FromPortIcon"
+		  SystemSampleTime	  "-1"
+		  FunctionWithSeparateData off
+		  RTWMemSecFuncInitTerm	  "Inherit from model"
+		  RTWMemSecFuncExecute	  "Inherit from model"
+		  RTWMemSecDataConstants  "Inherit from model"
+		  RTWMemSecDataInternal	  "Inherit from model"
+		  RTWMemSecDataParameters "Inherit from model"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "dotprod9"
+		  SID			  389
+		  Ports			  [2, 1]
+		  Position		  [240, 520, 260, 560]
+		  BackgroundColor	  "lightBlue"
+		  LibraryVersion	  "1.36"
+		  SourceBlock		  "neural/Weight Functions/dotprod"
+		  SourceType		  ""
+		  ShowPortLabels	  "FromPortIcon"
+		  SystemSampleTime	  "-1"
+		  FunctionWithSeparateData off
+		  RTWMemSecFuncInitTerm	  "Inherit from model"
+		  RTWMemSecFuncExecute	  "Inherit from model"
+		  RTWMemSecDataConstants  "Inherit from model"
+		  RTWMemSecDataInternal	  "Inherit from model"
+		  RTWMemSecDataParameters "Inherit from model"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "lz{2,1}"
+		  SID			  390
+		  Position		  [420, 330, 440, 350]
+		  BackgroundColor	  "magenta"
+		  IconDisplay		  "Port number"
+		}
+		Line {
+		  SrcBlock		  "IW{2,1}(1,:)'"
+		  SrcPort		  1
+		  DstBlock		  "dotprod1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "ad{2,1}"
+		  SrcPort		  1
+		  Points		  [0, 0]
+		  Branch {
+		    DstBlock		    "dotprod1"
+		    DstPort		    2
+		  }
+		  Branch {
+		    DstBlock		    "dotprod2"
+		    DstPort		    2
+		  }
+		  Branch {
+		    DstBlock		    "dotprod3"
+		    DstPort		    2
+		  }
+		  Branch {
+		    DstBlock		    "dotprod4"
+		    DstPort		    2
+		  }
+		  Branch {
+		    DstBlock		    "dotprod5"
+		    DstPort		    2
+		  }
+		  Branch {
+		    DstBlock		    "dotprod6"
+		    DstPort		    2
+		  }
+		  Branch {
+		    DstBlock		    "dotprod7"
+		    DstPort		    2
+		  }
+		  Branch {
+		    DstBlock		    "dotprod8"
+		    DstPort		    2
+		  }
+		  Branch {
+		    DstBlock		    "dotprod9"
+		    DstPort		    2
+		  }
+		  Branch {
+		    DstBlock		    "dotprod10"
+		    DstPort		    2
+		  }
+		}
+		Line {
+		  SrcBlock		  "dotprod1"
+		  SrcPort		  1
+		  DstBlock		  "Mux"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "IW{2,1}(2,:)'"
+		  SrcPort		  1
+		  DstBlock		  "dotprod2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "dotprod2"
+		  SrcPort		  1
+		  DstBlock		  "Mux"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "IW{2,1}(3,:)'"
+		  SrcPort		  1
+		  DstBlock		  "dotprod3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "dotprod3"
+		  SrcPort		  1
+		  DstBlock		  "Mux"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "IW{2,1}(4,:)'"
+		  SrcPort		  1
+		  DstBlock		  "dotprod4"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "dotprod4"
+		  SrcPort		  1
+		  DstBlock		  "Mux"
+		  DstPort		  4
+		}
+		Line {
+		  SrcBlock		  "IW{2,1}(5,:)'"
+		  SrcPort		  1
+		  DstBlock		  "dotprod5"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "dotprod5"
+		  SrcPort		  1
+		  DstBlock		  "Mux"
+		  DstPort		  5
+		}
+		Line {
+		  SrcBlock		  "IW{2,1}(6,:)'"
+		  SrcPort		  1
+		  DstBlock		  "dotprod6"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "dotprod6"
+		  SrcPort		  1
+		  DstBlock		  "Mux"
+		  DstPort		  6
+		}
+		Line {
+		  SrcBlock		  "IW{2,1}(7,:)'"
+		  SrcPort		  1
+		  DstBlock		  "dotprod7"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "dotprod7"
+		  SrcPort		  1
+		  DstBlock		  "Mux"
+		  DstPort		  7
+		}
+		Line {
+		  SrcBlock		  "IW{2,1}(8,:)'"
+		  SrcPort		  1
+		  DstBlock		  "dotprod8"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "dotprod8"
+		  SrcPort		  1
+		  DstBlock		  "Mux"
+		  DstPort		  8
+		}
+		Line {
+		  SrcBlock		  "IW{2,1}(9,:)'"
+		  SrcPort		  1
+		  DstBlock		  "dotprod9"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "dotprod9"
+		  SrcPort		  1
+		  DstBlock		  "Mux"
+		  DstPort		  9
+		}
+		Line {
+		  SrcBlock		  "IW{2,1}(10,:)'"
+		  SrcPort		  1
+		  DstBlock		  "dotprod10"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "dotprod10"
+		  SrcPort		  1
+		  DstBlock		  "Mux"
+		  DstPort		  10
+		}
+		Line {
+		  SrcBlock		  "Mux"
+		  SrcPort		  1
+		  DstBlock		  "lz{2,1}"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "b{2}"
+	      SID		      391
+	      Position		      [160, 80, 200, 100]
+	      BackgroundColor	      "lightBlue"
+	      Value		      "[-7.6334542533188312;-15.605769004106929;9.5386103916769969;-0.097339973816270103;36.782799143926"
+	      "788;8.2018066341292926;15.153030458866333;4.2679298498601739;36.406304506237475;-27.6815954213113]"
+	      MaskDisplay	      "disp('bias')"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      on
+	      MaskIconRotate	      "none"
+	      MaskPortRotate	      "default"
+	      MaskIconUnits	      "autoscale"
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "netsum"
+	      SID		      392
+	      Ports		      [2, 1]
+	      Position		      [240, 60, 260, 80]
+	      BackgroundColor	      "lightBlue"
+	      Inputs		      "2"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "tansig"
+	      SID		      393
+	      Ports		      [1, 1]
+	      Position		      [300, 60, 320, 80]
+	      BackgroundColor	      "lightBlue"
+	      LibraryVersion	      "1.36"
+	      SourceBlock	      "neural/Transfer Functions/tansig"
+	      SourceType	      ""
+	      ShowPortLabels	      "FromPortIcon"
+	      SystemSampleTime	      "-1"
+	      FunctionWithSeparateData off
+	      RTWMemSecFuncInitTerm   "Inherit from model"
+	      RTWMemSecFuncExecute    "Inherit from model"
+	      RTWMemSecDataConstants  "Inherit from model"
+	      RTWMemSecDataInternal   "Inherit from model"
+	      RTWMemSecDataParameters "Inherit from model"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "a{2}"
+	      SID		      394
+	      Position		      [360, 60, 380, 80]
+	      BackgroundColor	      "magenta"
+	      IconDisplay	      "Port number"
+	      InitialOutput	      "[0;0;0;0;0;0;0;0;0;0]"
+	    }
+	    Line {
+	      SrcBlock		      "a{1} "
+	      SrcPort		      1
+	      DstBlock		      "Delays 1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Delays 1"
+	      SrcPort		      1
+	      DstBlock		      "LW{2,1}"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "LW{2,1}"
+	      SrcPort		      1
+	      DstBlock		      "netsum"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "b{2}"
+	      SrcPort		      1
+	      DstBlock		      "netsum"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "netsum"
+	      SrcPort		      1
+	      DstBlock		      "tansig"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "tansig"
+	      SrcPort		      1
+	      DstBlock		      "a{2}"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Layer 3"
+	  SID			  395
+	  Ports			  [1, 1]
+	  Position		  [190, 120, 250, 140]
+	  BackgroundColor	  "lightBlue"
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "Layer 3"
+	    Location		    [480, 93, 1016, 386]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "a{2} "
+	      SID		      396
+	      Position		      [40, 40, 60, 60]
+	      BackgroundColor	      "magenta"
+	      IconDisplay	      "Port number"
+	      PortDimensions	      "10"
+	      SampleTime	      "1"
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Delays 1"
+	      SID		      397
+	      Ports		      [1, 1]
+	      Position		      [100, 40, 120, 60]
+	      BackgroundColor	      "lightBlue"
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      MaskDisplay	      "disp('TDL')"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      on
+	      MaskIconRotate	      "none"
+	      MaskPortRotate	      "default"
+	      MaskIconUnits	      "autoscale"
+	      System {
+		Name			"Delays 1"
+		Location		[480, 93, 1016, 386]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "p{3}"
+		  SID			  398
+		  Position		  [60, 40, 80, 60]
+		  BlockRotation		  270
+		  BlockMirror		  on
+		  BackgroundColor	  "magenta"
+		  NamePlacement		  "alternate"
+		  IconDisplay		  "Port number"
+		  PortDimensions	  "10"
+		  SampleTime		  "1"
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "mux"
+		  SID			  399
+		  Ports			  [1, 1]
+		  Position		  [200, 60, 240, 80]
+		  BackgroundColor	  "lightBlue"
+		  Inputs		  "1"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "pd{3,2}"
+		  SID			  400
+		  Position		  [300, 60, 320, 80]
+		  BackgroundColor	  "magenta"
+		  IconDisplay		  "Port number"
+		}
+		Line {
+		  SrcBlock		  "p{3}"
+		  SrcPort		  1
+		  DstBlock		  "mux"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "mux"
+		  SrcPort		  1
+		  DstBlock		  "pd{3,2}"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "LW{3,2}"
+	      SID		      401
+	      Ports		      [1, 1]
+	      Position		      [160, 40, 200, 60]
+	      BackgroundColor	      "lightBlue"
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      MaskDisplay	      "disp('weight')"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      on
+	      MaskIconRotate	      "none"
+	      MaskPortRotate	      "default"
+	      MaskIconUnits	      "autoscale"
+	      System {
+		Name			"LW{3,2}"
+		Location		[480, 93, 1016, 386]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "ad{3,2}"
+		  SID			  402
+		  Position		  [40, 60, 60, 80]
+		  BackgroundColor	  "magenta"
+		  IconDisplay		  "Port number"
+		  PortDimensions	  "10"
+		  SampleTime		  "1"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "IW{3,2}(1,:)'"
+		  SID			  403
+		  Position		  [140, 40, 180, 60]
+		  BackgroundColor	  "lightBlue"
+		  Value			  "[-0.23946604895932105;-0.083078428122546871;-0.75357468216088375;-0.54738167813523653;-0.57905518422487"
+		  "101;0.052222389670158818;-0.015918502219387554;-0.3028157350192523;-0.41383242519324592;-0.082082221325478585]"
+		  MaskDisplay		  "disp('weights')"
+		  MaskIconFrame		  on
+		  MaskIconOpaque	  on
+		  MaskIconRotate	  "none"
+		  MaskPortRotate	  "default"
+		  MaskIconUnits		  "autoscale"
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux"
+		  SID			  404
+		  Ports			  [1, 1]
+		  Position		  [340, 60, 380, 80]
+		  Inputs		  "1"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "dotprod1"
+		  SID			  405
+		  Ports			  [2, 1]
+		  Position		  [240, 40, 260, 80]
+		  BackgroundColor	  "lightBlue"
+		  LibraryVersion	  "1.36"
+		  SourceBlock		  "neural/Weight Functions/dotprod"
+		  SourceType		  ""
+		  ShowPortLabels	  "FromPortIcon"
+		  SystemSampleTime	  "-1"
+		  FunctionWithSeparateData off
+		  RTWMemSecFuncInitTerm	  "Inherit from model"
+		  RTWMemSecFuncExecute	  "Inherit from model"
+		  RTWMemSecDataConstants  "Inherit from model"
+		  RTWMemSecDataInternal	  "Inherit from model"
+		  RTWMemSecDataParameters "Inherit from model"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "lz{3,2}"
+		  SID			  406
+		  Position		  [420, 60, 440, 80]
+		  BackgroundColor	  "magenta"
+		  IconDisplay		  "Port number"
+		}
+		Line {
+		  SrcBlock		  "IW{3,2}(1,:)'"
+		  SrcPort		  1
+		  DstBlock		  "dotprod1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "ad{3,2}"
+		  SrcPort		  1
+		  DstBlock		  "dotprod1"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "dotprod1"
+		  SrcPort		  1
+		  DstBlock		  "Mux"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Mux"
+		  SrcPort		  1
+		  DstBlock		  "lz{3,2}"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "b{3}"
+	      SID		      407
+	      Position		      [160, 80, 200, 100]
+	      BackgroundColor	      "lightBlue"
+	      Value		      "1.208879515859524"
+	      MaskDisplay	      "disp('bias')"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      on
+	      MaskIconRotate	      "none"
+	      MaskPortRotate	      "default"
+	      MaskIconUnits	      "autoscale"
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "netsum"
+	      SID		      408
+	      Ports		      [2, 1]
+	      Position		      [240, 60, 260, 80]
+	      BackgroundColor	      "lightBlue"
+	      Inputs		      "2"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "purelin"
+	      SID		      409
+	      Ports		      [1, 1]
+	      Position		      [300, 60, 320, 80]
+	      BackgroundColor	      "lightBlue"
+	      LibraryVersion	      "1.36"
+	      SourceBlock	      "neural/Transfer Functions/purelin"
+	      SourceType	      ""
+	      ShowPortLabels	      "FromPortIcon"
+	      SystemSampleTime	      "-1"
+	      FunctionWithSeparateData off
+	      RTWMemSecFuncInitTerm   "Inherit from model"
+	      RTWMemSecFuncExecute    "Inherit from model"
+	      RTWMemSecDataConstants  "Inherit from model"
+	      RTWMemSecDataInternal   "Inherit from model"
+	      RTWMemSecDataParameters "Inherit from model"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "a{3}"
+	      SID		      410
+	      Position		      [360, 60, 380, 80]
+	      BackgroundColor	      "magenta"
+	      IconDisplay	      "Port number"
+	      InitialOutput	      "0"
+	    }
+	    Line {
+	      SrcBlock		      "a{2} "
+	      SrcPort		      1
+	      DstBlock		      "Delays 1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Delays 1"
+	      SrcPort		      1
+	      DstBlock		      "LW{3,2}"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "LW{3,2}"
+	      SrcPort		      1
+	      DstBlock		      "netsum"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "b{3}"
+	      SrcPort		      1
+	      DstBlock		      "netsum"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "netsum"
+	      SrcPort		      1
+	      DstBlock		      "purelin"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "purelin"
+	      SrcPort		      1
+	      DstBlock		      "a{3}"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Process Input 1"
+	  SID			  411
+	  Ports			  [1, 1]
+	  Position		  [100, 40, 120, 60]
+	  BackgroundColor	  "magenta"
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "Process Input 1"
+	    Location		    [480, 93, 1016, 386]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "x"
+	      SID		      412
+	      Position		      [40, 40, 60, 60]
+	      BackgroundColor	      "magenta"
+	      IconDisplay	      "Port number"
+	      PortDimensions	      "2"
+	      SampleTime	      "1"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "fixunknowns"
+	      SID		      413
+	      Ports		      [1, 1]
+	      Position		      [120, 30, 160, 70]
+	      BackgroundColor	      "lightBlue"
+	      LibraryVersion	      "1.36"
+	      SourceBlock	      "neural/Processing Functions/fixunknowns"
+	      SourceType	      "Fix Unknowns"
+	      ShowPortLabels	      "FromPortIcon"
+	      SystemSampleTime	      "-1"
+	      FunctionWithSeparateData off
+	      RTWMemSecFuncInitTerm   "Inherit from model"
+	      RTWMemSecFuncExecute    "Inherit from model"
+	      RTWMemSecDataConstants  "Inherit from model"
+	      RTWMemSecDataInternal   "Inherit from model"
+	      RTWMemSecDataParameters "Inherit from model"
+	      dummy		      "0"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "mapminmax"
+	      SID		      414
+	      Ports		      [1, 1]
+	      Position		      [320, 30, 360, 70]
+	      BackgroundColor	      "lightBlue"
+	      LibraryVersion	      "1.36"
+	      SourceBlock	      "neural/Processing Functions/mapminmax"
+	      SourceType	      "Map Min Max"
+	      ShowPortLabels	      "FromPortIcon"
+	      SystemSampleTime	      "-1"
+	      FunctionWithSeparateData off
+	      RTWMemSecFuncInitTerm   "Inherit from model"
+	      RTWMemSecFuncExecute    "Inherit from model"
+	      RTWMemSecDataConstants  "Inherit from model"
+	      RTWMemSecDataInternal   "Inherit from model"
+	      RTWMemSecDataParameters "Inherit from model"
+	      xmin		      "[22.37203801183;-6.51958225632998]"
+	      xmax		      "[29.5106040109867;23.0027682108523]"
+	      ymin		      "-1"
+	      ymax		      "1"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "removeconstantrows"
+	      SID		      415
+	      Ports		      [1, 1]
+	      Position		      [220, 30, 260, 70]
+	      BackgroundColor	      "lightBlue"
+	      LibraryVersion	      "1.36"
+	      SourceBlock	      "neural/Processing Functions/removeconstantrows"
+	      SourceType	      "Remove Constant Rows"
+	      ShowPortLabels	      "FromPortIcon"
+	      SystemSampleTime	      "-1"
+	      FunctionWithSeparateData off
+	      RTWMemSecFuncInitTerm   "Inherit from model"
+	      RTWMemSecFuncExecute    "Inherit from model"
+	      RTWMemSecDataConstants  "Inherit from model"
+	      RTWMemSecDataInternal   "Inherit from model"
+	      RTWMemSecDataParameters "Inherit from model"
+	      inputSize		      "2"
+	      keep		      "[1 2]"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "p"
+	      SID		      416
+	      Position		      [420, 40, 460, 60]
+	      BackgroundColor	      "magenta"
+	      IconDisplay	      "Port number"
+	      PortDimensions	      "2"
+	      SampleTime	      "1"
+	    }
+	    Line {
+	      SrcBlock		      "x"
+	      SrcPort		      1
+	      DstBlock		      "fixunknowns"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "fixunknowns"
+	      SrcPort		      1
+	      DstBlock		      "removeconstantrows"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "removeconstantrows"
+	      SrcPort		      1
+	      DstBlock		      "mapminmax"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "mapminmax"
+	      SrcPort		      1
+	      DstBlock		      "p"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Process Output 1"
+	  SID			  417
+	  Ports			  [1, 1]
+	  Position		  [320, 160, 340, 180]
+	  BackgroundColor	  "magenta"
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "Process Output 1"
+	    Location		    [480, 93, 1016, 386]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "a"
+	      SID		      418
+	      Position		      [40, 40, 60, 60]
+	      BackgroundColor	      "magenta"
+	      IconDisplay	      "Port number"
+	      PortDimensions	      "1"
+	      SampleTime	      "1"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "mapminmax_reverse"
+	      SID		      419
+	      Ports		      [1, 1]
+	      Position		      [160, 30, 200, 70]
+	      BackgroundColor	      "lightBlue"
+	      LibraryVersion	      "1.36"
+	      SourceBlock	      "neural/Processing Functions/mapminmax_reverse"
+	      SourceType	      "Map Min Max Reverse"
+	      ShowPortLabels	      "FromPortIcon"
+	      SystemSampleTime	      "-1"
+	      FunctionWithSeparateData off
+	      RTWMemSecFuncInitTerm   "Inherit from model"
+	      RTWMemSecFuncExecute    "Inherit from model"
+	      RTWMemSecDataConstants  "Inherit from model"
+	      RTWMemSecDataInternal   "Inherit from model"
+	      RTWMemSecDataParameters "Inherit from model"
+	      xmin		      "-15"
+	      xmax		      "15"
+	      ymin		      "-1"
+	      ymax		      "1"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "removeconstantrows_reverse"
+	      SID		      420
+	      Ports		      [1, 1]
+	      Position		      [300, 30, 340, 70]
+	      BackgroundColor	      "lightBlue"
+	      LibraryVersion	      "1.36"
+	      SourceBlock	      "neural/Processing Functions/removeconstantrows_reverse"
+	      SourceType	      "Remove Constant Rows Reverse"
+	      ShowPortLabels	      "FromPortIcon"
+	      SystemSampleTime	      "-1"
+	      FunctionWithSeparateData off
+	      RTWMemSecFuncInitTerm   "Inherit from model"
+	      RTWMemSecFuncExecute    "Inherit from model"
+	      RTWMemSecDataConstants  "Inherit from model"
+	      RTWMemSecDataInternal   "Inherit from model"
+	      RTWMemSecDataParameters "Inherit from model"
+	      inputSize		      "1"
+	      constants		      "zeros(0,1)"
+	      rearrange		      "1"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "y"
+	      SID		      421
+	      Position		      [440, 40, 480, 60]
+	      BackgroundColor	      "magenta"
+	      IconDisplay	      "Port number"
+	      PortDimensions	      "1"
+	      SampleTime	      "1"
+	    }
+	    Line {
+	      SrcBlock		      "a"
+	      SrcPort		      1
+	      DstBlock		      "mapminmax_reverse"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "mapminmax_reverse"
+	      SrcPort		      1
+	      DstBlock		      "removeconstantrows_reverse"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "removeconstantrows_reverse"
+	      SrcPort		      1
+	      DstBlock		      "y"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "a{1}"
+	  SID			  422
+	  Position		  [380, 40, 400, 60]
+	  GotoTag		  "feedback1"
+	  TagVisibility		  "local"
+	  MaskDisplay		  "plot(cos(0:.1:2*pi),sin(0:.1:2*pi))"
+	  MaskIconFrame		  off
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "a{2}"
+	  SID			  423
+	  Position		  [380, 80, 400, 100]
+	  GotoTag		  "feedback2"
+	  TagVisibility		  "local"
+	  MaskDisplay		  "plot(cos(0:.1:2*pi),sin(0:.1:2*pi))"
+	  MaskIconFrame		  off
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "y{1}"
+	  SID			  424
+	  Position		  [380, 160, 400, 180]
+	  BackgroundColor	  "magenta"
+	  IconDisplay		  "Port number"
+	  InitialOutput		  "0"
+	}
+	Line {
+	  SrcBlock		  "x{1}"
+	  SrcPort		  1
+	  DstBlock		  "Process Input 1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Process Output 1"
+	  SrcPort		  1
+	  DstBlock		  "y{1}"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Process Input 1"
+	  SrcPort		  1
+	  DstBlock		  "Layer 1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Layer 1"
+	  SrcPort		  1
+	  DstBlock		  "a{1}"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  " a{1} "
+	  SrcPort		  1
+	  DstBlock		  "Layer 2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Layer 2"
+	  SrcPort		  1
+	  DstBlock		  "a{2}"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  " a{2} "
+	  SrcPort		  1
+	  DstBlock		  "Layer 3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Layer 3"
+	  SrcPort		  1
+	  DstBlock		  "Process Output 1"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      RandomNumber
+      Name		      "Random\nNumber"
+      SID		      2
+      Position		      [15, 105, 45, 135]
+      Mean		      "15"
+      Variance		      "15"
+      Seed		      "round(now)"
+      SampleTime	      "500"
+    }
+    Block {
+      BlockType		      Saturate
+      Name		      "Sat(1)_0_30"
+      SID		      4
+      Position		      [395, 105, 425, 135]
+      UpperLimit	      "30"
+      LowerLimit	      "0"
+      SampleTime	      "0.1"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Saturate
+      Name		      "Sat(2)_0_30"
+      SID		      5
+      Position		      [545, 105, 575, 135]
+      UpperLimit	      "30"
+      LowerLimit	      "0"
+      SampleTime	      "0.1"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Scope"
+      SID		      6
+      Ports		      [1]
+      Position		      [655, 14, 685, 46]
+      Floating		      off
+      Location		      [5, 52, 1029, 545]
+      Open		      off
+      NumInputPorts	      "1"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Scope1"
+      SID		      7
+      Ports		      [1]
+      Position		      [165, 179, 195, 211]
+      Floating		      off
+      Location		      [5, 169, 1029, 401]
+      Open		      off
+      NumInputPorts	      "1"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      SaveName		      "ScopeData1"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Scope2"
+      SID		      8
+      Ports		      [1]
+      Position		      [325, 179, 355, 211]
+      Floating		      off
+      Location		      [5, 190, 1029, 490]
+      Open		      off
+      NumInputPorts	      "1"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      YMin		      "4"
+      YMax		      "5.5"
+      SaveName		      "ScopeData2"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum"
+      SID		      9
+      Ports		      [2, 1]
+      Position		      [105, 110, 125, 130]
+      ShowName		      off
+      IconShape		      "round"
+      Inputs		      "|+-"
+      InputSameDT	      off
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+      SampleTime	      "0.1"
+    }
+    Block {
+      BlockType		      ToWorkspace
+      Name		      "To Workspace"
+      SID		      10
+      Ports		      [1]
+      Position		      [95, 284, 195, 316]
+      VariableName	      "entradaRandomN"
+      MaxDataPoints	      "inf"
+      SampleTime	      "0.1"
+      SaveFormat	      "Array"
+    }
+    Block {
+      BlockType		      ToWorkspace
+      Name		      "To Workspace1"
+      SID		      11
+      Ports		      [1]
+      Position		      [290, 14, 385, 46]
+      VariableName	      "controladorN"
+      MaxDataPoints	      "inf"
+      SampleTime	      "0.1"
+      SaveFormat	      "Array"
+    }
+    Block {
+      BlockType		      ToWorkspace
+      Name		      "To Workspace2"
+      SID		      12
+      Ports		      [1]
+      Position		      [155, 14, 250, 46]
+      VariableName	      "erroRandomN"
+      MaxDataPoints	      "inf"
+      SampleTime	      "0.1"
+      SaveFormat	      "Array"
+    }
+    Block {
+      BlockType		      ToWorkspace
+      Name		      "To Workspace3"
+      SID		      13
+      Ports		      [1]
+      Position		      [655, 194, 750, 226]
+      VariableName	      "contPlantaN"
+      MaxDataPoints	      "inf"
+      SampleTime	      "0.1"
+      SaveFormat	      "Array"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Transfer Fcn\n(with initial states)\nTanque 1"
+      SID		      14
+      Ports		      [1, 1]
+      Position		      [295, 102, 355, 138]
+      LibraryVersion	      "1.41"
+      SourceBlock	      "simulink_extras/Additional\nLinear/Transfer Fcn\n(with initial states)"
+      SourceType	      "Transfer Function with Initial States"
+      ShowPortLabels	      "FromPortIcon"
+      SystemSampleTime	      "-1"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      N			      "[0.2964]"
+      D			      "[1  0.0656]"
+      X0		      "0"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Transfer Fcn\n(with initial states)\nTanque 2"
+      SID		      15
+      Ports		      [1, 1]
+      Position		      [455, 102, 515, 138]
+      LibraryVersion	      "1.41"
+      SourceBlock	      "simulink_extras/Additional\nLinear/Transfer Fcn\n(with initial states)"
+      SourceType	      "Transfer Function with Initial States"
+      ShowPortLabels	      "FromPortIcon"
+      SystemSampleTime	      "-1"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      N			      "[0.0656]"
+      D			      "[1  0.0656]"
+      X0		      "0"
+    }
+    Block {
+      BlockType		      Concatenate
+      Name		      "Vector\nConcatenate"
+      SID		      118
+      Ports		      [2, 1]
+      Position		      [100, 36, 105, 74]
+      Mode		      "Vector"
+    }
+    Line {
+      SrcBlock		      "Transfer Fcn\n(with initial states)\nTanque 1"
+      SrcPort		      1
+      DstBlock		      "Sat(1)_0_30"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Sum"
+      SrcPort		      1
+      Points		      [5, 0]
+      Branch {
+	Points			[0, 75]
+	DstBlock		"Scope1"
+	DstPort			1
+      }
+      Branch {
+	Points			[5, 0; 0, -30]
+	Branch {
+	  DstBlock		  "To Workspace2"
+	  DstPort		  1
+	}
+	Branch {
+	  Points		  [-55, 0]
+	  DstBlock		  "Vector\nConcatenate"
+	  DstPort		  2
+	}
+      }
+    }
+    Line {
+      SrcBlock		      "Transfer Fcn\n(with initial states)\nTanque 2"
+      SrcPort		      1
+      DstBlock		      "Sat(2)_0_30"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Neural Network"
+      SrcPort		      1
+      Points		      [35, 0]
+      Branch {
+	DstBlock		"To Workspace1"
+	DstPort			1
+      }
+      Branch {
+	Points			[5, 0]
+	Branch {
+	  DstBlock		  "Transfer Fcn\n(with initial states)\nTanque 1"
+	  DstPort		  1
+	}
+	Branch {
+	  Points		  [0, 75]
+	  DstBlock		  "Scope2"
+	  DstPort		  1
+	}
+      }
+    }
+    Line {
+      SrcBlock		      "Random\nNumber"
+      SrcPort		      1
+      Points		      [15, 0]
+      Branch {
+	Points			[5, 0]
+	Branch {
+	  Points		  [0, 180]
+	  DstBlock		  "To Workspace"
+	  DstPort		  1
+	}
+	Branch {
+	  DstBlock		  "Sum"
+	  DstPort		  1
+	}
+      }
+      Branch {
+	Points			[0, -75]
+	DstBlock		"Vector\nConcatenate"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Sat(1)_0_30"
+      SrcPort		      1
+      DstBlock		      "Transfer Fcn\n(with initial states)\nTanque 2"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Sat(2)_0_30"
+      SrcPort		      1
+      Points		      [20, 0]
+      Branch {
+	Points			[0, -90]
+	DstBlock		"Scope"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 70]
+	Branch {
+	  Points		  [0, 45; -485, 0]
+	  DstBlock		  "Sum"
+	  DstPort		  2
+	}
+	Branch {
+	  Points		  [0, 20]
+	  DstBlock		  "To Workspace3"
+	  DstPort		  1
+	}
+      }
+    }
+    Line {
+      SrcBlock		      "Vector\nConcatenate"
+      SrcPort		      1
+      Points		      [45, 0; 0, 65]
+      DstBlock		      "Neural Network"
+      DstPort		      1
+    }
+  }
+}

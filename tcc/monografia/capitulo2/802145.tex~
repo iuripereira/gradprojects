@@ -1,0 +1,224 @@
+%%
+%% Capítulo 2: O IEEE 802.15.4
+%%
+
+\mychapter{O IEEE 802.15.4}
+\label{Cap:ieee802.15.4}
+
+O padrão IEEE 802.15.4, liberado em maio de 2003, é um padrão que define a camada de comunicação em dois níveis no modelo OSI. Especifica a
+camada física e a camada MAC (Media Access Control) para dispositivos que não precisem de alta taxa de dados e que necessitem de baixa
+latência e baixo custo de energia, tais como nas LR-WPANs (Low Rate Wireless Personal Area Network).
+
+Foi criada e é mantida pela IEEE (Institute of Electrical and Eletronics Engineers). Instituição que tem como finalidade definir padrões
+para desenvolvimento tecnológico.
+
+O 802.15.4 é, portanto, um protocolo de pacote de dados para rede sem fio. Utiliza como canal de acesso ao meio o protocolo CSMA-CA (Carrie
+Sense Multiple Access - Collision Avoidance), que é o mesmo utilizado pelo padrão 802.11 (Wi-Fi) e visa a deteção e abstenção de colisão de
+pacotes. Além do CSMA-CA o 802.15.4 ainda possui time slotting opcional, reconhecimento de mensagem e uma estrutura sinalizadora, chamada 
+\textit{beacon}. A segurança é feita em multi-camada e será abordada mais adiante neste documento.\cite{siteZig}
+
+%Inserir imagem da camada MAC para o padrão 802.15.4
+\begin{figure}[htbp!]
+	\begin{center}
+		\fbox{\includegraphics[width=0.5\linewidth]
+		{figuras/padrao802154}}
+		\caption{Localização do padrão no modelo OSI}
+		\label{Fig:padrao802154}
+	\end{center}
+\end{figure} 
+
+\section{Entendento o padrão 802.15.4}
+
+Como já foi dito anteriormente este protocolo reside no segundo nível do modelo OSI. Esta camada é denominada de Data Link. Aqui os bits
+contendo as unidades de informação digital são manuseados e organizados de forma se tornarem impulsos eletromagnéticos para a camada física
+logo abaixo. Esta camada é similar as demais de outros padrões como o 802.11, mais conhecido como WiFi ou o 802.3 (Ethernet). As frequências
+definidas no padrão são espalhadas através de 27 canais diferentes divididas em três bandas principais:\cite{8vszigbee}
+
+\begin{itemize}
+	\item Europa - 868.0 à 868.6 MHz (1 canal)
+	\item EEUU - 902.0 à 928.0 MHz (10 canais)
+	\item Resto do mundo - 2.40 à 2.48 GHz (16 canais)
+\end{itemize}
+
+As taxas de dados são respectivamente:
+
+\begin{itemize}
+	\item 868.0 à 868.6 MHz - 20/100/250 Kb/s
+	\item 902.0 à 928.0 MHz - 40/250 Kb/s
+	\item 2.40 à 2.48 GHz - 250 Kb/s
+\end{itemize}
+
+\begin{itemize}
+	\item \textbf{Energia:} escaneia o canal e reporta a energia encontrada. Não interessa se é causada por outro nó ZigBee, outra
+	      tecnologia ou ruído. Apenas irá reportar se o espectro está sendo utilizado. Somente quando o valor recebido se encontrar
+	      abaixo de um certo parâmetro de threshold, poderá ser realizada a transmissão.
+	\item \textbf{Carrie Sense (CCA):} escaneia o meio e reporta se existem transmissões no padrão 802.15.4. Somente quando o canal
+	      estiver livre a transmissão será realizada.
+	\item \textbf{CCA + Energia:} escaneia o meio e reporta se existem transmissões no padrão 802.15.4 acima do parâmetro de threshold
+	      especificado para então poder transmitir.
+\end{itemize}  
+
+\subsection{Por que o 802.15.4 é bom contra ruído?}
+
+O 802.15.4 utiliza DSSS (Direct Sequence Spread Spectrum) que é a sequência direta de espalhamento do espectro. É uma técnica de modulação
+do espectro de propagação. Utilizada extensamente em aplicações militares, fornece uma densidade espectral da potência muito baixa
+espalhando a potência do sinal sobre uma faixa de frequência muito larga. Consequentemente este tipo de modulação requer uma largura de
+faixa muito grande para transmitir diversos Mbits/s.
+
+O 802.15.4 utiliza a DSSS para modular a informação antes dela ser enviada para a camada física. Basicamente, cada bit de informação a 
+ser transmitido é modulado em 4(quatro) diferentes canais. A característica dessa modulação traz como consequência menos interferência 
+nas frequências de banda utilizadas e geram uma melhoria no SNR (Signal to Noise Ratio) no receptor devido ao fato de que é mais fácil
+detectar e decodificar a mensagem que esta sendo enviada pelo transmissor.
+
+Existem diferentes modulações DSSS dependendo do tipo das limitações físicas do hardware do circuito e o número de símbolos que podem ser
+processados em um determinado tempo.
+
+%inserir imagem dsss.jpg
+\begin{figure}[htbp!]
+	\begin{center}
+		\fbox{\includegraphics[width=0.5\linewidth]
+		{figuras/dsss}}
+		\caption{Exemplo de modulação de uma onda utilizando a técnica DSSS}
+		\label{Fig:dsss}
+	\end{center}
+\end{figure} 
+
+\subsection{Por que o 802.15.4 é bom contra interferências?}
+
+O padrão 802.15.4 utiliza duas técnicas para evitar que os pacotes comecem a ser transmitidos ao mesmo tempo. São elas o CSMA-CA e o GTS.
+
+A mais comum é o CSMA-CA (Carrier Sense Multiple Access - Collision Avoidance). Nesse método, cada nó da rede escuta o meio para poder
+transmitir caso meio esteja ocioso ou, nesse caso, em baixa energia. Se a energia encontrada é maior em um nível específico, o nó espera
+durante um tempo randômico e tenta novamente. Existe um parâmetro definido no padrão chamado de macMinBE que consigura o expoente de back-off
+utilizado para calcular esse time-slot, que é o tempo de espera.
+
+A segunda técnica, GTS (Guarantee Time Slot) utiliza um nó de rede centralizado denominado de coordenador PAN (Personal Area Network) que
+gera slot de tempo para cada nó para que assim eles saibam quando têm de transmitir. Existem 16 possíveis slots de tempo. Em um primeiro
+passo um nó deve enviar ao coordenador PAN uma mensagem de requisição GTS, como resposta o coordenador irá enviar uma mensagem de \textit{beacon}
+contendo o slot alocado e o número de slots cadastrados.
+
+Uma das funcionalidades implementadas no padrão 802.15.4 é o escaneamento de energia do canal (PLME-ED request). A idéia é permitir que se
+conheça quanto de enegia (atividade/ruído/interferências) existe em um ou mais canais em detrimento de utilizá-los. Desta forma pode-se
+economizar energia ao se escolher canais livres quando se configura a rede. Existem três diferentes comportamentos quando se lida com
+problemas de detecção de energia:
+
+\begin{itemize}
+	\item \textbf{Energia:} escaneia o canal e reporta a energia encontrada. Não interessa se é causada por outro nó ZigBee, outra
+	      tecnologia ou ruído. Apenas irá reportar se o espectro está sendo utilizado. Somente quando o valor recebido se encontrar
+	      abaixo de um certo parâmetro de threshold, poderá ser realizada a transmissão.
+	\item \textbf{Carrie Sense (CCA):} escaneia o meio e reporta se existem transmissões no padrão 802.15.4. Somente quando o canal
+	      estiver livre a transmissão será realizada.
+	\item \textbf{CCA + Energia:} escaneia o meio e reporta se existem transmissões no padrão 802.15.4 acima do parâmetro de threshold
+	      especificado para então poder transmitir.
+\end{itemize}
+
+\subsection{Protocolo de baixo consumo}
+
+O protocolo de baixo consumo tem por base o fato do transceptor poder se encontrar em estado de hibernação (sleep) na maioria do tempo
+(99\% em média) equanto que as tarefas de recebimento e envio podem ser configuradas para tomar apenas uma paquena parte da energia do
+dispositivo. Essa porcentagem depende o tipo de modelo de comunicação utilizado. Se o modo \textit{beacon} é utilizado (redes estrela ou PAN)
+o montante mínimo de tempo utilizado para transmitir/receber estes frames irá aumentar o tempo total com o qual o tranceptor é utilizado. 
+
+%isso deve ir pro proximo capitulo
+\subsection{Dispositivos da rede}
+
+O padrão 802.15.4 define dois tipos de dispositivos de rede. A primeira é denominada \textbf{Dispositivos de Função Completa (FFD)}. 
+São dispositivos mais complexos e precisam de um hardware mais potente para a implantação da pilha de protocolos, conseqüentemente, 
+consomem mais energia. Podem funcionar tanto como coordenador de uma rede quanto como um nó comum seja ele roteador ou end device. 
+São implementados em microcontroladores com no mínimo 32KB de memória de programa e necessitam ter uma certa quantidade de memória RAM, 
+para implementações de tabelas de rotas e configurações de parâmetros.
+
+Por outro lado, existem os \textbf{Dispositivos de Função Reduzida (RFD)} que são dispositivos mais simples, onde sua pilha de protocolo 
+pode ser implementada usando os mínimos recursos possíveis de hardware, como por exemplo, em microcontroladores de 8 bits com memória de 
+programa próxima a 6KB, mas só podem se comunicar com dispositivos FFDs (Coordenador ou Roteador). Numa topologia de rede 802.15.4 eles 
+assumem o papel de End Device (dispositivo final). Na prática podem ser: interruptores de iluminação, dimmers, controle de relês, sensores, 
+entre outros.
+
+\subsection{Arquitetura de trasporte de dados}
+
+As unidades básicas de transporte de dados são denominadas frames, dos quais existem quatro tipos fundamentais: frames de dados, 
+frames de reconhecimento, frames de \textit{beacon} e frames de comando MAC. Estes tipos de frames provêem um meio termo racional entre
+simplicidade e robustez. Além do mais, uma estrutura denominada superframe, definida pelo coordenador, pode ser utilizada. Um superframe
+consiste de 16 slots de mesmo tamanho, que podem ser divididos futuramente em uma parte ativa e uma parte inativa onde o coordenador pode
+entrar em estado de economia de energia, sem necessidade de controlar sua rede.\cite{wiki802}
+
+\begin{figure}[htbp!]
+	\begin{center}
+		\fbox{\includegraphics[width=0.5\linewidth]
+		{figuras/dataframe}}
+		\caption{Estrutura do dataframe}
+		\label{Fig:dataframe}
+	\end{center}
+\end{figure}
+
+A estrutura do Data Frame pode ser vista na figura \ref{Fig:dataframe}. Esta estrutura é uma das mais básicas e importantes do padrão 
+802.15.4. Tem capacidade de transferir até 104 bytes por pacote, o que já é o suficiente, se tratando de transferência de informações 
+entre sensores. Para garantir a confiabilidade da entrega dos dados contém um campo com uma numeração seqüencial dos dados e um campo 
+de Frame Check Sequence (FCS).
+
+\begin{figure}[htbp!]
+	\begin{center}
+		\fbox{\includegraphics[width=0.5\linewidth]
+		{figuras/ackframe}}
+		\caption{Estrutura do ACK Frame}
+		\label{Fig:ackframe}
+	\end{center}
+\end{figure} 
+
+No ACK Frame visto na figura \ref{Fig:ackframe}, é enviado um retorno (ACK) eficaz do receptor para o emissor informando que o pacote foi 
+recebido sem erros.
+
+\begin{figure}[htbp!]
+	\begin{center}
+		\fbox{\includegraphics[width=0.5\linewidth]
+		{figuras/maccommandframe}}
+		\caption{Estrutura do frame de comando MAC}
+		\label{Fig:maccommandframe}
+	\end{center}
+\end{figure}
+
+A figura \ref{Fig:maccommandframe} mostra o frame que representa um mecanismo para controle e configuração remota de nós da rede, permitindo 
+que uma rede centralizada configure clientes individualmente sem importar o quanto a rede é extensa.
+
+\begin{figure}[htbp!]
+	\begin{center}
+		\fbox{\includegraphics[width=0.5\linewidth]
+		{figuras/beaconframe}}
+		\caption{Estrutura do frame para o Beacon}
+		\label{Fig:beaconframe}
+	\end{center}
+\end{figure}
+
+Na figura \ref{Fig:beaconframe} vemos uma estrutura opcional de sinalização. Os dispositivos podem \textit{acordar} somente quando este sinal é 
+transmitido, caso contrário, retornam a \textit{adormecer}. É usado nas topologias mesh e estrela estendida para manter os nós sincronizados sem 
+a necessidade deles consumirem energia por longos períodos de tempo.
+
+\begin{figure}[htbp!]
+	\begin{center}
+		\fbox{\includegraphics[width=0.5\linewidth]
+		{figuras/superframe}}
+		\caption{Estrutura do superframe}
+		\label{Fig:superframe}
+	\end{center}
+\end{figure}
+
+A estrutura de frame vista na figura \ref{Fig:superframe} é uma estrutura opcional da camada MAC, ela é definida pelo nó coordenador, utiliza 
+beacons para  sinalização, slotting time e Garantee Time Slotting (GTS) para permitir que um nó continue utilizando o meio de acesso caso
+esteja mandando uma mensagem com alta prioridade.
+
+A contenção de superframes ocorre entre seus limites, e é resolvida pelo CSMA-CA. Cada transmissão deve terminar antes da chegada do segundo 
+\textit{beacon}. Como mencionado anteriormente, aplicações com largura de banda bem definidas necessitam utilizar acima de sete domínios de um ou mais
+GTS (Guaranteed Time Slots) à direita no final do superframe. A primeira parte do superframe deve ser suficiente para dar serviço para a 
+estrutura de rede e seus dispositivos. Superframes são tipicamente utilizados no contexto de dispositivos de baixa latência, os quais as
+associações devem ser mantidas mesmo em um período de tempo inativo ou de longa duração.\cite{wiki802}
+
+Tranferência de dados para o coordenador requerem um sincronização de fase de \textit{beacons}, se aplicável, seguida de uma transmissão CSMA-CA. O 
+reconhecimento (acknowledgment) é opcional. Tranferência de dados vindas do coodenador usualmente seguem as requisições do dispositivo: Se
+os \textit{beacons} estão em uso, eles são utilizados para requisições de sinal; o coordenador reconhece a requisição e então envia os dados
+em pacotes que são reconhecidos pelo dispotisitivo. O mesmo é feito quando os superframes não estão em uso, somente neste caso não existem
+beacons para acompanhar as mensagens pendentes.
+
+Redes ponto-a-ponto podem tanto utilizar o CSMA-CA sem slots ou mecanismos de sincronização; neste caso, a comunicação entre quaisquer dois
+dispositivos é possível, considerando que um dos dispositivos deve ser o coordenador da rede.
+
+Em geral, todos os procedimentos implementados seguem uma arquitetura típica de classificação \textit{requisição-confirmação/indicação-resposta}

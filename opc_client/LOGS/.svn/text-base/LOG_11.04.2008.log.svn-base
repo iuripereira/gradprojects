@@ -1,0 +1,60 @@
+09:13:46AM - Listou servidores remotos!
+09:13:46AM - listaOpc - startCom  --> S_OK
+09:13:46AM - ListaOpc - CoCreateInstanceEx localhost--> S_OK
+09:13:55AM - getCLSID from MAPA --> S_OK
+09:13:55AM - listaOpc - startCom  --> S_OK
+09:13:56AM - getProgId --> S_OK
+09:13:56AM - connectAEServer - CoCreateInstanceEx localhost ProgID ICONICS.SimulatorOPCAE.1 --> S_OK
+09:13:56AM - Conectou Local  - ICONICS.SimulatorOPCAE.1
+09:14:00AM - Criou a Subscription Teste no localhost [127.0.0.1] - ICONICS.SimulatorOPCAE.1
+09:14:00AM - Send Buffer não cheio
+09:14:00AM - Send Buffer não cheio
+09:14:00AM - Send Buffer não cheio
+09:14:00AM - Send Buffer não cheio
+09:14:00AM - Send Buffer não cheio
+09:14:00AM - Send Buffer não cheio
+09:14:00AM - Send Buffer não cheio
+09:14:00AM - Send Buffer não cheio
+09:14:00AM - Send Buffer não cheio
+09:14:01AM - Send Buffer não cheio
+09:14:01AM - Send Buffer não cheio
+09:14:01AM - Send Buffer não cheio
+09:14:01AM - Send Buffer não cheio
+09:14:01AM - Send Buffer não cheio
+09:14:01AM - Send Buffer não cheio
+09:14:01AM - Send Buffer não cheio
+09:14:01AM - Send Buffer não cheio
+09:14:01AM - Send Buffer não cheio
+09:14:01AM - Send Buffer não cheio
+09:14:01AM - Send Buffer não cheio
+09:14:02AM - Send Buffer cheio. Perda de DADOS!!!
+10:02:48AM - Listou servidores remotos!
+10:02:48AM - listaOpc - startCom  --> S_OK
+10:02:49AM - ListaOpc - CoCreateInstanceEx localhost--> S_OK
+10:02:54AM - getCLSID from MAPA --> S_OK
+10:02:54AM - listaOpc - startCom  --> S_OK
+10:02:55AM - getProgId --> S_OK
+10:02:55AM - connectAEServer - CoCreateInstanceEx localhost ProgID ICONICS.SimulatorOPCAE.1 --> S_OK
+10:02:55AM - Conectou Local  - ICONICS.SimulatorOPCAE.1
+10:02:57AM - Criou a Subscription Teste no localhost [127.0.0.1] - ICONICS.SimulatorOPCAE.1
+10:02:58AM - Send Buffer não cheio
+10:02:58AM - Send Buffer não cheio
+10:02:58AM - Send Buffer não cheio
+10:02:58AM - Send Buffer não cheio
+10:02:58AM - Send Buffer não cheio
+10:02:58AM - Send Buffer não cheio
+10:02:58AM - Send Buffer não cheio
+10:02:58AM - Send Buffer não cheio
+10:02:58AM - Send Buffer não cheio
+10:02:59AM - Send Buffer não cheio
+10:02:59AM - Send Buffer não cheio
+10:02:59AM - Send Buffer não cheio
+10:02:59AM - Send Buffer não cheio
+10:02:59AM - Send Buffer não cheio
+10:02:59AM - Send Buffer não cheio
+10:02:59AM - Send Buffer não cheio
+10:03:00AM - Send Buffer não cheio
+10:03:00AM - Send Buffer não cheio
+10:03:00AM - Send Buffer não cheio
+10:03:00AM - Send Buffer não cheio
+10:03:00AM - Send Buffer cheio. Perda de DADOS!!!

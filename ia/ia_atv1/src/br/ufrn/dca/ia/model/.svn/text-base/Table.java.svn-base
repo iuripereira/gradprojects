@@ -1,0 +1,56 @@
+
+package br.ufrn.dca.ia.model;
+
+import br.ufrn.dca.ia.control.MaskLoader;
+import java.util.ArrayList;
+import javax.swing.table.AbstractTableModel;
+
+/**
+ *
+ * @author Marco Olimpio
+ */
+public class Table extends AbstractTableModel{
+    ArrayList mapMask = new ArrayList();
+    MaskLoader mkLoader = new MaskLoader();
+
+    public MaskLoader getMkLoader() {
+        return mkLoader;
+    }
+
+    public void setMkLoader(MaskLoader mkLoader) {
+        this.mkLoader = mkLoader;
+    }
+
+    public ArrayList getMapMask() {
+        return mapMask;
+    }
+
+    public void setMapMask(ArrayList mapMask) {
+        this.mapMask = mapMask;
+    }
+
+    public Table() {
+    }
+
+    public Table(ArrayList mapMask) {
+        this.mapMask = mapMask;
+    }
+
+    public void addLine(String dados){
+        mapMask.add(dados);
+    }
+
+    public int getRowCount() {
+        return this.mapMask.size();
+    }
+
+    public int getColumnCount() {
+        return 4;
+    }
+
+    public Object getValueAt(int rowIndex, int columnIndex) {
+        String[] val = this.mkLoader.get(rowIndex);
+        return val[columnIndex];
+    }
+
+}

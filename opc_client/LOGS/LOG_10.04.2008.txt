@@ -1,0 +1,28 @@
+08:55:39AM - Listou servidores remotos!
+08:55:39AM - listaOpc - startCom  --> S_OK
+08:55:39AM - ListaOpc - CoCreateInstanceEx localhost--> S_OK
+08:56:15AM - Listou servidores remotos!
+08:56:15AM - listaOpc - startCom  --> S_OK
+08:56:15AM - ListaOpc - CoCreateInstanceEx localhost--> S_OK
+08:56:24AM - getCLSID from MAPA --> S_OK
+08:56:24AM - listaOpc - startCom  --> S_OK
+08:56:25AM - getProgId --> S_OK
+08:56:25AM - connectAEServer - CoCreateInstanceEx localhost ProgID ICONICS.SimulatorOPCAE.1 --> S_OK
+08:56:27AM - Conectou Local  - ICONICS.SimulatorOPCAE.1
+09:14:35AM - Listou servidores remotos!
+09:14:35AM - listaOpc - startCom  --> S_OK
+09:14:35AM - ListaOpc - CoCreateInstanceEx localhost--> S_OK
+09:14:41AM - getCLSID from MAPA --> S_OK
+09:14:41AM - listaOpc - startCom  --> S_OK
+09:14:41AM - getProgId --> S_OK
+09:14:41AM - connectAEServer - CoCreateInstanceEx localhost ProgID ICONICS.SimulatorOPCAE.1 --> S_OK
+09:14:41AM - Conectou Local  - ICONICS.SimulatorOPCAE.1
+02:19:04PM - Listou servidores remotos!
+02:19:04PM - listaOpc - startCom  --> S_OK
+02:19:04PM - ListaOpc - CoCreateInstanceEx localhost--> S_OK
+02:20:08PM - Listou servidores remotos!
+02:20:08PM - listaOpc - startCom  --> S_OK
+02:20:08PM - ListaOpc - CoCreateInstanceEx localhost--> S_OK
+03:44:32PM - Listou servidores remotos!
+03:44:32PM - listaOpc - startCom  --> S_OK
+03:44:33PM - ListaOpc - CoCreateInstanceEx localhost--> S_OK

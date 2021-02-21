@@ -1,0 +1,117 @@
+%%
+%% Capítulo 3: O microcontrolador e o módulo sonar
+%%
+
+\mychapter{ O microcontrolador e o módulo sonar}
+\label{Cap:picsonar}
+
+\section{O microcontrolador PIC16F628A}
+
+Pode-se dizer que um microcontrolador é um componente eletrônico dotado de uma inteligência programável, utilizado no controle de processos lógicos \cite{pic}.
+
+O controle de processos é o controle de periféricos, tais como LEDs, botões e, no caso deste trabalho, sensores. São chamados de controles lógicos, pois a operação do sistema baseia-se nas ações lógicas que demandam de execução de acordo com o estado das entradas e saídas.
+
+O microcontrolador é programável, pois toda a lógica de operação é estruturada na forma de um programa e gravada dentro do componente. Após o programa ter sido gravado, toda vez que o microcontrolador for alimentado, o programa interno será executado. 
+
+\subsection{O PIC16F628A}
+
+Para este projeto foi utilizado o PIC16F628A por ser um microcontrolador versátil, compacto e poderoso. Algumas características desse PIC são:
+
+\begin{itemize}
+	\item Microcontrolador de 18 pinos, que facilita a montagem de hardwares experimentais;
+	\item Possui até 16 portas configuráveis como entrada ou saída e dois osciladores internos (4 MHz e 37 kHz);
+	\item 10 interrupções disponíveis (Timers, Externa, Mudança de Estado, EEPROM, USART, CCP e comparador);
+	\item Memória de programação FLASH com 2.048 palavras, que permite a gravação do programa diversas vezes no mesmo chip, sem a necessidade de apaga-lo por meio de luz ultravioleta, como acontece nos microcontroladores de janela;
+	\item Memória EEPROM (não-volátil) interna com 128 bytes;
+	\item Recursos adicionais avançados: módulo CCP, Comparador interno e USART;
+	\item Programação com 14 bits e 35 instruções
+\end{itemize}
+
+\subsubsection{Nomenclaturas utilizadas}
+
+\begin{figure}[htbp!]
+	\begin{center}
+		\fbox{\includegraphics[width=0.5\linewidth]
+		{figuras/PIC16F628A}}
+		\caption{Pinagem do PIC16F628A}
+		\label{Fig:pic16f628a}
+	\end{center}
+\end{figure} 
+
+O PIC16F628A possui um total de 16 I/O separados em dois grupos cuja a denominação atende pelo nome de PORTA e PORTB.
+
+O PORTA possui oito pinos que podem ser configurados como entrada ou saída, e seus nomes são definidos como RA0, RA1, RA2, RA3, RA4, RA5, RA6 e RA7. Alguns pinos tem dupla função e para utilizar uma determinada função é necessário abdicar de outra, por exemplo para se utilizar o pino RA5, perdemos o MCLR externo.
+
+O PORTB também possui oito pinos configuráveis como entrada ou saída, indo de RB0 a RB7. O RB0 pode ser utilizado também para gerar interrupção externa.
+
+Para que o microcontrolador possa funcionar, é necessário que o mesmo seja alimentado nos pinos 5 (Vss/GND) e 14 (Vdd/+5Vcc). A tensão nominal para alimentação é de 5Vcc, mas o ranger de variação desta tensão depende do modelo utilizado. No caso do PIC16F628A, ela vai de 2.0 a 5.5Vcc.
+
+Um pino denominado MCLR (barrado) se refere ao Master Clear externo. Para que o PIC funcione, este pino tem que se encontrar em nível lógico baixo (GND). Caso contrário o programa será resetado.
+
+\subsubsection{Opções do PIC}
+
+Antes de gravar o código propriamente dito com a lógica desejada no PIC, é necessário verificar e configurar os bits que definem as opções de gravação do mesmo. Esses bits podem ser configurados tanto em programas que fazem interface com o gravador de PIC utilizado quanto no próprio código, seja ele em \textit{assembler} ou \textit{C}.
+
+Os parâmetros de configuração para o PIC16F628A são:
+
+\begin{itemize}
+\item \textbf{Tipo de oscilador:} Existem dois grupos de osciladores para uso com o PIC16F628A: internos e externos. O PIC em questão possui dois osciladores internos (37 kHz e 4 MHz) e capacidade de operação com vários osciladores externos. As opções disponíveis para configurar o oscilador desejado são: 
+
+\item \textbf{WATCHDOG TIMER:} O WDT também pode ser ativado ou não na hora da gravação, e esta configuração não poderá ser alterada posteriormente pelo programa. Esse parâmetro é um controle implementado para o caso do software gravado no PIC travar ou entrar em loop infinito por alguma razão. Após um certo intervalo de tempo se ele não for resetado pelo software e o timer dele chegar ao fim, o PIC será reinicializado.
+\item \textbf{POWER UP TIMER:} O \textit{power up timer} interno pode ser habilitado ou não na hora da gravação. Esta operação faz com que o PIC só comece a operar cerca de 72 ms após o pino MCLR ser colocado em nível alto.
+\item \textbf{BROWN OUT DETECT:} Trata-se de um sistema de detecção automática de baixa tensão capaz de resetar o PIC. Isso significa que, se a tensão de alimentação for menor do que 4V (típico) por mais do que 100 \mu s, o sistema será reinicializado.
+\item \textbf{MASTER CLEAR ENABLE:} Esta é a opção que define o uso do pino 4, que pode ser I/O ou \textit{ Master Clear} externo (MCLR). Ao habilitar esta opção, o pino 4 funciona como MCLR.
+\item \textbf{LOW VOLTAGE PROGRAM:}  Um recurso relativamente novo para muitos modelos de PIC. Trata-se do sistema de programação do PIC em baixa tensão (5V). Normalmente essa programação por uma alta tensão (13 V) no pino MCLR. Acontece que hoje é possível criarmos sistemas onde um PIC possa gravar o programa de outro PIC, ou então efetuarmos um upgrade remoto. Quando habilitada esta opção, o pino 10 deixa de ser o RB4 e passa a operar como PGM.
+ \item \textbf{DATA EE READ PROTECT:} Com esta opção ativada, não será possível ler a EEPROM interna antes do gravador de PIC. Durante o desenvolvimento, ou até em alguns tipos de projeto, essa leitura pode ser útil para encontrar erros e solucionar problemas.
+\item \textbf{CÓDIGO DE PROTEÇÃO:} É muito importante que esta opção esteja ativada quando se deseja gravar em série, pois isso impedirá que qualquer pessoa consiga ler o programa gravado dentro do PIC. É a única maneira de proteger seu sistema contra cópia indevida. Esse parâmetro impede que se leia a memória mas não impede que se grave outros programas por cima do anterior.
+\end{itemize}
+
+\section{O módulo sonar}
+\begin{figure}[htbp!]
+	\begin{center}
+		\fbox{\includegraphics[width=0.5\linewidth]
+		{figuras/tatosonar}}
+		\caption{Módulo sonar da Tato}
+		\label{Fig:tatosonar}
+	\end{center}
+\end{figure} 
+
+A medição de distâncias é um problema que diversas  áreas encontram, sejam elas industriais ou o segmento de consumo. A tecnologia de ultrassom é uma das tecnologias usadas pelas indústrias. Entretanto, um balanço entre custo e benefícios é importante. A medição de distâncias por ultrassom é normalmente utilizada quando uma medição sem contato é necessária.
+
+\subsubsection{O som}
+
+O som é uma vibração mecânica transmitida por um meio elástico. A faixa de frequências que o ser humano consegue ouvir   varia aproximadamente de 20Hz a 20.000Hz. Esta faixa é por definição, o espectro audível e varia de pessoa para pessoa e geralmente diminui com a idade. O ouvido é mais sensível a frequências em torno de 3.500Hz. Sons acima de 20.000Hz são conhecidos como ultrassom e sons abaixo de 20 Hz como infrassom.
+
+\subsubsection{Velocidade do som}
+
+A velocidade do som depende do meio que ele atravessa. Em geral, a velocidade do som é proporcional (a raiz quadrada da diferença) da ?dureza? do meio e sua densidade. Esta é uma propriedade fundamental do meio. As propriedades físicas e a velocidade do som mudam de acordo com as condições do ambiente. A velocidade do som no ar depende da temperatura. No ar, a velocidade é de aproximadamente 345 m/s, na água de 1500 m/s e em uma barra de aço, de 5000 m/s.
+
+Um uso comum do ultrasom é para medição de distâncias, isto também é chamado de sonar. Sonar trabalha de um modo similar ao radar. Um pulso ultrasônico é gerado em uma direção. Se existir um objeto no caminho deste pulso, o pulso é refletido de volta para o emissor como um eco, e é detectado. Medindo a diferença de tempo entre a emissão do pulso e a recepção do eco, é possível determinar a distância do objeto.
+
+\subsubsection{Reflexão do som}
+
+Para medir a distância que o som percorreu, ele precisa ser refletido de volta. Este som é uma onda transversal que bate em uma superfície plana. O som é então refletido, desde que as dimensões do  objeto sejam grandes, comparado com o comprimento da onda.
+
+Alguns parâmetros a serem considerados:
+
+\begin{itemize}
+\item \textbf{Superfície:} A superfície ideal do objeto é dura e lisa. Esta superfície reflete uma quantidade maior do sinal do que uma macia e porosa. Um eco fraco é resultado de um objeto pequeno ou macio. Isto reduz a distância de operação do sensor e reduz a sua precisão. 
+\item \textbf{Distância:} Quanto menor for a distância do sensor ao objeto, mais forte será o eco. Deste modo, a medida que a distância aumenta, o objeto precisa ter melhores características de reflexão para retornar um eco suficiente.  
+\item \textbf{Tamanho:} Um objeto grande tem mais superfície para refletir o sinal do que um menor. A área de superfície reconhecida como alvo é a área mais próxima ao sensor.  
+\item \textbf{Ângulo:} A inclinação da superfície do objeto em relação ao sensor afeta o modo que o objeto reflete a onda. A porção perpendicular ao sensor retorna o eco. Se o objeto todo estiver a um ângulo grande, o sinal é então refletido para longe do sensor e o eco não é detectado.
+\end{itemize}
+
+\subsubsection{Funcionamento básico do sensor}
+
+\begin{figure}[htbp!]
+	\begin{center}
+		\fbox{\includegraphics[width=0.5\linewidth]
+		{figuras/ondasonar}}
+		\caption{Esquema do funcionamento básico do sonar}
+		\label{Fig:ondasonar}
+	\end{center}
+\end{figure} 
+
+O firmware do microcontrolador gera um trem de pulsos de 40 kHz. Depois que 10 pulsos são gerados, uma variável que mede o tempo é ativada. Esta variável guarda o tempo que o pulso leva até retornar e é usada para o cálculo da distância. Quando a onda é refletida pelo objeto, ela é capturada pelo receptor (Rx). Este sinal recebido é amplificado pelo amplificador, pois ela sofre uma atenuação no ar. Depois disto, o sinal retorna para o microcontrolador (MCU), onde é filtrado e usado para o cálculo da distância.
+
+O sensor um tipo de sinal de saída chamado Eco, que é um pulso em nível alto correspondente ao tempo de ida e volta do som, ou seja, é necessário dividir este tempo por 2 para obter calcular a distância.

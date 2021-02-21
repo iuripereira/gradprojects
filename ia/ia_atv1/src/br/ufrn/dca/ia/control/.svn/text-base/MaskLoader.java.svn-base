@@ -1,0 +1,151 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package br.ufrn.dca.ia.control;
+
+import br.ufrn.dca.ia.model.Table;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.ArrayList;
+import javax.swing.JTable;
+import javax.swing.table.TableModel;
+
+/**
+ *
+ * @author Marco Olimpio
+ */
+public class MaskLoader {
+    private ArrayList<String[]> mask;
+    private JTable table;
+
+    public JTable getTable() {
+        return table;
+    }
+
+    public void setTable(JTable table) {
+        this.table = table;
+    }
+
+    public ArrayList getMask() {
+        return mask;
+    }
+
+    public void setMask(ArrayList mask) {
+        this.mask = mask;
+    }
+
+    public void addValue(String[] line){
+        mask.add(line);
+    }
+
+    public int size(){
+        return mask.size();
+    }
+
+
+    public MaskLoader(String filePath) throws FileNotFoundException, IOException {
+        //filePath = "F:\\Marco\\UFRN\\20092\\IA\\1Trabalho\\mascara.txt";
+        /*File file = new File(filePath);
+
+        try {
+        FileInputStream iStream = new FileInputStream(file);
+        BufferedInputStream bIStream = new BufferedInputStream(iStream);
+
+        while (bIStream.read() != -1) {
+        System.out.println(bIStream.read
+        dis.read
+        }
+
+        fis.close();
+        bis.close();
+        dis.close();
+
+        } catch (FileNotFoundException e) {
+        e.printStackTrace();
+        } catch (IOException e) {
+        e.printStackTrace();
+        }
+         */
+        filePath = "F:\\Marco\\UFRN\\20092\\IA\\1Trabalho\\mascara.txt";
+        //File file = new File(filePath);
+        File file = new File(filePath);
+        FileReader fileReader = new FileReader(file);
+        BufferedReader bfReader = new BufferedReader(fileReader);
+        String line = null;
+        String[] dados;
+        while (bfReader.ready()) {
+            line = bfReader.readLine();
+            Table t = new Table();
+            t.addLine(line);
+            //dados = line.split(" ");
+            //map.add(dados);
+            //System.out.println(line);
+        }
+
+    }
+
+    public MaskLoader(File filePath) throws FileNotFoundException, IOException {
+        mask = new ArrayList<String[]>();
+        FileReader fileReader = new FileReader(filePath);
+        BufferedReader bfReader = new BufferedReader(fileReader);
+        String line = null;
+        String[] dados = null;
+        ArrayList<String> maskLine = new ArrayList<String>();
+        while (bfReader.ready()) {
+            line = bfReader.readLine();
+            dados = line.split(" ");
+            /*
+            System.out.println("\n--vector");
+            for (int i = 0; i < dados.length; i++) {
+                String string = dados[i];
+                System.out.print(dados[i]);
+            }
+            System.out.println("\n--vector");
+             */
+            /*for (int i = 0; i < line.length(); i++) {
+                //maskLine.add(line[i]);
+                //System.out.println(dados.toString());
+            }*/
+            //System.out.println(dados.toString());
+            mask.add((String[])dados);
+            //Table t = new Table();
+            //t.addLine(line);
+
+            //dados = line.split(" ");
+            //map.add(dados);
+            //System.out.println(line);
+        }
+
+    }
+
+    public MaskLoader() {
+    }
+
+    public void printMask(){
+        for (int i = 0; i < mask.size(); i++) {
+            String[] lineMask = (String[])mask.get(i);
+            String antes10 = "0"+i;
+            String depois10 = ""+i;
+            String lNumber = i <=9 ? antes10 : depois10;
+            System.out.print(lNumber+": ");
+            for (int j = 0; j < lineMask.length; j++) {
+                System.out.print(lineMask[i]+" ");
+            }
+            System.out.print("\n");
+        }
+    }
+
+    public TableModel getTableModel(){
+
+        return null;
+    }
+
+    public String[] get(int i){
+        return mask.get(i);
+    }
+}

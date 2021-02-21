@@ -1,0 +1,80 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package br.ufrn.dca.ia.structure;
+
+import java.util.ArrayList;
+
+/**
+ *
+ * @author Iuri
+ */
+public class Graph {
+    private Node n[];
+    private Path m[][]; //declara a matriz de adjacência
+    private static int MAX = Integer.MAX_VALUE;
+
+    public Graph(int size, int begin, int end, ArrayList wall){
+        int NumNodes = size^2;
+        n = new Node[NumNodes];
+        m = new Path[size][size];
+
+        for(int i=0;i<NumNodes;i++){
+            n[i].setId(i);
+            for(int j=0;j<NumNodes;j++){
+
+            }
+        }
+
+        m[v[0].getId()][v[1].getId()] = new Aresta(1,283.65);
+        m[v[0].getId()][v[20].getId()] = new Aresta(1,95.66);
+        m[v[7].getId()][v[20].getId()] = new Aresta(1,317.29);
+        m[v[20].getId()][v[21].getId()] = new Aresta(1,284.64);
+        m[v[1].getId()][v[21].getId()] = new Aresta(1,98.09);
+        m[v[6].getId()][v[21].getId()] = new Aresta(1,314.18);
+        m[v[1].getId()][v[2].getId()] = new Aresta(1,317.35);
+        m[v[2].getId()][v[3].getId()] = new Aresta(1,315.16);
+        m[v[3].getId()][v[4].getId()] = new Aresta(1,414.50);
+        m[v[4].getId()][v[5].getId()] = new Aresta(1,307.72);
+        m[v[5].getId()][v[6].getId()] = new Aresta(1,322.17);
+        m[v[6].getId()][v[7].getId()] = new Aresta(1,299.03);
+        m[v[2].getId()][v[5].getId()] = new Aresta(1,411.10);
+        m[v[4].getId()][v[8].getId()] = new Aresta(1,375.62);
+        m[v[8].getId()][v[9].getId()] = new Aresta(1,310.53);
+        m[v[9].getId()][v[10].getId()] = new Aresta(1,322.12);
+        m[v[10].getId()][v[11].getId()] = new Aresta(1,281.39);
+        m[v[7].getId()][v[11].getId()] = new Aresta(1,387.46);
+        m[v[6].getId()][v[10].getId()] = new Aresta(1,383.67);
+        m[v[5].getId()][v[9].getId()] = new Aresta(1,380.72);
+        m[v[8].getId()][v[12].getId()] = new Aresta(1,381.78);
+        m[v[12].getId()][v[13].getId()] = new Aresta(1,310.57);
+        m[v[13].getId()][v[14].getId()] = new Aresta(1,315.84);
+        m[v[14].getId()][v[15].getId()] = new Aresta(1,290.23);
+        m[v[11].getId()][v[15].getId()] = new Aresta(1,378.18);
+        m[v[10].getId()][v[14].getId()] = new Aresta(1,373.71);
+        m[v[9].getId()][v[13].getId()] = new Aresta(1,378.24);
+        m[v[12].getId()][v[16].getId()] = new Aresta(1,321.36);
+        m[v[16].getId()][v[17].getId()] = new Aresta(1,289.45);
+        m[v[17].getId()][v[18].getId()] = new Aresta(1,331.18);
+        m[v[18].getId()][v[19].getId()] = new Aresta(1,290.42);
+        m[v[15].getId()][v[19].getId()] = new Aresta(1,325.69);
+        m[v[14].getId()][v[18].getId()] = new Aresta(1,329.00);
+        m[v[13].getId()][v[17].getId()] = new Aresta(1,320.88);
+
+
+        for(int i=0;i<22;i++){
+            for(int j=0;j<22;j++){
+                if(m[v[i].getId()][v[j].getId()] == null){
+                    m[v[i].getId()][v[j].getId()] = new Aresta(0, max);
+                }
+                if(i > j){
+                    m[v[i].getId()][v[j].getId()] = m[v[j].getId()][v[i].getId()];
+                }
+            }
+        }
+    }
+
+
+}

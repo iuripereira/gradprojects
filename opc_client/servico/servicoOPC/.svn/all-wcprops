@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/siga/!svn/ver/976/OPC%20AE%20Coletor/servico/servicoOPC
+END
+Unt_Principal.dti
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/siga/!svn/ver/964/OPC%20AE%20Coletor/servico/servicoOPC/Unt_Principal.dti
+END
+Unt_Principal.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/siga/!svn/ver/976/OPC%20AE%20Coletor/servico/servicoOPC/Unt_Principal.cpp
+END
+service.ico
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/siga/!svn/ver/964/OPC%20AE%20Coletor/servico/servicoOPC/service.ico
+END
+Unt_Principal.dfm
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/siga/!svn/ver/964/OPC%20AE%20Coletor/servico/servicoOPC/Unt_Principal.dfm
+END
+SrvOPC.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/siga/!svn/ver/976/OPC%20AE%20Coletor/servico/servicoOPC/SrvOPC.cpp
+END
+Unt_Principal.ddp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/siga/!svn/ver/964/OPC%20AE%20Coletor/servico/servicoOPC/Unt_Principal.ddp
+END
+Unt_Principal.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/siga/!svn/ver/964/OPC%20AE%20Coletor/servico/servicoOPC/Unt_Principal.h
+END
+SrvOPC.bpr
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/siga/!svn/ver/964/OPC%20AE%20Coletor/servico/servicoOPC/SrvOPC.bpr
+END

@@ -1,0 +1,201 @@
+%%
+%% Capítulo 3: Engenharia de Software
+%%
+
+\mychapter{Fundamentos da Orientação a Objetos}
+\label{Cap:software}
+
+\section{O Paradigma da Orientação a Objetos}
+Antes do advento da orientação a objetos, geralmente o código era organizado como um conjunto de módulos, cada um consistindo em um conjunto de funções. Módulos em aplicações maiores eram divididos em submódulos, etc. Esses, por sua vez, eram decompostos em funções.
+
+Funções implementam algoritmos - maneiras de realizar tarefas. Embora os algoritmos sejam importantes, o mundo real não é decomposto em módulos e algoritmos. Em vez disso, geralmente pensamos sobre o nosso mundo em termos de conceitos, como automóveis e casas, e em termos de entidades concretas, como um carro da marca Ford e um guarda-roupas. Devido a essa não-correspondência entre funções e a maneira como normalmente pensamos, projetos e códigos tradicionais são pobremente mapeados para o mundo real.
+
+A Orientação a Objetos é um paradigma de análise, projeto e programação de sistemas de \textit{software} baseado na composição e interação entre diversas unidades de \textit{software} chamadas de objetos. O uso racional desses objetos, obedecendo aos princípios associados à sua definição conforme estabelecido no modelo de desenvolvimento orientado a objetos é a chave para o desenvolvimento de sistemas complexos e eficientes~\cite{ricarte}.
+
+\subsection{Objetos}
+Tomando como base o mundo real, um objeto é caracterizado por possuir um estado e um comportamento. Para melhor caracterizar a idéia de estado e comportamento, observemos o exemplo que se segue: um carro tem um estado (cor, marca, ano de fabricação) e um comportamento (mudança de marcha, frear, acelerar).
+Conceitualmente, objetos de \textit{software} possuem a mesma definição de objetos no mundo real: eles também possuem estados e comportamentos~\cite{sun-java}. Um objeto armazena seu estado nas suas variáveis (ou atributos) e demonstra seu comportamento através de seus métodos podendo interagir com outros objetos através de "trocas de mensagens". Na prática, essa troca de mensagem traduz-se na aplicação de métodos a esses objetos.
+Portanto, quando se cria um objeto, ele adquire um espaço em memória para armazenar seu estado (os valores de seu conjunto de atributos, definidos por uma classe) e um conjunto de operações que podem ser aplicadas a este objeto (o conjunto de métodos definidos pela classe)~\cite{ricarte}. Assim, é similar a uma variável de programa em uma linguagem de programação, exceto que geralmente terá uma estrutura de dados complexa, bem como operações específicas definidas pelo programador~\cite{elmasri-navathe}. A figura \ref{Fig:objetosoft} mostra a representação de um objeto de \textit{software}.
+
+\begin{figure}[htbp!]
+	\begin{center}
+		\fbox{\includegraphics[width=0.6\linewidth]{figuras/representacao_objeto}}
+		\caption{Representação de um objeto de \textit{software}.}~\cite{sun-java}
+		\label{Fig:objetosoft}
+	\end{center}
+\end{figure}
+
+Ao ser criado um objeto, uma referência para o mesmo também é criada. Quando utilizada por um usuário, uma referência de objeto sempre referencia o mesmo objeto do qual ela foi criada. Em outras palavras, uma referência de objeto sempre será para um único objeto. Este identificador é independente dos valores dos atributos dos objetos. Isto significa que os objetos podem ser distintos entre si sem a necessidade de comparar seus valores e seu comportamento.~\cite{booch} define essa forma de identidade, como sendo uma característica que diferencia objetos de outros objetos.
+
+\subsection{Interfaces}
+~\cite{rumbaugh-et-al} define interface como sendo uma especificação do comportamento abstrato de um tipo de objeto, especificando as assinaturas das operações. Uma interface não pode ser instanciável, isto é, não podem ser criados objetos que correspondam à definição da interface.
+
+\subsection{Classes} 
+Uma classe define o comportamento dos objetos e quais estados ele é capaz de manter~\cite{rumbaugh-et-al}. ~\cite{ricarte} diz em seu trabalho que uma classe é um gabarito para a definição de objetos. Através da definição de uma classe, descreve-se quais propriedades e comportamentos terão os objetos criados ou instanciados a partir daquela classe. Em outras palavras, um determinado conjunto de objetos que possui uma estrutura interna e comportamentos análogos é criado a partir de uma classe em comum e esta classe é denominada de classe pai.
+~\cite{booch} cita quatro conceitos que são fundamentais para se trabalhar com o modelo orientado a objetos e considera-se que a falta de um desses conceitos o usuário não estará trabalhando orientado a objetos. São eles: abstração, encapsulamento, modularidade e herança.
+
+\subsection{Abstração}
+Habilidade de se concentrar nas características essenciais de um objeto que o distingue dos demais objetos, possibilitando ao observador ignorar características menos importantes ou acidentais~\cite{booch}.
+
+\subsection{Encapsulamento}
+Segundo~\cite{booch}, o encapsulamento é um processo de compartimentização de elementos provenientes de uma abstração, que constitui sua estrutura e seu comportamento, servindo para separar os contratos de interfaces de sua implementação. Em outras palavras, o encapsulamento impede o acesso direto ao estado de um objeto (seus atributos), disponibilizando externamente apenas os métodos que alteram estes estados.
+
+\subsection{Modularidade}
+Caracteriza-se por ser uma propriedade do sistema em que o mesmo foi decomposto em um conjunto de módulos funcionais. Com isso, um componente de \textit{software} pode ser reutilizável sendo aproveitado em vários projetos~\cite{booch}.
+
+\subsection{Herança}
+A herança é um mecanismo de reusabilidade muito poderoso. Segundo~\cite{ricarte}, o conceito de encapsular estrutura e comportamento em um tipo não é exclusivo da orientação a objetos; particularmente, a programação por tipos abstratos de dados segue esse mesmo conceito e o que torna a orientação a objetos única é o conceito de herança. Para~\cite{booch}, herança representa uma hierarquia de abstrações, na qual uma subclasse herda de uma (herança simples) ou mais (herança múltipla) superclasses aproveitando seus comportamentos (métodos) e estados possíveis (atributos).~\cite{booch} também cita três conceitos que não são fundamentais para se trabalhar orientado a objeto, mas são importantes para o usuário obter o total poder de expressividade que uma linguagem orientada a objetos possa oferecer. São eles: tipação, concorrência e persistência.
+Um conceito muito importante que está relacionado com herança é o de polimorfismo. O polimorfismo de operações, também conhecido como sobrecarga de operadores (\textit{overloading}), permite que um mesmo operador ou símbolo possa ser associado a duas ou mais implementações, dependendo do tipo de objetos ao qual o operador é aplicado~\cite{edelweiss-galante}.
+
+\subsection{Tipação}
+O conceito de tipo tem significado originalmente das teorias de Tipos Abstratos de Dados. A programação orientada a objetos é baseada em Tipos Abstratos de Dados, mais conhecidos como TAD. Eles podem ser representados por um encapsulamento que inclui somente a representação de dados de um tipo específico e os subprogramas que fornecem as operações para esse tipo~\cite{sebesta}.
+Apesar dos conceitos de tipo e de classe serem muito parecido,~\cite{booch} caracteriza a tipação como sendo um elemento separado no modelo de objetos porque o conceito de tipo está mais voltado para o sentido de abstração.
+~\cite{booch} divide o conceito de tipação em dois tipos, tipação fraca e tipação forte. Na tipação forte, um objeto só pode acessar seus métodos se esses métodos forem definidos na classe que o representa ou na sua superclasse. Nesses tipos, violações de tipos podem ser detectadas em tempo de compilação. Enquanto que na tipação fraca, um objeto pode trocar qualquer mensagem com outro objeto, mas esse objeto não necessariamente irá saber como responder, podendo não haver violação de tipos na compilação e sim, erros durante a execução.
+
+\subsection{Concorrência}
+~\cite{rumbaugh-et-al} define concorrência como sendo a execução de duas ou mais atividades durante o mesmo intervalo de tempo, não havendo necessidade dessas atividades estarem sincronizadas. Na noção de objetos~\cite{booch} descreve concorrência como sendo a propriedade que diferencia um objeto ativo e um não ativo. Em um sistema orientado a objetos, onde estes objetos cooperam entre si trocando mensagens, alguns estarão ativos, trocando mensagens, e outros estarão em estado de espera.
+
+\subsection{Persistência}
+~\cite{booch} define persistência de dados como sendo uma propriedade do objeto em que ele pode existir mesmo depois que o programa que o criou termine ou que a sua localização não seja a mesma em que o mesmo foi criado.~\cite{booch} enfatiza que a persistência representa muito mais do que simplesmente persistir dados.
+
+\section{Engenharia de \textit{Software}}
+A engenharia de \textit{software} é uma área do conhecimento da computação voltada para a especificação, desenvolvimento e manutenção de sistemas, aplicando tecnologias e práticas de gerência de projetos e outras disciplinas, objetivando organização, produtividade e qualidade.
+
+Atualmente, essas tecnologias e práticas englobam linguagens de programação, banco de dados, ferramentas, plataformas, bibliotecas, padrões, processos e a questão da qualidade de \textit{software}.
+
+Os fundamentos científicos para a engenharia de \textit{software} envolvem o uso de modelos abstratos e precisos que permitem ao engenheiro especificar, projetar, implementar e manter sistemas de \textit{software}, avaliando e garantindo suas qualidades. Além disso, a engenharia de \textit{software} deve oferecer mecanismos para se planejar e gerenciar o processo de desenvolvimento de um sistema computacional~\cite{ian-sommerville}.
+
+Pode-se definir um processo de desenvolvimento de \textit{software} como sendo uma seqüência coerente de etapas que são cuidadosamente planejadas, onde o sucesso de cada etapa é primordial para produtos com qualidade, baixo custo e rapidez na construção, ou seja, pode possibilitar bom resultado final no produto de \textit{software}. Estas etapas englobam as atividades de especificação, projeto, implementação, testes e caracterizam-se pela interação de ferramentas, pessoas e métodos. Devido ao uso da palavra projeto em muitos contextos, por questões de clareza, há vezes em que se prefira usar o original em inglês \textit{design}.
+
+Um modelo de processo de desenvolvimento de \textit{software}, ou simplesmente modelo de processo, pode ser visto como uma representação ou abstração dos objetos e atividades envolvidas no processo de \textit{software}. Além disso, oferece uma forma mais abrangente e fácil de representar o gerenciamento de processo de \textit{software} e conseqüentemente o progresso do projeto.
+
+Exemplos de alguns modelos de processo de \textit{software}:
+\begin{itemize}
+	\item Cascata (\textit{Waterfall}) - com fases distintas de especificação, projeto e desenvolvimento;
+	\item Iterativo e incremental - desenvolvimento é iniciado com um subconjunto simples de Requisitos de 	
+	\textit{Software} e interativamente alcança evoluções subseqüentes das versões até o sistema todo estar 
+	implementado;
+	\item Espiral - evolução através de vários ciclos completos de especificação, projeto e desenvolvimento;
+	\item Ágil - minimizar o risco pelo desenvolvimento do \textit{software} em curtos períodos os quais 
+	gastam 	tipicamente menos de uma semana a até quatro.
+\end{itemize}
+
+No próximo capítulo veremos mais detalhes sobre o processo de desenvolvimento de \textit{software} utilizado pela equipe na construção do simulador.
+
+\section{UML}
+A abstração do sistema computacional através de modelos que o descrevem é um poderoso instrumento para o entendimento e comunicação do produto final que será desenvolvido. A maior dificuldade nesta atividade está no equilíbrio (\textit{tradeoff}) entre simplicidade (favorecendo a comunicação) e a complexidade (favorecendo a precisão) do modelo.
+
+Para a modelagem podemos citar 3 paradigmas:
+\begin{itemize}
+	\item Análise estruturada, criada por Gane e Searson;
+	\item Análise Essencial, criada por Palmer e McMenamin e Ed. Yourdon;
+	\item UML criada por Grady Booch, Ivar Jacobson, Jaimes Rumbaugh, entre outros.
+\end{itemize}
+
+Atualmente a modelagem mais recomendada, e sendo a mais comum, é a utilização da linguagem UML que foi usada no desenvolvimento do simulador computacional.
+
+A Linguagem de Modelagem Unificada (\textit{Unified Modeling Language}), ou UML, é uma notação gráfica usada para expressar projetos orientados a objetos. Ela é uma combinação das notações de Booch, Rumbaugh, Jacobson, Wirf-Brock e Harel, entre outros. O padrão oficial da UML é gerenciado pelo consórcio de empresas \textit{Object Management Groud} (OMG), e sua especificação formal exige centenas de páginas. A maioria das expressões de projeto em UML são denominadas modelos.
+
+\section{Refatoração}
+Ao projetar um \textit{software}, temos de enfrentar desafios peculiares em relação ao campo da engenharia de \textit{software}. Um dos maiores desafios é a tendencia de mudança dos requisitos enquanto a aplicação está sendo construída até mesmo os próprios objetivos de uma aplicação típica mudam depois que se tenha tomado a desição de construí-la. Um bom gerente de projeto se esforça muito para estabelecer claramente os requisitos do cliente logo que possível - certamente no início do projeto - mas isso freqüentemente não é possível. 
+
+Na prática, podemos ter uma boa idéia da natureza de uma aplicação, mas não sabemos exatamente o que é desejado até que uma versão preliminar ou um protótipo seja produzido. Por essa razão, projetamos com flexibilidade, permitindo aos demais membros da equipe a alterar mais facilmente o que já foi feito.
+
+A refatoração (do inglês \textit{refactoring}) é o processo em se alterar um sistema computacional de tal forma que não se altere o comportamento externo do código e ainda melhorar a sua estrutura interna. É uma alternativa disciplinada de reorganizar o código que provalvemente possa introduzir erros. Em essência, quando refatoramos estamos melhorando o \textit{design} do código depois que ele foi escrito~\cite{fowler-et-al}.
+
+O \textit{refactoring} permite a equipe de desenvolvimento a evitar a escrita de código desnecessário. Por exemplo, um membro da equipe inicia o desenvolvimento de uma funcionalidade, seguida de outra, e assim por diante, cada um programando do seu jeito sem se preocupar com o código. Uma reconstrução do código seguindo um conjunto de boas práticas, pode evitar este problema, assim como outros problemas associados, como por exemplo, a repetição da mesma parte do código para criar uma funcionalidade ou limitar a possibilidade de alterar partes do código sem afetar o programa em geral.
+
+Uma das grandes dificuldades do \textit{refactoring} é conciliar a comunicação entre os desenvolvedores e a máquina~\cite{fowler-et-al}. Enquanto o código é construído pelo desenvolvedor, este por sua vez se preocupa com o seu entendimento e a máquina, onde o meio de comunicação é o código. Ao criar uma função, o desenvolvedor se preocupa somente que o seu objetivo seja cumprido, esquecendo muitas vezes dos outros membros da equipe que estão trabalhando no mesmo projeto e terão que entender o seu código. Programar recorrendo ao \textit{refactoring} é uma forma de tornar universal a codificação. Isto acaba tornando-se útil para o próprio desenvolvedor quando for necessária uma mudança. Outra vantagem é a detecção de erros. O desenvolvedor pode perder muito tempo para encontrar um \textit{bug} se o código do programa estiver muito complicado de se entender. Com o programa bem organizado, o problema fica fácil de ser encontrado.
+
+Por fim, o hábito de aplicar esta boa prática pode diminuir o tempo desperdiçado, sendo possível manter a qualidade do sistema. Na próxima seção iremos detalhar uma prática bastante usada no desenvolvimento de sistemas computacionais, o uso de padrões de projeto.
+
+\section{Padrões de Projeto}
+A idéia de padrões (do inglês \textit{patterns}) surgiu através dos livros escritos pelo arquiteto, matemático e urbanista austríaco, Christopher Alexander, que estuda assuntos relacionados ao planejamento urbano e à arquitetura de prédios. Em seus livros o termo \textit{pattern} referencia estruturas que podem ser utilizadas para solucionar problemas, que ocorrem seguidamente na área onde o arquiteto atua. No período de 1977 - 1979, Alexander, como era conhecido, escreveu dois dos principais livros que deram origem, mais tarde, aos padrões de projeto (\textit{Design Patterns}). São eles: \textit{A Pattern Language: Towns, Buildings, Construction} (\textit{Oxford University Press}, 1977) e \textit{The Timeless Way of Building} (\textit{Oxford University Press}, 1979).
+
+Segundo~\cite{alexander-et-al}, cada padrão descreve um problema que ocorre repetidamente no nosso ambiente de trabalho e então descreve o núcleo da solução para esse problema, de tal forma que pode-se usar esta solução milhares de vezes, sem nunca fazer da mesma maneira duas vezes. Mesmo que Alexander estivesse falando sobre padrões em construção de edifícios e cidades, o que ele diz pode ser aplicado também nos padrões de projeto orientados a objeto em desenvolvimento de software~\cite{gamma-et-al}. Sendo assim, as nossas soluções são expressas em termos de interfaces e objetos ao invés de paredes e portas, mas em ambos os contextos, um padrão sempre será uma solução para um problema num determinado contexto.~\cite{alexander-et-al} cita quatro elementos essenciais que caracteriza um padrão de \textit{design}. São eles:
+
+\begin{enumerate}
+\item ``O \textbf{nome} do padrão é um identificador que podemos usar para descrever um problema de \textit{design}, suas soluções e consequências em uma ou duas palavras. Ao nomear um padrão aumentamos o nosso vocabulário de \textit{design} permitindo-nos projetar em um nível maior de abstração.'' Ter um vocabulário para os padrões nos permite falar sobre eles com nossos colegas de trabalho, em nossa documentação, e até mesmo para nós mesmos. Ele torna mais fácil pensar em projetos e descrever suas vantagens e desvantagens para as outras pessoas.
+
+\item ``O \textbf{problema} descreve quando o padrão deve ser aplicado. Ele explica o problema e em que contexto ele se encontra.'' Pode ser usado para descrever os problemas de \textit{design} específicos, tais como a forma de representar algoritmos como objetos. Às vezes, o problema irá incluir uma lista de condições que devem ser atendidas antes de se aplicar o padrão.
+
+\item ``A \textbf{solução} descreve os elementos que compõem o \textit{design}, seus relacionamentos, responsabilidades e colaborações.'' A solução não descreve um projeto concreto particular ou uma implementação, porque o padrão é semelhante a um \textit{template} que pode ser aplicado em muitas situações diferentes. Em vez disso, o padrão fornece uma descrição abstrata de um problema de \textit{design} e como uma disposição geral de elementos (classes e objetos no nosso caso) podem resolvê-lo.
+
+\item ``As \textbf{conseqüências} são os conflitos e resultados obtidos quando se aplica um padrão. Embora as conseqüências sejam muitas vezes irrelevantes, quando descrevemos as decisões de projeto, elas são críticas para avaliar novas alternativas de projeto e para a compreensão dos custos e benefícios da aplicação do padrão.'' No contexto do desenvolvimento de \textit{software}, as conseqüências muitas vezes dizem respeito a conflitos entre tempo e espaço. Elas podem significar problemas da linguagem e implementação. Uma vez que a reutilização é uma ação frequente em projetos orientados a objetos, as conseqüências em se usar um padrão incluem seu impacto na flexibilidade do sistema, extensibilidade e portabilidade. Seguindo essas conseqüências ajudam a compreender e avaliar estes padrões.
+\end{enumerate}
+
+No âmbito do desenvolvimento de \textit{software} os padrões de projeto passaram a ser reconhecidos formalmente por volta dos anos 90, quando os autores Helm e Erich Gamma descreveram padrões aplicados ao \textit{framework} de Interface Gráfica, ET++. O ponto alto da discussão sobre padrões de projeto resultou em uma publicação, \textit{Design Patterns - Elements of Reusable Software}, pelos autores Gamma, Helm, Johnson e Vlissides (GoF - \textit{Gang of Four}). 
+
+~\cite{metsker} define padrões de projeto com sendo um padrão, para alcançar uma solução utilizando classes e métodos em uma linguagem orientada a objetos.
+
+Na subseção seguinte trataremos dos padrões de projetos utilizados na implementação do estudo de caso, dentre eles os padrões de projeto clássicos.
+
+\subsection{Padrões de Projeto Clássicos - GoF}
+Os padrões de projeto clássicos são aqueles pertencentes ao catálogo de padrões documentados pelos autores Gamma, Helm, Johnson e Vlissides. São 23 os padrões clássicos e segundo Gamma em~\cite{gamma-et-al} são classificados de acordo com o seu propósito, seja para criação, estrutural ou comportamental. Os padrões GoF podem ser visto na Tabela \ref{Tab:padroes-gof}.
+
+\begin{table}[htbp]
+	\begin{tabularx}{\linewidth}{|X|X|X|} \hline
+		\multicolumn{3}{|c|}{\textbf{Padrões de Projetos Clássicos}} \\ \hline
+		\textbf{Criacional} & \textbf{Estrutural} & \textbf{Comportamental} \\ \hline
+		Abstract Factory & Adapter   & Chain of responsability \\
+		Builder          & Bridge    & Command \\
+		Factory Method   & Composite & Flyweight \\
+		Prototype        & Decorator & Interpreter \\
+		Singleton        & Facade    & Iterator \\
+		                 & Proxy     & Mediator \\
+		                 &           & Memento \\
+			             &           & Observer \\
+			             &           & State \\
+						 &			 & Strategy \\
+						 &		     & Template Method \\
+						 &			 & Visitor \\ \hline		
+	\end{tabularx}
+	\caption{Classificação dos Padrões de Projeto Clássicos}
+	\label{Tab:padroes-gof}
+\end{table}
+
+~\cite{gamma-et-al} descreve um padrão de projeto orientado a objetos usando um formato consistente. Cada padrão é dividido em seções de acordo com o formulário a seguir. O formulário proporciona uma estrutura uniforme para as informações, tornando os padrões de projeto mais fáceis de se utilizar, aprender e comparar.
+
+\begin{itemize}
+\item \textbf{Nome e Classificação}: O nome do padrão transmite a essência do padrão de forma clara. A sua classificação pode ser vista na Tabela \ref{Tab:padroes-gof} apresentanda anteriormente.
+\item \textbf{Intenção}: Uma breve resposta para as seguintes perguntas: O que o padrão de projeto faz? Qual é a sua lógica e intenção?
+\item \textbf{Também Conhecido Como}: Outros nomes conhecidos para o padrão, se houver.
+\item \textbf{Motivação}: Um cenário que ilustra o problema encontrado e como as estruturas de classes e objetos presentes no padrão resolvem o problema.
+\item \textbf{Aplicabilidade}: Quais são as situações em que o padrão de projeto pode ser aplicado? Quais problemas de \textit{desing} o padrão pode resolver? Como podemos reconhecer estas situações?
+\item \textbf{Estrutura}: A representação gráfica das classes presentes no padrão usando, por exemplo, uma notação baseada na UML.
+\item \textbf{Participantes}: As classes e/ou objetos participantes do padrão de projeto e suas responsabilidades.
+\item \textbf{Colaboradores}: Como os participantes podem colaborar para cumprir suas responsabilidades?
+\item \textbf{Conseqüências}: Como o padrão de projeto atinge seus objetivos? Quais são os conflitos e resultados obtidos quando se aplica o padrão?
+\item \textbf{Implementação}: Que perigos, dicas, ou técnicas que devemos estar cientes quando implementamos o padrão?
+\item \textbf{Exemplo de Código}: Fragmentos de código que ilustram como podemos implementar o padrão.
+\item \textbf{Usos Conhecidos}: Exemplos dos padrões encontrados em sistemas reais.
+\item \textbf{Padrões Relacionados}: Que padrões de projeto estão intimamente relacionados com este padrão que acabamos de utilizar? Quais são as diferenças mais importantes? Com que outros padrões este deve ser usado?
+\end{itemize}
+
+\subsubsection{Padrões Criacionais}
+Os padrões desse tipo tratam de como os objetos são instanciados abstraindo a forma de criação, como são compostos e representados~\cite{gamma-et-al}. Dentre os padrões criacionais foram utilizados na implementação da camada de persistência o \textit{Abstract Factory}, \textit{Factory Method} e o \textit{Singleton}. Maiores detalhes sobre os padrões criacionais utilizados serão descritos no Capítulo 4 (Estudo de caso).
+
+\begin{itemize}
+\item \textbf{\textit{Abstract Factory}} - Provê uma interface para criar famílias de objetos relacionados ou dependentes sem especificar suas classes concretas.
+\item \textbf{\textit{Factory Method}} - Esse padrão consiste em definir uma interface para a criação de objetos, decidindo qual classe deverá ser instanciada~\cite{gamma-et-al}. Uma aplicação do \textit{Factory Method} se dá na necessidade de abstração do tipo de classe a ser instanciado, como por exemplo, quando se deseja abstrair a implementação ou o tipo de camada de acesso a um repositório de dados.
+\item \textbf{\textit{Singleton}} - O propósito do padrão \textit{Singleton} é garantir a existência de apenas uma instância de um objeto de uma classe, fornecendo assim um ponto de acesso global a essa instância~\cite{gamma-et-al}. Apesar de ter como objetivo garantir uma única instância de um objeto o \textit{Singleton} também pode ser utilizado para controlar o número de instâncias de um objeto.
+\end{itemize}
+
+\subsubsection{Padrões Estruturais}
+Os padrões desse tipo são responsáveis por tratar de compor classes e objetos para formar estruturas grandes e complexas~\cite{gamma-et-al}. Os padrões estruturais de classes utilizam herança para compor interfaces ou implementações. Já os padrões estruturais de objeto descrevem as formas de como compor objetos para realizar uma nova funcionalidade. Dentre os padrões estruturais só foi utilizado o padrão \textit{Facade} (Fachada). Novamente, maiores detalhes sobre o padrão estrutural \textit{Facade} será descrito no Capítulo 4.
+
+\begin{itemize}
+\item \textbf{\textit{Facade}} - Provê uma interface unificada para o conjunto de interfaces de um subsistema. Define uma interface de alto nível que faz um subsistema mais fácil de usar.
+\end{itemize}
+
+\subsubsection{Padrões Comportamentais}
+Essa classificação é dada aos padrões que tratam da responsabilidade e interação dos objetos, tornando um objeto complexo gerenciável, especificando suas responsabilidades e as maneira como eles se comunicam entre si~\cite{gamma-et-al}. Atualmente não se viu a necessidade de aplicar nenhum padrão comportamental na implementação da camada de persistência do simulador.
+
+\subsection{Padrões de Projeto para Aplicações Corporativas}
+Os padrões de projeto pertencentes ao catálogo JEE (\textit{Java Enterprise Edition}) são padrões que descrevem as melhores práticas relacionadas à arquitetura e \textit{design} de aplicações JEE. Consistem em um catálogo originado das experiências entre os arquitetos da \textit{Sun Microsystems} e seus clientes. A partir dessas experiências foram surgindo documentações que passaram a registrar soluções para situações recorrentes. Cada padrão é classificado dentro de um contexto que trata do seu papel com relação à camada a que pertence na aplicação. Dentre os padrões de projeto utilizados no estudo de caso, foi utilizado o padrão da camada de integração o \textit{Data Access Object} - DAO.
+
+\begin{itemize}
+\item \textbf{\textit{Data Access Object}} - Possui como objetivo desacoplar o acesso da camada do repositório de dados do restante do sistema, realizando o mapeamento entre os objetos da aplicação e esse. Dessa forma abstrai-se o acesso aos dados e sua implementação. O DAO é implementado como parte da camada de persistência atuando como uma camada de integração.
+\end{itemize}
+
+Uma observação importante que deve ser feita é que mesmo o padrão de projeto DAO ter sido concebido para aplicações que utilizam a linguagem de programação Java, ele pode ser implementado na linguagem C++ sem nenhuma complicação. Maiores detalhes sobre a implementação do padrão de projeto DAO poderão ser vistos no Capitulo 4.

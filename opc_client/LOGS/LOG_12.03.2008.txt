@@ -1,0 +1,6 @@
+09:17:17AM - Listou servidores remotos!
+09:17:17AM - listaOpc - startCom  --> S_OK
+09:17:17AM - ListaOpc - CoCreateInstanceEx localhost--> S_OK
+09:34:47AM - Listou servidores remotos!
+09:34:47AM - listaOpc - startCom  --> S_OK
+09:34:47AM - ListaOpc - CoCreateInstanceEx localhost--> S_OK

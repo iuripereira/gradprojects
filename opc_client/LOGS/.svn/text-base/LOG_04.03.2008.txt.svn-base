@@ -1,0 +1,29 @@
+05:24:03PM - Listou servidores remotos!
+05:24:03PM - listaOpc - startCom  --> S_OK
+05:24:04PM - ListaOpc - CoCreateInstanceEx localhost--> S_OK
+05:24:06PM - getCLSID from MAPA --> S_OK
+05:24:06PM - listaOpc - startCom  --> S_OK
+05:24:08PM - getProgId --> S_OK
+05:24:59PM - Listou servidores remotos!
+05:24:59PM - listaOpc - startCom  --> S_OK
+05:24:59PM - ListaOpc - CoCreateInstanceEx localhost--> S_OK
+05:25:12PM - getCLSID from MAPA --> S_OK
+05:25:12PM - listaOpc - startCom  --> S_OK
+05:25:12PM - getProgId --> S_OK
+05:26:34PM - Listou servidores remotos!
+05:26:34PM - listaOpc - startCom  --> S_OK
+05:26:34PM - ListaOpc - CoCreateInstanceEx localhost--> S_OK
+05:26:39PM - getCLSID from MAPA --> S_OK
+05:26:39PM - listaOpc - startCom  --> S_OK
+05:26:39PM - getProgId --> S_OK
+05:27:02PM - connectAEServer - CoCreateInstanceEx localhost ProgID Matrikon.OPC.Simulation.1 --> S_
+05:27:02PM - Conectou Local  - Matrikon.OPC.Simulation.1
+05:27:05PM - Falha ao tentar criar a seguinte EventSubscription: Teste chave:TesteMatrikon.OPC.Simu
+05:45:24PM - Listou servidores remotos!
+05:45:24PM - listaOpc - startCom  --> S_OK
+05:45:24PM - ListaOpc - CoCreateInstanceEx localhost--> S_OK
+05:45:27PM - getCLSID from MAPA --> S_OK
+05:45:27PM - listaOpc - startCom  --> S_OK
+05:45:29PM - getProgId --> S_OK
+05:45:36PM - connectAEServer - CoCreateInstanceEx localhost ProgID IntegrationObjects.OPCAE.VB.Simulation --> S_OK
+05:45:36PM - Conectou Local  - IntegrationObjects.OPCAE.VB.Simulation

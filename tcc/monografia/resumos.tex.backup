@@ -1,0 +1,29 @@
+%
+% ********** Resumo
+%
+
+% Usa-se \chapter*, e não \chapter, porque este "capítulo" não deve
+% ser numerado.
+% Na maioria das vezes, ao invés dos comandos LaTeX \chapter e \chapter*,
+% deve-se usar as nossas versões definidas no arquivo comandos.tex,
+% \mychapter e \mychapterast. Isto porque os comandos LaTeX têm um erro
+% que faz com que eles sempre coloquem o número da página no rodapé na
+% primeira página do capítulo, mesmo que o estilo que estejamos usando
+% para numeração seja outro.
+
+\mychapterast{Resumo}
+%SOUSA, Bruno A. S. de. \textbf{Modelagem e Implementação da Camada de Persistência para um Simulador %Computacional para Poços de Petróleo com Método de Elevação Artificial por Plunger Lift}. Natal, 2010. XX %f. Trabalho de Conclusão de Curso (Engenharia de Computação e Automação) - Departamento de Engenharia da %Computação e Automação, Universidade Federal do Rio Grande do Norte, Natal-RN, 2010.
+
+A demanda crescente por tecnologias sem fio que facilitem o dia-a-dia da sociedade e da indústria a medida que trazem benefícios e
+facilidades ao lidar com tarefas cotidianas antes sem o artifício de agentes autômatos motiva este trabalho de forma a tentar estabelecer
+um parâmetro entre o que é possível e viável atualmente tendo em vista a tecnologia de ponta utilizada neste estudo e já atuante
+no mercado bem como de tentar predizer os possíveis avanços e caminhos para tal em um futuro próximo e promissor para as redes de sensores
+sem fio.
+
+\mychapterast{Abstract}
+
+The growing demand for wireless technologies that facilitate the daily routine of the society and industry as it brings benefits and
+facilities to cope with daily tasks without the help of software or hardware, motivates this work to try to establish
+a parameter between what is currently possible and feasible in view of the high technology used in this study and have active
+market as well as trying to predict the possible paths to such advances and in the near future and promising for sensor networks
+wireless.

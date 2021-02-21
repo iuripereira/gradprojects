@@ -1,0 +1,399 @@
+10:11:54AM - Listou servidores locais
+10:11:59AM - Conectou Local
+10:12:01AM - Criou a Subscription Teste no localhost [127.0.0.1] - ICONICS.SimulatorOPCAE.1
+10:12:02AM - Buffer não cheio
+10:12:02AM - Buffer não cheio
+10:12:02AM - Buffer não cheio
+10:12:02AM - Buffer não cheio
+10:12:02AM - Buffer não cheio
+10:12:02AM - Buffer não cheio
+10:12:02AM - Buffer não cheio
+10:12:03AM - Buffer não cheio
+10:12:03AM - Buffer não cheio
+10:12:03AM - Buffer não cheio
+10:12:03AM - Buffer não cheio
+10:12:03AM - Buffer não cheio
+10:12:03AM - Buffer não cheio
+10:12:03AM - Buffer não cheio
+10:12:03AM - Buffer não cheio
+10:12:03AM - Buffer não cheio
+10:12:03AM - Buffer não cheio
+10:12:04AM - Buffer não cheio
+10:12:04AM - Buffer não cheio
+10:12:04AM - Buffer não cheio
+10:12:04AM - Buffer cheio. Perda de DADOS!!!
+11:06:37AM - Listou servidores locais
+11:06:39AM - Conectou Local
+11:06:58AM - Criou a Subscription Teste no localhost [127.0.0.1] - ICONICS.SimulatorOPCAE.1
+11:06:58AM - Buffer não cheio
+11:06:58AM - Buffer não cheio
+11:06:58AM - Buffer não cheio
+11:06:58AM - Buffer não cheio
+11:06:59AM - Buffer não cheio
+11:06:59AM - Buffer não cheio
+11:06:59AM - Buffer não cheio
+11:06:59AM - Buffer não cheio
+11:06:59AM - Buffer não cheio
+11:06:59AM - Buffer não cheio
+11:06:59AM - Buffer não cheio
+11:06:59AM - Buffer não cheio
+11:06:59AM - Buffer não cheio
+11:06:59AM - Buffer não cheio
+11:06:59AM - Buffer não cheio
+11:07:00AM - Buffer não cheio
+11:07:00AM - Buffer não cheio
+11:07:00AM - Buffer não cheio
+11:07:00AM - Buffer não cheio
+11:07:00AM - Buffer não cheio
+11:07:00AM - Buffer cheio. Perda de DADOS!!!
+11:07:50AM - Falha ao tentar criar Filtro --> Subscription is NULL
+11:08:02AM - Falha ao tentar criar Filtro --> Subscription is NULL
+11:12:14AM - Listou servidores locais
+11:12:15AM - Conectou Local
+11:12:18AM - Criou a Subscription Teste no localhost [127.0.0.1] - ICONICS.SimulatorOPCAE.1
+11:12:18AM - Buffer não cheio
+11:12:18AM - Buffer não cheio
+11:12:18AM - Buffer não cheio
+11:12:18AM - Buffer não cheio
+11:12:18AM - Buffer não cheio
+11:12:18AM - Buffer não cheio
+11:12:18AM - Buffer não cheio
+11:12:18AM - Buffer não cheio
+11:12:19AM - Buffer não cheio
+11:12:19AM - Buffer não cheio
+11:12:19AM - Buffer não cheio
+11:12:19AM - Buffer não cheio
+11:12:19AM - Buffer não cheio
+11:12:19AM - Buffer não cheio
+11:12:19AM - Buffer não cheio
+11:12:19AM - Buffer não cheio
+11:12:19AM - Buffer não cheio
+11:12:19AM - Buffer não cheio
+11:12:19AM - Buffer não cheio
+11:12:19AM - Buffer não cheio
+11:12:19AM - Buffer cheio. Perda de DADOS!!!
+11:13:48AM - Listou servidores locais
+11:13:50AM - Conectou Local
+11:13:52AM - Criou a Subscription Teste no localhost [127.0.0.1] - ICONICS.SimulatorOPCAE.1
+11:13:53AM - Buffer não cheio
+11:13:53AM - Buffer não cheio
+11:13:53AM - Buffer não cheio
+11:13:53AM - Buffer não cheio
+11:13:53AM - Buffer não cheio
+11:13:53AM - Buffer não cheio
+11:13:53AM - Buffer não cheio
+11:13:53AM - Buffer não cheio
+11:13:53AM - Buffer não cheio
+11:13:54AM - Buffer não cheio
+11:13:54AM - Buffer não cheio
+11:13:54AM - Buffer não cheio
+11:13:54AM - Buffer não cheio
+11:13:54AM - Buffer não cheio
+11:13:54AM - Buffer não cheio
+11:13:54AM - Buffer não cheio
+11:13:54AM - Buffer não cheio
+11:13:54AM - Buffer não cheio
+11:13:54AM - Buffer não cheio
+11:13:54AM - Buffer não cheio
+11:13:54AM - Buffer cheio. Perda de DADOS!!!
+11:23:04AM - Listou servidores locais
+11:23:05AM - Conectou Local
+11:23:09AM - Listou servidores locais
+11:23:14AM - Conectou Local
+11:23:16AM - Criou a Subscription Teste no localhost [127.0.0.1] - IntegrationObjects.OPCAE.Simulat
+11:23:18AM - Buffer não cheio
+11:23:19AM - Buffer não cheio
+11:23:20AM - Buffer não cheio
+11:23:21AM - Buffer não cheio
+11:23:22AM - Buffer não cheio
+11:23:23AM - Buffer não cheio
+11:23:23AM - Buffer não cheio
+11:23:25AM - Buffer não cheio
+11:23:26AM - Buffer não cheio
+11:23:27AM - Buffer não cheio
+11:23:28AM - Buffer não cheio
+11:23:29AM - Buffer não cheio
+11:23:29AM - Buffer não cheio
+11:23:30AM - Buffer não cheio
+11:23:32AM - Buffer não cheio
+11:23:33AM - Buffer não cheio
+11:23:34AM - Buffer não cheio
+11:23:35AM - Buffer não cheio
+11:23:36AM - Buffer não cheio
+11:23:37AM - Buffer não cheio
+11:23:38AM - Buffer cheio. Perda de DADOS!!!
+11:24:30AM - Listou servidores locais
+11:24:32AM - Conectou Local
+11:24:36AM - Criou a Subscription Teste no localhost [127.0.0.1] - IntegrationObjects.OPCAE.Simulat
+11:24:37AM - Buffer não cheio
+11:24:50AM - Listou servidores locais
+11:24:51AM - Conectou Local
+11:24:53AM - Criou a Subscription Teste no localhost [127.0.0.1] - ICONICS.SimulatorOPCAE.1
+11:24:54AM - Buffer não cheio
+11:24:54AM - Buffer não cheio
+11:24:54AM - Buffer não cheio
+11:24:54AM - Buffer não cheio
+11:24:54AM - Buffer não cheio
+11:24:54AM - Buffer não cheio
+11:24:54AM - Buffer não cheio
+11:24:54AM - Buffer não cheio
+11:24:54AM - Buffer não cheio
+11:24:55AM - Buffer não cheio
+11:24:55AM - Buffer não cheio
+11:24:55AM - Buffer não cheio
+11:24:55AM - Buffer não cheio
+11:24:55AM - Buffer não cheio
+11:24:55AM - Buffer não cheio
+11:24:55AM - Buffer não cheio
+11:24:55AM - Buffer não cheio
+11:24:56AM - Buffer não cheio
+11:24:56AM - Buffer não cheio
+11:24:56AM - Buffer não cheio
+11:24:56AM - Buffer cheio. Perda de DADOS!!!
+11:25:38AM - Listou servidores locais
+11:25:40AM - Conectou Local
+11:25:42AM - Criou a Subscription Teste no localhost [127.0.0.1] - ICONICS.SimulatorOPCAE.1
+11:25:43AM - Buffer não cheio
+11:25:43AM - Buffer não cheio
+11:25:43AM - Buffer não cheio
+11:25:43AM - Buffer não cheio
+11:25:43AM - Buffer não cheio
+11:25:43AM - Buffer não cheio
+11:25:43AM - Buffer não cheio
+11:25:43AM - Buffer não cheio
+11:25:43AM - Buffer não cheio
+11:25:44AM - Buffer não cheio
+11:25:44AM - Buffer não cheio
+11:25:44AM - Buffer não cheio
+11:25:44AM - Buffer não cheio
+11:25:44AM - Buffer não cheio
+11:25:44AM - Buffer não cheio
+11:25:44AM - Buffer não cheio
+11:25:44AM - Buffer não cheio
+11:25:44AM - Buffer não cheio
+11:25:44AM - Buffer não cheio
+11:25:44AM - Buffer não cheio
+11:25:45AM - Buffer cheio. Perda de DADOS!!!
+11:26:24AM - Listou servidores locais
+11:26:25AM - Conectou Local
+11:26:28AM - Criou a Subscription Teste no localhost [127.0.0.1] - ICONICS.SimulatorOPCAE.1
+11:26:28AM - Buffer não cheio
+11:26:28AM - Buffer não cheio
+11:26:29AM - Buffer não cheio
+11:26:29AM - Buffer não cheio
+11:26:29AM - Buffer não cheio
+11:26:29AM - Buffer não cheio
+11:26:29AM - Buffer não cheio
+11:26:29AM - Buffer não cheio
+11:26:29AM - Buffer não cheio
+11:26:29AM - Buffer não cheio
+11:26:29AM - Buffer não cheio
+11:26:29AM - Buffer não cheio
+11:26:30AM - Buffer não cheio
+11:26:30AM - Buffer não cheio
+11:26:30AM - Buffer não cheio
+11:26:30AM - Buffer não cheio
+11:27:55AM - Listou servidores locais
+11:27:57AM - Conectou Local
+11:27:59AM - Criou a Subscription Teste no localhost [127.0.0.1] - ICONICS.SimulatorOPCAE.1
+11:28:00AM - Buffer não cheio
+11:28:00AM - Buffer não cheio
+11:28:00AM - Buffer não cheio
+11:28:00AM - Buffer não cheio
+11:28:00AM - Buffer não cheio
+11:28:00AM - Buffer não cheio
+11:28:00AM - Buffer não cheio
+11:28:00AM - Buffer não cheio
+11:28:00AM - Buffer não cheio
+11:28:00AM - Buffer não cheio
+11:28:01AM - Buffer não cheio
+11:28:01AM - Buffer não cheio
+11:28:01AM - Buffer não cheio
+11:28:01AM - Buffer não cheio
+11:28:01AM - Buffer não cheio
+11:28:01AM - Buffer não cheio
+11:28:01AM - Buffer não cheio
+11:28:01AM - Buffer não cheio
+11:28:01AM - Buffer não cheio
+11:28:02AM - Buffer não cheio
+11:28:02AM - Buffer cheio. Perda de DADOS!!!
+11:35:33AM - Listou servidores locais
+11:35:35AM - Conectou Local
+11:35:38AM - Criou a Subscription Teste no localhost [127.0.0.1] - ICONICS.SimulatorOPCAE.1
+11:35:38AM - Buffer não cheio
+11:35:38AM - Buffer não cheio
+11:35:38AM - Buffer não cheio
+11:35:38AM - Buffer não cheio
+11:35:38AM - Buffer não cheio
+11:35:38AM - Buffer não cheio
+11:35:38AM - Buffer não cheio
+11:35:38AM - Buffer não cheio
+11:35:39AM - Buffer não cheio
+11:35:39AM - Buffer não cheio
+11:35:39AM - Buffer não cheio
+11:35:39AM - Buffer não cheio
+11:35:39AM - Buffer não cheio
+11:35:39AM - Buffer não cheio
+11:35:39AM - Buffer não cheio
+11:35:39AM - Buffer não cheio
+11:35:39AM - Buffer não cheio
+11:35:40AM - Buffer não cheio
+11:35:40AM - Buffer não cheio
+11:35:40AM - Buffer não cheio
+11:35:40AM - Buffer cheio. Perda de DADOS!!!
+11:37:25AM - Listou servidores locais
+11:37:28AM - Conectou Local
+11:37:30AM - Criou a Subscription Teste no localhost [127.0.0.1] - ICONICS.SimulatorOPCAE.1
+11:37:31AM - Buffer não cheio
+11:37:31AM - Buffer não cheio
+11:37:31AM - Buffer não cheio
+11:37:31AM - Buffer não cheio
+11:37:31AM - Buffer não cheio
+11:37:31AM - Buffer não cheio
+11:37:31AM - Buffer não cheio
+11:37:31AM - Buffer não cheio
+11:37:32AM - Buffer não cheio
+11:37:32AM - Buffer não cheio
+11:37:32AM - Buffer não cheio
+11:37:32AM - Buffer não cheio
+11:37:32AM - Buffer não cheio
+11:37:32AM - Buffer não cheio
+11:37:32AM - Buffer não cheio
+11:37:32AM - Buffer não cheio
+11:37:32AM - Buffer não cheio
+11:37:32AM - Buffer não cheio
+11:37:32AM - Buffer não cheio
+11:38:27AM - Listou servidores locais
+11:38:29AM - Conectou Local
+11:38:31AM - Criou a Subscription Teste no localhost [127.0.0.1] - ICONICS.SimulatorOPCAE.1
+11:38:32AM - Buffer não cheio
+11:38:32AM - Buffer não cheio
+11:38:32AM - Buffer não cheio
+11:38:32AM - Buffer não cheio
+11:38:32AM - Buffer não cheio
+11:38:32AM - Buffer não cheio
+11:38:32AM - Buffer não cheio
+11:38:32AM - Buffer não cheio
+11:38:32AM - Buffer não cheio
+11:38:33AM - Buffer não cheio
+11:38:33AM - Buffer não cheio
+11:38:33AM - Buffer não cheio
+11:38:33AM - Buffer não cheio
+11:38:33AM - Buffer não cheio
+11:38:33AM - Buffer não cheio
+11:38:33AM - Buffer não cheio
+11:38:33AM - Buffer não cheio
+11:38:33AM - Buffer não cheio
+11:38:33AM - Buffer não cheio
+11:40:21AM - Listou servidores locais
+11:40:23AM - Conectou Local
+11:40:26AM - Criou a Subscription Teste no localhost [127.0.0.1] - ICONICS.SimulatorOPCAE.1
+11:40:26AM - Buffer não cheio
+11:40:26AM - Buffer não cheio
+11:40:26AM - Buffer não cheio
+11:40:27AM - Buffer não cheio
+11:40:27AM - Buffer não cheio
+11:40:27AM - Buffer não cheio
+11:40:27AM - Buffer não cheio
+11:40:27AM - Buffer não cheio
+11:40:27AM - Buffer não cheio
+11:40:27AM - Buffer não cheio
+11:40:27AM - Buffer não cheio
+11:40:27AM - Buffer não cheio
+11:40:27AM - Buffer não cheio
+11:40:28AM - Buffer não cheio
+11:40:28AM - Buffer não cheio
+11:40:28AM - Buffer não cheio
+11:40:28AM - Buffer não cheio
+11:40:28AM - Buffer não cheio
+11:40:28AM - Buffer não cheio
+11:40:53AM - Buffer não cheio
+11:40:53AM - Buffer cheio. Perda de DADOS!!!
+11:43:02AM - Listou servidores locais
+11:43:03AM - Conectou Local
+11:43:06AM - Criou a Subscription Teste no localhost [127.0.0.1] - ICONICS.SimulatorOPCAE.1
+11:43:06AM - Buffer não cheio
+11:43:06AM - Buffer não cheio
+11:43:06AM - Buffer não cheio
+11:43:07AM - Buffer não cheio
+11:43:07AM - Buffer não cheio
+11:43:07AM - Buffer não cheio
+11:43:07AM - Buffer não cheio
+11:43:07AM - Buffer não cheio
+11:43:07AM - Buffer não cheio
+11:43:07AM - Buffer não cheio
+11:43:07AM - Buffer não cheio
+11:43:07AM - Buffer não cheio
+11:43:07AM - Buffer não cheio
+11:43:07AM - Buffer não cheio
+11:43:08AM - Buffer não cheio
+11:43:08AM - Buffer não cheio
+11:43:08AM - Buffer não cheio
+11:43:08AM - Buffer não cheio
+11:43:08AM - Buffer não cheio
+11:43:08AM - Buffer não cheio
+11:43:08AM - Buffer cheio. Perda de DADOS!!!
+11:49:57AM - Listou servidores locais
+11:49:58AM - Conectou Local
+11:50:01AM - Criou a Subscription Teste no localhost [127.0.0.1] - ICONICS.SimulatorOPCAE.1
+11:50:01AM - Buffer não cheio
+11:50:01AM - Buffer não cheio
+11:50:01AM - Buffer não cheio
+11:50:01AM - Buffer não cheio
+11:50:01AM - Buffer não cheio
+11:50:01AM - Buffer não cheio
+11:50:01AM - Buffer não cheio
+11:50:02AM - Buffer não cheio
+11:50:02AM - Buffer não cheio
+11:50:02AM - Buffer não cheio
+11:50:02AM - Buffer não cheio
+11:50:02AM - Buffer não cheio
+11:50:02AM - Buffer não cheio
+11:50:02AM - Buffer não cheio
+11:50:02AM - Buffer não cheio
+11:50:02AM - Buffer não cheio
+11:50:02AM - Buffer não cheio
+11:50:02AM - Buffer não cheio
+11:50:02AM - Buffer não cheio
+11:50:03AM - Buffer não cheio
+11:50:03AM - Buffer cheio. Perda de DADOS!!!
+11:53:16AM - Listou servidores locais
+11:53:17AM - Conectou Local
+11:53:20AM - Criou a Subscription Teste no localhost [127.0.0.1] - ICONICS.SimulatorOPCAE.1
+11:53:21AM - Buffer não cheio
+11:53:21AM - Buffer não cheio
+11:53:21AM - Buffer não cheio
+11:53:21AM - Buffer não cheio
+11:53:21AM - Buffer não cheio
+11:53:21AM - Buffer não cheio
+11:53:21AM - Buffer não cheio
+11:53:22AM - Buffer não cheio
+11:53:22AM - Buffer não cheio
+11:53:22AM - Buffer não cheio
+11:53:22AM - Buffer não cheio
+11:53:22AM - Buffer não cheio
+11:53:22AM - Buffer não cheio
+11:58:13AM - Listou servidores locais
+11:58:15AM - Conectou Local
+11:58:20AM - Criou a Subscription Teste no localhost [127.0.0.1] - ICONICS.SimulatorOPCAE.1
+11:58:21AM - Buffer não cheio
+11:58:21AM - Buffer não cheio
+11:58:21AM - Buffer não cheio
+11:58:21AM - Buffer não cheio
+11:58:21AM - Buffer não cheio
+11:58:21AM - Buffer não cheio
+11:58:21AM - Buffer não cheio
+11:58:22AM - Buffer não cheio
+11:58:22AM - Buffer não cheio
+11:58:22AM - Buffer não cheio
+11:58:22AM - Buffer não cheio
+11:58:22AM - Buffer não cheio
+11:58:22AM - Buffer não cheio
+11:58:22AM - Buffer não cheio
+11:58:22AM - Buffer não cheio
+11:58:22AM - Buffer não cheio
+11:58:22AM - Buffer não cheio
+11:58:22AM - Buffer não cheio
+11:58:23AM - Buffer não cheio
+11:58:23AM - Buffer não cheio
+11:58:23AM - Buffer cheio. Perda de DADOS!!!

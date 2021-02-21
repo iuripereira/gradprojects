@@ -1,0 +1,32 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package br.ufrn.dca.ia.main;
+
+import br.ufrn.dca.ia.view.MainForm;
+import com.sun.java.swing.plaf.windows.WindowsLookAndFeel;
+import javax.swing.SwingUtilities;
+import javax.swing.UIManager;
+
+/**
+ *
+ * @author Marco Olimpio
+ */
+public class Main {
+
+    public static void main(String[] args) {
+        try {
+            UIManager.setLookAndFeel(new WindowsLookAndFeel());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        SwingUtilities.invokeLater(new Runnable() {
+
+            public void run() {
+                MainForm w = new MainForm();
+                w.setVisible(true);
+            }
+        });
+    }
+}

@@ -1,0 +1,181 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.06.00"/>
+    <PROJECT value="clienteAE.exe"/>
+    <OBJFILES value="clienteAE.obj semaforo.obj Buffer.obj ConectaOPC.obj 
+      DialogCreateSubscription.obj OPCBridge.obj OPCEventServer.obj 
+      OPCEventSink.obj OPCEventSubscription.obj OPCShutDown.obj formAE.obj 
+      bibliotecas\opccomn_i.obj bibliotecas\OpcEnum_i.obj 
+      bibliotecas\Opcda_i.obj bibliotecas\opc_ae_i.obj Logger.obj 
+      DialogFilter.obj OPCEventAreaBrowser.obj Dominio\Subscription.obj 
+      Dominio\Area.obj Dominio\EventCategory.obj Dominio\Attributes.obj 
+      Dominio\OPCServer.obj Dominio\Source.obj ProtocoloTCP.obj 
+      ThreadReadTCP.obj ThreadConectaTCP.obj ThreadSendTCP.obj XML\XML.obj 
+      ThreadView.obj DialogAtributos.obj Dominio\Filter.obj"/>
+    <RESFILES value=""/>
+    <IDLFILES value=""/>
+    <IDLGENFILES value=""/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES) DialogCreateSubscription.dfm formAE.dfm DialogFilter.dfm 
+      DialogAtributos.dfm"/>
+    <LIBFILES value=""/>
+    <LIBRARIES value="inet.lib xmlrtl.lib rtl.lib vcl.lib"/>
+    <SPARELIBS value="vcl.lib rtl.lib xmlrtl.lib inet.lib"/>
+    <PACKAGES value="vcl.bpi rtl.bpi dbrtl.bpi adortl.bpi vcldb.bpi vclx.bpi bdertl.bpi 
+      vcldbx.bpi ibxpress.bpi dsnap.bpi cds.bpi bdecds.bpi qrpt.bpi teeui.bpi 
+      teedb.bpi tee.bpi dss.bpi teeqr.bpi visualclx.bpi visualdbclx.bpi 
+      dsnapcrba.bpi dsnapcon.bpi bcbsmp.bpi vclie.bpi xmlrtl.bpi inet.bpi 
+      inetdbbde.bpi inetdbxpress.bpi inetdb.bpi nmfast.bpi webdsnap.bpi 
+      bcbie.bpi websnap.bpi soaprtl.bpi dclocx.bpi dbexpress.bpi dbxcds.bpi 
+      indy.bpi bcb2kaxserver.bpi"/>
+    <PATHCPP value=".;bibliotecas;bibliotecas;bibliotecas;bibliotecas;Dominio;Dominio;Dominio;Dominio;Dominio;Dominio;XML;Dominio"/>
+    <PATHPAS value=".;"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
+    <RELEASELIBPATH value="$(BCB)\lib\release"/>
+    <LINKER value="ilink32"/>
+    <USERDEFINES value="_DEBUG"/>
+    <SYSDEFINES value="NO_STRICT"/>
+    <MAINSOURCE value="clienteAE.cpp"/>
+    <INCLUDEPATH value="XML;Dominio;bibliotecas;&quot;C:\Arquivos de programas\Borland\CBuilder6\Projects&quot;;&quot;C:\Documents and Settings\user\Meus documentos\SIGA\_Projeto\ClienteOPC&quot;;$(BCB)\include;$(BCB)\include\vcl"/>
+    <LIBPATH value="XML;Dominio;bibliotecas;&quot;C:\Arquivos de programas\Borland\CBuilder6\Projects&quot;;&quot;C:\Documents and Settings\user\Meus documentos\SIGA\_Projeto\ClienteOPC&quot;;$(BCB)\lib\obj;$(BCB)\lib"/>
+    <WARNINGS value="-w-par"/>
+    <OTHERFILES value=""/>
+  </MACROS>
+  <OPTIONS>
+    <IDLCFLAGS value="-IXML -IDominio -Ibibliotecas 
+      -I&quot;C:\Arquivos de programas\Borland\CBuilder6\Projects&quot; 
+      -I&quot;C:\Documents and Settings\user\Meus documentos\SIGA\_Projeto\ClienteOPC&quot; 
+      -I$(BCB)\include -I$(BCB)\include\vcl -src_suffix cpp -D_DEBUG -boa"/>
+    <CFLAG1 value="-Od -H=$(BCB)\lib\vcl60.csm -Hc -Vx -Ve -X- -r- -a8 -b- -k -y -v -vi- -c 
+      -tW -tWM"/>
+    <PFLAGS value="-$YD -$W -$O- -$A8 -v -JPHNE -M"/>
+    <RFLAGS value=""/>
+    <AFLAGS value="/mx /w2 /zd"/>
+    <LFLAGS value="-D&quot;&quot; -c- -aa -Tpe -x -Gn -v"/>
+    <OTHERFILES value=""/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="c0w32.obj sysinit.obj $(OBJFILES)"/>
+    <ALLRES value="$(RESFILES)"/>
+    <ALLLIB value="$(LIBFILES) $(LIBRARIES) import32.lib cp32mt.lib"/>
+    <OTHERFILES value=""/>
+  </LINKER>
+  <FILELIST>
+      <FILE FILENAME="clienteAE.cpp" FORMNAME="" UNITNAME="clienteAE" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="semaforo.cpp" FORMNAME="" UNITNAME="semaforo.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Buffer.cpp" FORMNAME="" UNITNAME="Buffer.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ConectaOPC.cpp" FORMNAME="" UNITNAME="ConectaOPC.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="DialogCreateSubscription.cpp" FORMNAME="OKBottomDlg1" UNITNAME="DialogCreateSubscription" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="OPCBridge.cpp" FORMNAME="" UNITNAME="OPCBridge.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="OPCEventServer.cpp" FORMNAME="" UNITNAME="OPCEventServer.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="OPCEventSink.cpp" FORMNAME="" UNITNAME="OPCEventSink.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="OPCEventSubscription.cpp" FORMNAME="" UNITNAME="OPCEventSubscription.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="OPCShutDown.cpp" FORMNAME="" UNITNAME="OPCShutDown.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="formAE.cpp" FORMNAME="Form1" UNITNAME="formAE" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="bibliotecas\opccomn_i.c" FORMNAME="" UNITNAME="opccomn_i" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="bibliotecas\OpcEnum_i.c" FORMNAME="" UNITNAME="OpcEnum_i" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="bibliotecas\Opcda_i.c" FORMNAME="" UNITNAME="Opcda_i.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="bibliotecas\opc_ae_i.c" FORMNAME="" UNITNAME="opc_ae_i.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Logger.cpp" FORMNAME="" UNITNAME="Logger" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="DialogFilter.cpp" FORMNAME="OKBottomDlg" UNITNAME="DialogFilter" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="OPCEventAreaBrowser.cpp" FORMNAME="" UNITNAME="OPCEventAreaBrowser" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Dominio\Subscription.cpp" FORMNAME="" UNITNAME="Subscription.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Dominio\Area.cpp" FORMNAME="" UNITNAME="Area.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Dominio\EventCategory.cpp" FORMNAME="" UNITNAME="EventCategory.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Dominio\Attributes.cpp" FORMNAME="" UNITNAME="Attributes" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Dominio\OPCServer.cpp" FORMNAME="" UNITNAME="OPCServer.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Dominio\Source.cpp" FORMNAME="" UNITNAME="Source.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ProtocoloTCP.cpp" FORMNAME="" UNITNAME="ProtocoloTCP" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ThreadReadTCP.cpp" FORMNAME="" UNITNAME="ThreadReadTCP" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ThreadConectaTCP.cpp" FORMNAME="" UNITNAME="ThreadConectaTCP" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ThreadSendTCP.cpp" FORMNAME="" UNITNAME="ThreadSendTCP.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="XML\XML.cpp" FORMNAME="" UNITNAME="XML" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ThreadView.cpp" FORMNAME="" UNITNAME="ThreadView" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="DialogAtributos.cpp" FORMNAME="dialogAttributes" UNITNAME="DialogAtributos" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clienteAE.todo" FORMNAME="" UNITNAME="clienteAE.todo" CONTAINERID="ToDo" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Dominio\Filter.cpp" FORMNAME="" UNITNAME="Filter" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+  </FILELIST>
+  <BUILDTOOLS>
+  </BUILDTOOLS>
+
+  <IDEOPTIONS>
+[Version Info]
+IncludeVerInfo=0
+AutoIncBuild=0
+MajorVer=1
+MinorVer=0
+Release=0
+Build=0
+Debug=0
+PreRelease=0
+Special=0
+Private=0
+DLL=0
+Locale=1046
+CodePage=1252
+
+[Version Info Keys]
+CompanyName=
+FileDescription=
+FileVersion=1.0.0.0
+InternalName=
+LegalCopyright=
+LegalTrademarks=
+OriginalFilename=
+ProductName=
+ProductVersion=1.0.0.0
+Comments=
+
+[HistoryLists\hlIncludePath]
+Count=2
+Item0=XML;Dominio;bibliotecas;C:\Arquivos de programas\Borland\CBuilder6\Projects;C:\Documents and Settings\user\Meus documentos\SIGA\_Projeto\ClienteOPC;$(BCB)\include;$(BCB)\include\vcl
+Item1=C:\Arquivos de programas\Borland\CBuilder6\Projects;C:\Documents and Settings\user\Meus documentos\SIGA\_Projeto\ClienteOPC;$(BCB)\include;$(BCB)\include\vcl
+
+[HistoryLists\hlLibraryPath]
+Count=2
+Item0=XML;Dominio;bibliotecas;C:\Arquivos de programas\Borland\CBuilder6\Projects;C:\Documents and Settings\user\Meus documentos\SIGA\_Projeto\ClienteOPC;$(BCB)\lib\obj;$(BCB)\lib
+Item1=C:\Arquivos de programas\Borland\CBuilder6\Projects;C:\Documents and Settings\user\Meus documentos\SIGA\_Projeto\ClienteOPC;$(BCB)\lib\obj;$(BCB)\lib
+
+[HistoryLists\hlDebugSourcePath]
+Count=1
+Item0=$(BCB)\source\vcl
+
+[HistoryLists\hlConditionals]
+Count=1
+Item0=_DEBUG
+
+[Debugging]
+DebugSourceDirs=$(BCB)\source\vcl
+
+[Parameters]
+RunParams=
+Launcher=
+UseLauncher=0
+DebugCWD=
+HostApplication=
+RemoteHost=
+RemotePath=
+RemoteLauncher=
+RemoteCWD=
+RemoteDebug=0
+
+[Compiler]
+ShowInfoMsgs=0
+LinkDebugVcl=0
+LinkCGLIB=0
+
+[CORBA]
+AddServerUnit=1
+AddClientUnit=1
+PrecompiledHeaders=1
+
+[Language]
+ActiveLang=
+ProjectLang=
+RootDir=
+  </IDEOPTIONS>
+</PROJECT>

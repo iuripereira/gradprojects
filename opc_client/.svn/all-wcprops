@@ -1,0 +1,419 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/siga/!svn/ver/3412/OPC%20AE%20Coletor
+END
+clienteAE.res
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/siga/!svn/ver/586/OPC%20AE%20Coletor/clienteAE.res
+END
+OPCBridge.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/siga/!svn/ver/586/OPC%20AE%20Coletor/OPCBridge.h
+END
+formAE.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/siga/!svn/ver/2896/OPC%20AE%20Coletor/formAE.cpp
+END
+semaforo.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/siga/!svn/ver/586/OPC%20AE%20Coletor/semaforo.cpp
+END
+ThreadConectaTCP.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/siga/!svn/ver/2445/OPC%20AE%20Coletor/ThreadConectaTCP.cpp
+END
+clienteAE.todo
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/siga/!svn/ver/1462/OPC%20AE%20Coletor/clienteAE.todo
+END
+DialogCreateSubscription.ddp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/siga/!svn/ver/1465/OPC%20AE%20Coletor/DialogCreateSubscription.ddp
+END
+DialogAtributos.dfm
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/siga/!svn/ver/3412/OPC%20AE%20Coletor/DialogAtributos.dfm
+END
+OPCEventAreaBrowser.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/siga/!svn/ver/1046/OPC%20AE%20Coletor/OPCEventAreaBrowser.cpp
+END
+OPCShutDown.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/siga/!svn/ver/822/OPC%20AE%20Coletor/OPCShutDown.h
+END
+ConectaOPC.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/siga/!svn/ver/2077/OPC%20AE%20Coletor/ConectaOPC.h
+END
+OPCEventSubscription.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/siga/!svn/ver/3412/OPC%20AE%20Coletor/OPCEventSubscription.cpp
+END
+ThreadSendTCP.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/siga/!svn/ver/2082/OPC%20AE%20Coletor/ThreadSendTCP.cpp
+END
+clienteAE.exe
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/siga/!svn/ver/2895/OPC%20AE%20Coletor/clienteAE.exe
+END
+clienteAE.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/siga/!svn/ver/1109/OPC%20AE%20Coletor/clienteAE.cpp
+END
+DiologCreateSubscription.dfm
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/siga/!svn/ver/586/OPC%20AE%20Coletor/DiologCreateSubscription.dfm
+END
+Tcp.h
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/siga/!svn/ver/586/OPC%20AE%20Coletor/Tcp.h
+END
+ProtocoloTCP.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/siga/!svn/ver/930/OPC%20AE%20Coletor/ProtocoloTCP.h
+END
+DialogAtributos.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/siga/!svn/ver/3412/OPC%20AE%20Coletor/DialogAtributos.cpp
+END
+ThreadView.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/siga/!svn/ver/822/OPC%20AE%20Coletor/ThreadView.cpp
+END
+DialogFilter.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/siga/!svn/ver/955/OPC%20AE%20Coletor/DialogFilter.h
+END
+OPCShutDown.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/siga/!svn/ver/1111/OPC%20AE%20Coletor/OPCShutDown.cpp
+END
+Com.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/siga/!svn/ver/586/OPC%20AE%20Coletor/Com.cpp
+END
+DialogAreasFiltro.ddp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/siga/!svn/ver/1465/OPC%20AE%20Coletor/DialogAreasFiltro.ddp
+END
+Logger.h
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/siga/!svn/ver/2424/OPC%20AE%20Coletor/Logger.h
+END
+OPCEventAreaBrowser.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/siga/!svn/ver/855/OPC%20AE%20Coletor/OPCEventAreaBrowser.h
+END
+ProtocoloTCP.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/siga/!svn/ver/1111/OPC%20AE%20Coletor/ProtocoloTCP.cpp
+END
+DialogFilter.dfm
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/siga/!svn/ver/1054/OPC%20AE%20Coletor/DialogFilter.dfm
+END
+OPCFilter.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/siga/!svn/ver/586/OPC%20AE%20Coletor/OPCFilter.h
+END
+OPCEventSubscription.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/siga/!svn/ver/2750/OPC%20AE%20Coletor/OPCEventSubscription.h
+END
+ThreadSendTCP.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/siga/!svn/ver/822/OPC%20AE%20Coletor/ThreadSendTCP.h
+END
+formAE.ddp
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/siga/!svn/ver/586/OPC%20AE%20Coletor/formAE.ddp
+END
+DialogAtributos.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/siga/!svn/ver/2750/OPC%20AE%20Coletor/DialogAtributos.h
+END
+DialogFilter.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/siga/!svn/ver/2121/OPC%20AE%20Coletor/DialogFilter.cpp
+END
+ThreadView.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/siga/!svn/ver/822/OPC%20AE%20Coletor/ThreadView.h
+END
+OPCEventSink.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/siga/!svn/ver/3412/OPC%20AE%20Coletor/OPCEventSink.cpp
+END
+OPCEventServer.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/siga/!svn/ver/3412/OPC%20AE%20Coletor/OPCEventServer.cpp
+END
+ThreadReadTCP.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/siga/!svn/ver/930/OPC%20AE%20Coletor/ThreadReadTCP.cpp
+END
+DialogCatFiltro.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/siga/!svn/ver/586/OPC%20AE%20Coletor/DialogCatFiltro.h
+END
+DialogCreateSubscription.dfm
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/siga/!svn/ver/1047/OPC%20AE%20Coletor/DialogCreateSubscription.dfm
+END
+Buffer.h
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/siga/!svn/ver/1111/OPC%20AE%20Coletor/Buffer.h
+END
+Logger.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/siga/!svn/ver/2426/OPC%20AE%20Coletor/Logger.cpp
+END
+DialogAtributos.ddp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/siga/!svn/ver/1465/OPC%20AE%20Coletor/DialogAtributos.ddp
+END
+Com.h
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/siga/!svn/ver/586/OPC%20AE%20Coletor/Com.h
+END
+OPCFilter.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/siga/!svn/ver/586/OPC%20AE%20Coletor/OPCFilter.cpp
+END
+DialogCreateSubscription.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/siga/!svn/ver/1047/OPC%20AE%20Coletor/DialogCreateSubscription.cpp
+END
+DialogDatabase.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/siga/!svn/ver/586/OPC%20AE%20Coletor/DialogDatabase.h
+END
+clienteAE.bpr
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/siga/!svn/ver/1109/OPC%20AE%20Coletor/clienteAE.bpr
+END
+DiologCreateSubscription.ddp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/siga/!svn/ver/586/OPC%20AE%20Coletor/DiologCreateSubscription.ddp
+END
+OPCBridge.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/siga/!svn/ver/586/OPC%20AE%20Coletor/OPCBridge.cpp
+END
+DialogAreasFiltro.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/siga/!svn/ver/586/OPC%20AE%20Coletor/DialogAreasFiltro.h
+END
+DialogSourceFiltro.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/siga/!svn/ver/586/OPC%20AE%20Coletor/DialogSourceFiltro.h
+END
+defOPCSiga.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/siga/!svn/ver/586/OPC%20AE%20Coletor/defOPCSiga.h
+END
+DialogDatabase.ddp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/siga/!svn/ver/586/OPC%20AE%20Coletor/DialogDatabase.ddp
+END
+Buffer.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/siga/!svn/ver/1111/OPC%20AE%20Coletor/Buffer.cpp
+END
+DialogTCP.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/siga/!svn/ver/650/OPC%20AE%20Coletor/DialogTCP.h
+END
+OPCEventSink.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/siga/!svn/ver/2747/OPC%20AE%20Coletor/OPCEventSink.h
+END
+ConectaOPC.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/siga/!svn/ver/2426/OPC%20AE%20Coletor/ConectaOPC.cpp
+END
+formAE.h
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/siga/!svn/ver/2747/OPC%20AE%20Coletor/formAE.h
+END
+ThreadReadTCP.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/siga/!svn/ver/822/OPC%20AE%20Coletor/ThreadReadTCP.h
+END
+OPCEventServer.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/siga/!svn/ver/3412/OPC%20AE%20Coletor/OPCEventServer.h
+END
+ThreadConectaTCP.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/siga/!svn/ver/930/OPC%20AE%20Coletor/ThreadConectaTCP.h
+END
+semaforo.h
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/siga/!svn/ver/586/OPC%20AE%20Coletor/semaforo.h
+END
+DialogSourceFiltro.ddp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/siga/!svn/ver/586/OPC%20AE%20Coletor/DialogSourceFiltro.ddp
+END
+DialogFilter.ddp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/siga/!svn/ver/586/OPC%20AE%20Coletor/DialogFilter.ddp
+END
+clienteAE.rar
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/siga/!svn/ver/1466/OPC%20AE%20Coletor/clienteAE.rar
+END
+DialogTCP.ddp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/siga/!svn/ver/1466/OPC%20AE%20Coletor/DialogTCP.ddp
+END
+DialogCreateSubscription.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/siga/!svn/ver/586/OPC%20AE%20Coletor/DialogCreateSubscription.h
+END
+formAE.dfm
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/siga/!svn/ver/3412/OPC%20AE%20Coletor/formAE.dfm
+END

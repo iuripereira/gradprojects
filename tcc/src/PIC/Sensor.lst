@@ -1,0 +1,310 @@
+CCS PCM C Compiler, Version 4.038, 52919               12-dez-10 18:10
+
+               Filename: C:\Documents and Settings\Iuri\Meus documentos\sensor\Sensor.lst
+
+               ROM used: 179 words (9%)
+                         Largest free fragment is 1869
+               RAM used: 20 (9%) at main() level
+                         21 (9%) worst case
+               Stack:    1 worst case (0 in main + 1 for interrupts)
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   05B
+0003:  NOP
+0004:  MOVWF  7F
+0005:  SWAPF  03,W
+0006:  CLRF   03
+0007:  MOVWF  21
+0008:  MOVF   7F,W
+0009:  MOVWF  20
+000A:  MOVF   0A,W
+000B:  MOVWF  28
+000C:  CLRF   0A
+000D:  SWAPF  20,F
+000E:  MOVF   04,W
+000F:  MOVWF  22
+0010:  MOVF   77,W
+0011:  MOVWF  23
+0012:  MOVF   78,W
+0013:  MOVWF  24
+0014:  MOVF   79,W
+0015:  MOVWF  25
+0016:  MOVF   7A,W
+0017:  MOVWF  26
+0018:  MOVF   7B,W
+0019:  MOVWF  27
+001A:  BCF    03.7
+001B:  BCF    03.5
+001C:  BTFSS  0B.4
+001D:  GOTO   020
+001E:  BTFSC  0B.1
+001F:  GOTO   033
+0020:  MOVF   22,W
+0021:  MOVWF  04
+0022:  MOVF   23,W
+0023:  MOVWF  77
+0024:  MOVF   24,W
+0025:  MOVWF  78
+0026:  MOVF   25,W
+0027:  MOVWF  79
+0028:  MOVF   26,W
+0029:  MOVWF  7A
+002A:  MOVF   27,W
+002B:  MOVWF  7B
+002C:  MOVF   28,W
+002D:  MOVWF  0A
+002E:  SWAPF  21,W
+002F:  MOVWF  03
+0030:  SWAPF  7F,F
+0031:  SWAPF  7F,W
+0032:  RETFIE
+.................... /* ----- Includes referentes ao PIC ----- */ 
+.................... #include <16F628A.h> 
+.................... //////// Standard Header file for the PIC16F628A device //////////////// 
+.................... #device PIC16F628A 
+.................... #list 
+....................  
+....................  
+.................... #FUSES NOWDT                    //No Watch Dog Timer 
+.................... #FUSES INTRC_IO                 //Clock interno de 4MHz 
+.................... #FUSES PUT                      //Power Up Timer 
+.................... #FUSES NOPROTECT                //Code not protected from reading 
+....................  
+.................... #FUSES BROWNOUT                 //Reset when brownout detected 
+.................... #FUSES NOLVP                    //No low voltage prgming, B3(PIC16) or B5(PIC18) used for I/O 
+.................... #FUSES NOCPD                    //No EE protection 
+.................... #FUSES MCLR 
+....................  
+.................... #use delay(clock=4000000) 
+*
+003E:  MOVLW  2E
+003F:  MOVWF  04
+0040:  BCF    03.7
+0041:  MOVF   00,W
+0042:  BTFSC  03.2
+0043:  GOTO   052
+0044:  MOVLW  01
+0045:  MOVWF  78
+0046:  CLRF   77
+0047:  DECFSZ 77,F
+0048:  GOTO   047
+0049:  DECFSZ 78,F
+004A:  GOTO   046
+004B:  MOVLW  4A
+004C:  MOVWF  77
+004D:  DECFSZ 77,F
+004E:  GOTO   04D
+004F:  GOTO   050
+0050:  DECFSZ 00,F
+0051:  GOTO   044
+....................  
+.................... #use fast_io(a) 
+.................... #use fast_io(b) 
+....................  
+.................... /* ----- Configuração das portas ----- */ 
+....................  
+.................... #byte PORT_A = 0x05 
+.................... #byte PORT_B = 0x06 
+....................  
+.................... #byte TRIS_A = 0x85 
+.................... #byte TRIS_B = 0x86 
+....................  
+.................... #bit BUTTON = PORT_A.2   // BOTAO DE CALIBRACAO 
+.................... #bit RESERVA = PORT_A.1 //ENTRADA VINDA DO ZIGBEE 
+.................... #bit LED1 = PORT_B.1 //LED QUE VERIFICA SE O BOTAO FOI APERTADO 
+.................... #bit B0 = PORT_B.0 //BIT DE INTERRUPCAO 
+.................... #bit VERMELHO = PORT_B.4  //LED VERMELHO 
+.................... #bit VERDE = PORT_B.5  //LED VERDE 
+.................... #bit AMARELO = PORT_B.6 //LED AMARELO 
+....................  
+.................... int16 ref = 0; 
+*
+0064:  CLRF   29
+0065:  CLRF   2A
+.................... int16 tempo = 0; 
+0066:  CLRF   2B
+0067:  CLRF   2C
+.................... int count; 
+....................  
+.................... #INT_EXT 
+.................... void pulsin(){ 
+....................    disable_interrupts(GLOBAL); 
+*
+0033:  BCF    0B.6
+0034:  BCF    0B.7
+0035:  BTFSC  0B.7
+0036:  GOTO   034
+....................    disable_interrupts(INT_EXT); 
+0037:  BCF    0B.4
+....................     
+....................    count = 0; 
+0038:  CLRF   2D
+....................     
+....................    while(B0){ 
+0039:  BTFSS  06.0
+003A:  GOTO   053
+....................       count++; 
+003B:  INCF   2D,F
+....................       delay_ms(1); 
+003C:  MOVLW  01
+003D:  MOVWF  2E
+....................    } 
+*
+0052:  GOTO   039
+....................    tempo = count; 
+0053:  CLRF   2C
+0054:  MOVF   2D,W
+0055:  MOVWF  2B
+....................     
+....................    enable_interrupts(GLOBAL | INT_EXT); 
+0056:  MOVLW  D0
+0057:  IORWF  0B,F
+.................... } 
+....................  
+....................  
+0058:  BCF    0B.1
+0059:  BCF    0A.3
+005A:  GOTO   020
+.................... void main(){ 
+005B:  CLRF   04
+005C:  BCF    03.7
+005D:  MOVLW  1F
+005E:  ANDWF  03,F
+005F:  BSF    03.5
+0060:  BSF    0E.3
+0061:  MOVLW  07
+0062:  BCF    03.5
+0063:  MOVWF  1F
+....................    TRIS_A = 0b00000110; //  
+*
+0068:  MOVLW  06
+0069:  BSF    03.5
+006A:  MOVWF  05
+....................    TRIS_B = 0b00000001; //Habilitado para leitura 
+006B:  MOVLW  01
+006C:  MOVWF  06
+....................     
+....................    VERDE = 0; 
+006D:  BCF    03.5
+006E:  BCF    06.5
+....................    VERMELHO = 0; 
+006F:  BCF    06.4
+....................    AMARELO = 0; 
+0070:  BCF    06.6
+....................    BUTTON = 0; 
+0071:  BCF    05.2
+....................    RESERVA = 0; 
+0072:  BCF    05.1
+....................    B0 = 0; 
+0073:  BCF    06.0
+....................    LED1 = 0; 
+0074:  BCF    06.1
+....................     
+....................    ext_int_edge(L_TO_H);       
+0075:  BSF    03.5
+0076:  BSF    01.6
+....................    enable_interrupts(GLOBAL | int_ext); 
+0077:  MOVLW  D0
+0078:  BCF    03.5
+0079:  IORWF  0B,F
+....................     
+....................    while(true){ 
+....................       if(RESERVA){  
+007A:  BTFSS  05.1
+007B:  GOTO   097
+....................          if(tempo < ref){ 
+007C:  MOVF   2C,W
+007D:  SUBWF  2A,W
+007E:  BTFSS  03.0
+007F:  GOTO   08A
+0080:  BTFSS  03.2
+0081:  GOTO   086
+0082:  MOVF   29,W
+0083:  SUBWF  2B,W
+0084:  BTFSC  03.0
+0085:  GOTO   08A
+....................             VERMELHO = 1; 
+0086:  BSF    06.4
+....................             VERDE = 0; 
+0087:  BCF    06.5
+....................             AMARELO = 0; 
+0088:  BCF    06.6
+....................          }else{ 
+0089:  GOTO   08D
+....................             VERMELHO = 0; 
+008A:  BCF    06.4
+....................             VERDE = 0; 
+008B:  BCF    06.5
+....................             AMARELO = 1; 
+008C:  BSF    06.6
+....................          } 
+....................        
+....................          if(BUTTON){ 
+008D:  BTFSS  05.2
+008E:  GOTO   095
+....................             ref = tempo; 
+008F:  MOVF   2C,W
+0090:  MOVWF  2A
+0091:  MOVF   2B,W
+0092:  MOVWF  29
+....................             LED1 = 1; 
+0093:  BSF    06.1
+....................          }else{ 
+0094:  GOTO   096
+....................             LED1 = 0; 
+0095:  BCF    06.1
+....................          } 
+....................       }else{ 
+0096:  GOTO   0B1
+....................          if(tempo < ref){ 
+0097:  MOVF   2C,W
+0098:  SUBWF  2A,W
+0099:  BTFSS  03.0
+009A:  GOTO   0A5
+009B:  BTFSS  03.2
+009C:  GOTO   0A1
+009D:  MOVF   29,W
+009E:  SUBWF  2B,W
+009F:  BTFSC  03.0
+00A0:  GOTO   0A5
+....................             VERMELHO = 1; 
+00A1:  BSF    06.4
+....................             VERDE = 0; 
+00A2:  BCF    06.5
+....................             AMARELO = 0; 
+00A3:  BCF    06.6
+....................          }else{ 
+00A4:  GOTO   0A8
+....................             VERMELHO = 0; 
+00A5:  BCF    06.4
+....................             VERDE = 1; 
+00A6:  BSF    06.5
+....................             AMARELO = 0; 
+00A7:  BCF    06.6
+....................          } 
+....................        
+....................          if(BUTTON){ 
+00A8:  BTFSS  05.2
+00A9:  GOTO   0B0
+....................             ref = tempo; 
+00AA:  MOVF   2C,W
+00AB:  MOVWF  2A
+00AC:  MOVF   2B,W
+00AD:  MOVWF  29
+....................             LED1 = 1; 
+00AE:  BSF    06.1
+....................          }else{ 
+00AF:  GOTO   0B1
+....................             LED1 = 0; 
+00B0:  BCF    06.1
+....................          } 
+....................       } 
+....................    } 
+00B1:  GOTO   07A
+.................... } 
+00B2:  SLEEP
+
+Configuration Fuses:
+   Word  1: 3F70   NOWDT PUT NOPROTECT BROWNOUT MCLR NOLVP INTRC_IO NOCPD

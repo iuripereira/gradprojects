@@ -1,0 +1,53 @@
+\select@language {brazil}
+\contentsline {chapter}{Sum\'ario}{i}{chapter*.3}
+\contentsline {chapter}{Lista de Figuras}{iii}{chapter*.4}
+\contentsline {chapter}{Lista de Tabelas}{iv}{chapter*.5}
+\contentsline {chapter}{Lista de C\'odigos}{v}{chapter*.6}
+\contentsline {chapter}{\numberline {1}Introdu\c c\~ao}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Objetivos}{2}{section.1.1}
+\contentsline {subsection}{\numberline {1.1.1}Objetivo Geral}{2}{subsection.1.1.1}
+\contentsline {subsection}{\numberline {1.1.2}Objetivos Espec\IeC {\'\i }ficos}{2}{subsection.1.1.2}
+\contentsline {section}{\numberline {1.2}Metodologia}{2}{section.1.2}
+\contentsline {section}{\numberline {1.3}Estrutura do Trabalho}{3}{section.1.3}
+\contentsline {chapter}{\numberline {2}O padr\~ao IEEE 802.15.4 e o protocolo ZigBee}{4}{chapter.2}
+\contentsline {section}{\numberline {2.1}O IEEE 802.15.4}{4}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Entendendo o padr\~ao 802.15.4}{4}{subsection.2.1.1}
+\contentsline {subsubsection}{Por que o 802.15.4 \'e bom contra ru\IeC {\'\i }do?}{5}{section*.8}
+\contentsline {subsubsection}{Por que o 802.15.4 \'e bom contra interfer\^encias?}{6}{section*.9}
+\contentsline {subsubsection}{Protocolo de baixo consumo}{7}{section*.10}
+\contentsline {subsubsection}{Dispositivos da rede}{7}{section*.11}
+\contentsline {subsubsection}{Arquitetura de trasporte de dados}{8}{section*.12}
+\contentsline {section}{\numberline {2.2}O protocolo ZigBee}{10}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Entendendo o ZigBee}{10}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Como trabalha uma rede ZigBee}{11}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}ZigBee vs ZigBee Pro}{13}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.4}802.15.4 vs ZigBee}{14}{subsection.2.2.4}
+\contentsline {section}{\numberline {2.3}Seguran\c ca no padr\~ao IEEE 802.15.4 e protocolo ZigBee}{14}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Um vis\~ao geral da seguran\c ca no IEEE 802.15.4}{15}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Insights de seguran\c ca do 802.15.4}{15}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}A lista de controle de acesso}{18}{subsection.2.3.3}
+\contentsline {subsection}{\numberline {2.3.4}Seguran\c ca ZigBee}{18}{subsection.2.3.4}
+\contentsline {chapter}{\numberline {3} O microcontrolador e o m\'odulo sonar}{21}{chapter.3}
+\contentsline {section}{\numberline {3.1}O microcontrolador PIC16F628A}{21}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}O PIC16F628A}{21}{subsection.3.1.1}
+\contentsline {subsubsection}{Nomenclaturas utilizadas}{22}{section*.13}
+\contentsline {subsubsection}{Op\c c\~oes do PIC}{22}{section*.14}
+\contentsline {section}{\numberline {3.2}O m\'odulo sonar}{24}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}O som}{25}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Velocidade do som}{25}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Reflex\~ao do som}{25}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}Funcionamento b\'asico do sensor}{26}{subsection.3.2.4}
+\contentsline {chapter}{\numberline {4}Implementa\c c\~ao do projeto}{27}{chapter.4}
+\contentsline {section}{\numberline {4.1}A l\'ogica do PIC16F628A}{28}{section.4.1}
+\contentsline {section}{\numberline {4.2}Os m\'odulos XBee Pro S\'erie 2}{30}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Adaptador/Conversor USB}{31}{subsection.4.2.1}
+\contentsline {section}{\numberline {4.3}O Software de gerenciamento}{32}{section.4.3}
+\contentsline {chapter}{\numberline {5}Conclus\~oes}{35}{chapter.5}
+\contentsline {subsection}{\numberline {5.0.1}O sensor}{35}{subsection.5.0.1}
+\contentsline {subsection}{\numberline {5.0.2}O m\'odulo XBee}{35}{subsection.5.0.2}
+\contentsline {subsection}{\numberline {5.0.3}O PIC16F628A}{35}{subsection.5.0.3}
+\contentsline {subsection}{\numberline {5.0.4}XBee-api para Java}{36}{subsection.5.0.4}
+\contentsline {subsection}{\numberline {5.0.5}Considera\c c\~oes gerais}{36}{subsection.5.0.5}
+\contentsline {chapter}{Refer\^encias bibliogr\'aficas}{37}{subsection.5.0.5}
+\contentsline {chapter}{\numberline {A}Informa\c c\~oes adicionais}{38}{appendix.A}
+\contentsline {section}{\numberline {A.1}C\'odigos fontes}{38}{section.A.1}

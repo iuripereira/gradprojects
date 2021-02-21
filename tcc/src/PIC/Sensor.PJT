@@ -1,0 +1,41 @@
+[PROJECT]
+Target=Sensor.HEX
+Development_Mode=2
+Processor=0x628A
+ToolSuite=CCS
+Processor_Text=PIC16F628A
+
+[Directories]
+Include=
+Library=
+LinkerScript=
+
+[Target Data]
+FileList=C:\Documents and Settings\Iuri\Meus documentos\sensor\Sensor.c
+BuildTool=C-COMPILER
+OptionString=+FM
+AdditionalOptionString=
+BuildRequired=1
+
+[Sensor.c]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+
+[mru-list]
+1=Sensor.c
+
+[Windows]
+0=0000 Sensor.c 0 0 796 451 3 0
+
+[Opened Files]
+1=C:\Documents and Settings\Iuri\Meus documentos\sensor\Sensor.c
+2=
+3=
+[Units]
+Count=1
+1=Sensor.c (main)
+Link=0

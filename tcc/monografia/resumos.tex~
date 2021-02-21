@@ -1,0 +1,23 @@
+%
+% ********** Resumo
+%
+
+% Usa-se \chapter*, e não \chapter, porque este "capítulo" não deve
+% ser numerado.
+% Na maioria das vezes, ao invés dos comandos LaTeX \chapter e \chapter*,
+% deve-se usar as nossas versões definidas no arquivo comandos.tex,
+% \mychapter e \mychapterast. Isto porque os comandos LaTeX têm um erro
+% que faz com que eles sempre coloquem o número da página no rodapé na
+% primeira página do capítulo, mesmo que o estilo que estejamos usando
+% para numeração seja outro.
+
+\mychapterast{Resumo}
+O crescente uso de tecnologias sem fio, aliado a necessidade de se encontrar soluções informatizadas para solucionar os crescentes problemas relacionados 
+ao trânsito, são fatores que motivam o desenvolvimento deste trabalho. O presente trabalho tem como finalidade mostrar a viabilidade de se projetar um 
+sistema que irá identificar e gerenciar vagas de estacionamento, através da comunicação entre sensores sem fio presentes em cada vaga. 
+
+\mychapterast{Abstract}
+
+The growling demand of wireless Technologies allied with the need to find computer solutions in order to solve problems related to transit are factors 
+that motivates the development of this work. This paper aims to show the feasibility of designing a system that will identify and manage parking spaces 
+through the communication between wireless sensors present in each parking space.

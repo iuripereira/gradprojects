@@ -1,0 +1,23 @@
+10:56:51AM - Listou servidores remotos!
+10:56:51AM - listaOpc - startCom  --> S_OK
+10:56:51AM - ListaOpc - CoCreateInstanceEx localhost--> S_OK
+10:56:53AM - getCLSID from MAPA --> S_OK
+10:56:53AM - listaOpc - startCom  --> S_OK
+10:56:56AM - getProgId --> S_OK
+10:56:56AM - connectAEServer - CoCreateInstanceEx localhost ProgID IntegrationObjects.OPCAE.Simulation --> S_OK
+10:56:56AM - Conectou Local  - IntegrationObjects.OPCAE.Simulation
+10:56:58AM - Criou a Subscription Teste no localhost [127.0.0.1] - IntegrationObjects.OPCAE.Simulation
+10:56:59AM - Send Buffer não cheio
+10:57:00AM - Send Buffer não cheio
+11:34:35AM - Listou servidores remotos!
+11:34:35AM - listaOpc - startCom  --> S_OK
+11:34:35AM - ListaOpc - CoCreateInstanceEx localhost--> S_OK
+11:34:37AM - getCLSID from MAPA --> S_OK
+11:34:37AM - listaOpc - startCom  --> S_OK
+11:34:40AM - getProgId --> S_OK
+11:34:40AM - connectAEServer - CoCreateInstanceEx localhost ProgID IntegrationObjects.OPCAE.Simulation --> S_OK
+11:34:40AM - Conectou Local  - IntegrationObjects.OPCAE.Simulation
+11:34:43AM - Criou a Subscription Teste no localhost [127.0.0.1] - IntegrationObjects.OPCAE.Simulation
+11:34:43AM - Send Buffer não cheio
+11:34:44AM - Send Buffer não cheio
+11:34:45AM - Send Buffer não cheio

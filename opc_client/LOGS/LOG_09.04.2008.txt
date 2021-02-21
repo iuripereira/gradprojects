@@ -1,0 +1,70 @@
+08:34:42AM - Listou servidores remotos!
+08:34:42AM - listaOpc - startCom  --> S_OK
+08:34:42AM - ListaOpc - CoCreateInstanceEx localhost--> S_OK
+08:34:43AM - getCLSID from MAPA --> S_OK
+08:34:43AM - listaOpc - startCom  --> S_OK
+08:34:45AM - getProgId --> S_OK
+08:34:45AM - connectAEServer - CoCreateInstanceEx localhost ProgID IntegrationObjects.OPCAE.VB.Simulation --> S_OK
+08:34:45AM - Conectou Local  - IntegrationObjects.OPCAE.VB.Simulation
+08:34:48AM - Criou a Subscription Teste no localhost [127.0.0.1] - IntegrationObjects.OPCAE.VB.Simulation
+08:34:48AM - Send Buffer não cheio
+08:34:48AM - Send Buffer não cheio
+08:34:48AM - Send Buffer não cheio
+08:34:48AM - Send Buffer não cheio
+08:34:49AM - Send Buffer não cheio
+08:34:50AM - Send Buffer não cheio
+08:34:51AM - Send Buffer não cheio
+08:34:52AM - Send Buffer não cheio
+08:34:53AM - Send Buffer não cheio
+08:35:13AM - Criou a Subscription Teste no localhost [127.0.0.1] - IntegrationObjects.OPCAE.VB.Simulation
+08:35:27AM - Send Buffer não cheio
+08:35:27AM - Send Buffer não cheio
+08:35:27AM - Send Buffer não cheio
+08:35:27AM - Send Buffer não cheio
+08:35:27AM - Send Buffer não cheio
+08:35:27AM - Send Buffer não cheio
+08:35:27AM - Send Buffer não cheio
+08:35:27AM - Send Buffer não cheio
+08:35:27AM - Send Buffer não cheio
+08:35:27AM - Send Buffer não cheio
+08:35:27AM - Send Buffer não cheio
+08:35:27AM - Send Buffer cheio. Perda de DADOS!!!
+08:36:01AM - Criou a Subscription Teste no localhost [127.0.0.1] - IntegrationObjects.OPCAE.VB.Simulation
+03:09:51PM - Listou servidores remotos!
+03:09:51PM - listaOpc - startCom  --> S_OK
+03:09:51PM - ListaOpc - CoCreateInstanceEx localhost--> S_OK
+04:06:27PM - Listou servidores remotos!
+04:06:27PM - listaOpc - startCom  --> S_OK
+04:06:27PM - ListaOpc - CoCreateInstanceEx localhost--> S_OK
+04:06:30PM - getCLSID from MAPA --> S_OK
+04:06:30PM - listaOpc - startCom  --> S_OK
+04:06:31PM - getProgId --> S_OK
+04:06:31PM - connectAEServer - CoCreateInstanceEx localhost ProgID ICONICS.SimulatorOPCAE.1 --> S_OK
+04:06:31PM - Conectou Local  - ICONICS.SimulatorOPCAE.1
+04:17:53PM - Listou servidores remotos!
+04:17:53PM - listaOpc - startCom  --> S_OK
+04:17:53PM - ListaOpc - CoCreateInstanceEx localhost--> S_OK
+04:17:59PM - getCLSID from MAPA --> S_OK
+04:17:59PM - listaOpc - startCom  --> S_OK
+04:17:59PM - getProgId --> S_OK
+04:17:59PM - connectAEServer - CoCreateInstanceEx localhost ProgID ICONICS.SimulatorOPCAE.1 --> S_OK
+04:17:59PM - Conectou Local  - ICONICS.SimulatorOPCAE.1
+04:18:44PM - Listou servidores remotos!
+04:18:44PM - listaOpc - startCom  --> S_OK
+04:18:44PM - ListaOpc - CoCreateInstanceEx localhost--> S_OK
+04:18:46PM - getCLSID from MAPA --> S_OK
+04:18:46PM - listaOpc - startCom  --> S_OK
+04:18:46PM - getProgId --> S_OK
+04:18:46PM - connectAEServer - CoCreateInstanceEx localhost ProgID ICONICS.SimulatorOPCAE.1 --> S_OK
+04:18:46PM - Conectou Local  - ICONICS.SimulatorOPCAE.1
+04:19:30PM - Listou servidores remotos!
+04:19:30PM - listaOpc - startCom  --> S_OK
+04:19:30PM - ListaOpc - CoCreateInstanceEx localhost--> S_OK
+04:53:36PM - Listou servidores remotos!
+04:53:36PM - listaOpc - startCom  --> S_OK
+04:53:36PM - ListaOpc - CoCreateInstanceEx localhost--> S_OK
+04:53:39PM - getCLSID from MAPA --> S_OK
+04:53:39PM - listaOpc - startCom  --> S_OK
+04:53:40PM - getProgId --> S_OK
+04:53:40PM - connectAEServer - CoCreateInstanceEx localhost ProgID ICONICS.SimulatorOPCAE.1 --> S_OK
+04:53:40PM - Conectou Local  - ICONICS.SimulatorOPCAE.1

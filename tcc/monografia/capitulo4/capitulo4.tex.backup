@@ -1,0 +1,167 @@
+%%
+%% Capítulo 4: Implementação do projeto
+%%
+
+\mychapter{Implementação do projeto}
+\label{Cap:implementacao}
+
+Nos capítulos anteriores foram vistos alguns conceitos e especificações que abrangem a teoria das tecnologias que serão empregadas na implementação do projeto propriamente dito. Este capítulo irá descrever como o projeto foi desenvolvido, bem como discorrerá sobre como as tecnologias envolvidas e descritas anteriormente foram utilizadas em conjunto com o objetivo de chegar a um produto final, com resultados relevantes para os fins do presente trabalho.
+
+A ideia por trás do projeto é fornecer um ambiente em que o usuário do estacionamento possa ter a sua disposição a opção de verificar visualmente se uma vaga está ou não livre através dos sinais luminosos (LEDs). Também é oferecida a possibilidade do usuário solicitar uma reserva de vaga. Após essa reserva o sistema procura uma vaga que esteja livre e a deixa reservada por um determinado intervalo de tempo à espera do usuário para que o mesmo possa estacionar o seu veículo. Se após esse intervalo de tempo nenhum veículo ocupou a vaga, o sistema volta ao seu funcionamento normal, liberando a vaga e esperando um veículo estacionar ou uma nova solicitação de reserva de vaga.
+
+O projeto, portanto, consiste em elaborar um circuito transmissor/receptor que irá utilizar um módulo ZigBee acoplado ao circuito para transmissão e recepção de dados sem fio, um sensor sonar que irá medir a distância e detectar se um obstáculo está ou não presente em uma determinada vaga e um microcontrolador que conterá a lógica responsável por processar os dados fornecidos pelo sonar e pelo ZigBee. Outro módulo ZigBee configurado como base ficará conectado a um computador e receberá os dados do módulo acoplado no circuito em que o sensor está presente. Na base receptora um software desenvolvido em linguagem Java TM irá gerenciar a vaga e estabelecer meio de contato entre os dois dispositivos. 
+\begin{figure}[htbp!]
+	\begin{center}
+		\fbox{\includegraphics[width=0.5\linewidth]
+		{figuras/modelogeral}}
+		\caption{Esquema geral do modelo de estacionamento.}
+		\label{Fig:modelogeral}
+	\end{center}
+\end{figure} 
+
+A seguir, todo o processo que possibilita a transmissão, recepção e processamento dos dados serão detalhados passo a passo e individualmente. Ao final serão apresentados alguns resultados obtidos.
+
+\section{A lógica  do PIC16F628A}
+
+O PIC16F628A será o meio de comunicação entre o sensor e o ZigBee como pôde ser visto no esquema geral do modelo na figura (\ref{Fig:modelogeral}). Para realizar tal tarefa é necessário que o PIC contenha em sua programação uma lógica para tratar o sinal fornecido pela saída do sensor e, através desse processamento, fornecer como resposta o sinal para acender o LED respectivo. O PIC também receberá como entrada um sinal proveniente do módulo ZigBee no circuito, que por sua vez foi recebido do módulo base e corresponde a uma requisição de reserva de vaga.
+
+Temos então a seguinte configuração para o PIC. Os pinos RA1, RA2 e RB0 são configurados como entradas. O pino RA1 é responsável por ativar o modo de reserva de vaga. Quando ele se encontrar em estado lógico alto, o LED amarelo, que indica reserva, ficará aceso e só apagara quando um obstáculo se encontrar no alcance definido como sendo de uma vaga ocupada ou quando a entrada RA1 receber nível lógico baixo. 
+
+O pino RA2 fica responsável por calibrar o sensor para uma distância específica. Quando ele é pressionado o tamanho do comprimento de onda do pulso do sensor naquele instante será armazenado em uma variável de referência e qualquer valor desse comprimento desse momento em diante será comparado com o valor de referência para decidir qual LED deve ser ativado. 
+
+O pino RB0 é conhecido como sendo o pino de interrupção externa do PIC. Quando ele é configurado como entrada e, mais especificamente para o projeto em questão, quando definido que a interrupção acontecerá toda vez que o nível baixo da entrada passar para o nível alto.
+
+A interrupção pausa o código principal aonde quer que ele esteja sendo executado e executa o código definido pelo desenvolvedor para tratar da interrupção. No caso deste projeto, a interrupção será responsável por medir o tamanho do comprimento de onda do pulso gerado pelo sensor.
+
+Como visto anteriormente, o sensor retorna um pulso de onda quadrada com largura definida em milissegundos correspondente ao tempo que a onda leva para ir até um obstáculo e voltar. Esse tempo é o mesmo tempo em que a entrada RB0 ficará em estado lógico alto. Tendo em vista que a interrupção ocorreu quando a entrada RB0 estava em nível lógico baixo e passou para nível lógico alto e a interrupção agora está sendo executada, o trecho de código então contará quanto tempo a entrada RB0 ficou em estado alto e atribuirá ela a uma variável denominada “tempo”. Essa variável é, portanto, a medida do comprimento de onda naquele instante. 
+
+
+\begin{figure}[htbp!]
+	\begin{center}
+		\fbox{\includegraphics[width=0.5\linewidth]
+		{figuras/codigointerrupt}}
+		\caption{Trecho de código que trata a interrupção externa do PIC16F628A para medir o comprimento de onda do sinal gerado pelo sonar .}
+		\label{Fig:codigointerrupt}
+	\end{center}
+\end{figure} 
+
+Os pinos 4, 5 e 14 são referentes ao MCLR, terra e Vcc respectivamente. Já os pinos 10, 11 e 12 correspondentes as entradas RB4, RB5 e RB6 são configurados como saída e vão direto para os respectivos LEDs que indicarão o estado da vaga monitorada. Uma dessas saídas é escolhida, no caso a saída correspondente ao LED vermelho que indica que a vaga está ocupada, para ser enviado ao ZigBee e de lá para o outro módulo ZigBee na base para que o software possa tratá-lo e gerenciar, na base, o seu estado. A lógica do PIC é, portanto, o que se pode ver no fluxograma na figura (\ref{Fig:fluxograma_pic}).
+
+\begin{figure}[htbp!]
+	\begin{center}
+		\fbox{\includegraphics[width=0.6\linewidth]
+		{figuras/fluxograma_pic}}
+		\caption{Fluxograma que explica a lógica por trás do código no PIC .}
+		\label{Fig:fluxograma_pic}
+	\end{center}
+\end{figure} 
+
+\section{Os módulos XBee Pro Série 2}
+
+Foram utilizados no projeto dois módulos XBee Pro Série 2  da fabricante Digi International Inc. Algumas de suas principais características são:
+
+\begin{itemize}
+\item \textbf{Performance}
+\begin{itemize}
+\item \textbf{Rendimento da Potência de saída:} 60 mW (18 dBm), 100 mW EIRP;
+   	\item \textbf{Alcance em ambientes internos/zonas urbanas:} 100m;
+   	\item \textbf{Alcance de RF em linha visível para ambientes externos:} 1,6Km; 
+  	\item \textbf{Sensibilidade do receptor:} -100 dBm (1\% PER);
+   	\item \textbf{Freqüência de operação:} ISM 2.4 GHz;
+  	\item \textbf{Taxa de dados de RF:} 250.000 bps;
+   	\item \textbf{Taxa de dados da Interface (Data Rate):} 115.200 bps; 
+\end{itemize} 
+   
+\item \textbf{Alimentação}
+  \begin{itemize}
+\item \textbf{ Tensão de alimentação:} - 2.8 à 3.4v;    	
+\item \textbf{ Corrente de transmissão (típico): } - 215 mA @ 3.3 V;
+\item \textbf{Corrente de Recepção (típico):} 55 mA @ 3.3 V;
+\item \textbf{Corrente de Power-down Sleep:} $<10 \mu A;$ 
+\end{itemize}
+   
+\item \textbf{Propriedades físicas}
+   \begin{itemize}
+   \item \textbf{Dimensões:} (2.438cm x 3.294cm);
+   \item \textbf{Peso:} 0.10 oz (3g); 
+   \item \textbf{Temperatura de operação:} -40 to 85º C (industrial); 
+   \item \textbf{Opções de antena:} Conector U.FL RF, Chip ou Chicote (whip);
+    \end{itemize}
+\item \textbf{Rede} 
+   \begin{itemize}
+   \item \textbf{Tipo de espalhamento espectral:} DSSS (Direct Sequence Spread Spectrum); 
+   \item \textbf{Manipulação de erro:} Retransmite novamente (Retries) e reconhecimento (acknowledgements);
+   \item \textbf{Topologia de Rede:} Peer-to-peer(Par-a-par), ponto-a-ponto, ponto-a-multiponto e malha;
+   \item \textbf{Endereçamento:} 65.000 endereços de rede disponíveis para cada canal; 
+   \item \textbf{Opções de filtros:} PAN ID, canais e endereços; 
+   \item \textbf{Criptografia:} 128-bit AES; 
+   \item \textbf{Número de canais selecionáveis via software:} 12 canais de seqüência direta;
+   \end{itemize}
+\item \textbf{Geral}
+  \begin{itemize}
+   \item \textbf{Faixa de freqüência:} 2.4000 - 2.4835 GHz; 
+  \end{itemize}
+\end{itemize}
+
+O módulo XBee possui 20 pinos. Para este projeto foram utilizados dois pinos de entrada/saída digital para envio/recebimento de dados proveniente da placa remota com o sensor e da base onde fica o computador gerenciador.
+
+O bit de saída do PIC que diz se o LED vermelho está ou não aceso vai para a entrada digital no pino 17 do XBee remoto. Já o pino 18 está configurado
+como saída digital e transmite um bit proveniente do software de gerenciamento que vai estabelecer se uma vaga foi ou não foi reservada. 
+
+\subsection{Adaptador/Conversor USB}
+
+\begin{figure}[htbp!]
+	\begin{center}
+		\fbox{\includegraphics[width=0.5\linewidth]
+		{figuras/conbee}}
+		\caption{Adaptador/Conversor USB da Rogercom para módulos XBee Pro .}
+		\label{Fig: conbee}
+	\end{center}
+\end{figure} 
+
+
+Para que os dados, após chegarem à base, possam ser processados por um software, é necessário que haja uma interface entre o módulo XBee receptor e qualquer interface de entrada/saída presente na maioria dos computadores no mercado.
+
+No projeto foi utilizada uma placa adaptadora/conversora fabricada pela Rogercom. A placa tem interface USB e contém um driver que instala e configura uma porta serial COMx para comunicação de dados. Dessa forma, os dados recebidos podem ser tratados como se tivessem sido recebidos por uma porta serial comum. Através dela pode-se também atualizar o firmware dos módulos e configurar seus parâmetros para a rede.
+
+\begin{figure}[htbp!]
+	\begin{center}
+		\fbox{\includegraphics[width=0.5\linewidth]
+		{figuras/conbee2}}
+		\caption{Detalhes dos indicadores da placa USB .}
+		\label{Fig: conbee2}
+	\end{center}
+\end{figure} 
+
+\section{O Software de gerenciamento}
+
+Para fins de monitoramento de vagas de estacionamento e solicitação de reserva de vaga, foi desenvolvido um software em linguagem Java utilizando uma API open source denominada xbee-api.
+
+Essa API fornece todas as funções necessárias para estabelecer comunicação serial entre o dispositivo que se encontra na base e o computador, bem como de receber e transmitir pacotes de dados entre os módulos presentes na rede.
+
+\begin{figure}[htbp!]
+	\begin{center}
+		\fbox{\includegraphics[width=0.6\linewidth]
+		{figuras/printprograma}}
+		\caption{Print Screen do software em funcionamento .}
+		\label{Fig:printprograma}
+	\end{center}
+\end{figure} 
+
+O software tem funcionamento bem simples. Ele estabelece uma conexão com uma porta COMx criada pelo driver da placa conversa/adaptadora e logo em seguida começa a ler o meio na espera de pacotes do módulo remoto. A medida que os pacotes vão chegando o código trata os mesmos a fim de adquirir os dados relevantes referentes aos estado do bit de entrada. Uma vez que o bit de entrada, que vem transmitido pelo ZigBee remoto conectado ao PIC pela saída referente ao LED vermelho, encontra-se em nível alto, o programa irá disponibilizar a vaga em questão como ocupada, caso contrário, ela estará disponível.
+
+Um artifício extra foi permitir que o usuário solicite uma reserva de vaga. Nesse caso, o programa verifica se existe uma vaga livre, caso exista, ele pega a primeira vaga livre disponível e a configura como reservada. Ao mesmo tempo, envia para o módulo remoto correspondente àquela vaga um bit em nível lógico alto que será o bit de entrada na porta RA1 do PIC. Uma vez que esse bit está em alto no PIC, o mesmo fará a lógica já vista anteriormente com o objetivo de disponibilizar nos LEDs a configuração correta, ou seja, dispor o LED amarelo aceso.
+
+No software, a classe que verifica esse processamento é a classe \textit{CheckVaga.java}. Ela implementa uma Thread que fica rodando e verificando de acordo com o tempo de amostragem do módulo ZigBee os estados dos bits que estão sendo recebidos e enviados nos pacotes de dados. Essa Thread tem uma variável booleana que configura dois estados distintos. Em um denominado estado normal a comparação é feita levando em consideração que nenhuma vaga foi reservada. Já no outro estado, a vaga foi reservada e é verificado se em um intervalo de tempo algum veiculo estacionou no lugar previamente reservado, caso contrário, após esse intervalo de tempo ter se esgotado, o sistema volta ao estado normal e a vaga retorna ao estado livre. Caso algum veículo estacione no lugar que fora reservado previamente, o estado também retorna ao normal, uma vez que não há mais a reserva da vaga.
+
+Um fluxograma que melhor organiza essa lógica do programa pode ser vista na figura (\ref{Fig:fluxograma_java})
+
+\begin{figure}[htbp!]
+	\begin{center}
+		\fbox{\includegraphics[width=0.6\linewidth]
+		{figuras/fluxograma_java}}
+		\caption{Fluxograma que explica a lógica do módulo base .}
+		\label{Fig:fluxograma_java}
+	\end{center}
+\end{figure} 
+

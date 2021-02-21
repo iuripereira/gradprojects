@@ -1,0 +1,37 @@
+9
+
+dir
+3416
+https://10.13.98.52/svn/siga/OPC%20AE%20Coletor/servico
+https://10.13.98.52/svn/siga
+
+
+
+2009-09-09T16:56:16.752985Z
+3412
+guga
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+8dc58d19-1736-0410-8514-f32f975eba0a
+
+servicoJAVA
+dir
+
+servicoOPC
+dir
+
+servicoOPCJAVA
+dir
+

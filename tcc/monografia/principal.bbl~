@@ -1,0 +1,35 @@
+\begin{thebibliography}{xx}
+
+\harvarditem{de~Carvalho \harvardand\ Cunha}{2010}{siteZig}
+de~Carvalho, Leandro Ouriques~M. \harvardand\ Pablo~Salino Cunha
+  \harvardyearleft 2010\harvardyearright , `802.15.4 e zigbee', {\em Wireless
+  Sensor Network, Research Group} .
+
+\harvarditem{de~Souza}{2006}{pic}
+de~Souza, David~Jo{\'s}e  \harvardyearleft 2006\harvardyearright , {\em
+  Desbravando o PIC}, Editora {\'E}rica.
+
+\harvarditem{Eletr{\^o}nicos}{2010}{tato}
+Eletr{\^o}nicos, Tato~Equipamentos  \harvardyearleft 2010\harvardyearright ,
+  `Medindo dist{\^a}ncias por ultrasom', {\em www.tato.ind.br} .
+
+\harvarditem{Gasc{\'o}n}{2009{\em a}}{8vszigbee}
+Gasc{\'o}n, David  \harvardyearleft 2009{\em a}\harvardyearright , `802.15.4 vs
+  zigbee', {\em Wireless Sensor Network, Research Group} .
+
+\harvarditem{Gasc{\'o}n}{2009{\em b}}{segzigbee}
+Gasc{\'o}n, David  \harvardyearleft 2009{\em b}\harvardyearright , `Security in
+  802.15.4 and zigbee networks', {\em Wireless Sensor Network, Research Group}
+  .
+
+\harvarditem{Gasc{\'o}n}{2009{\em c}}{zigpro}
+Gasc{\'o}n, David  \harvardyearleft 2009{\em c}\harvardyearright , `Zigbee vs
+  zigbee-pro', {\em Wireless Sensor Network, Research Group} .
+
+\harvarditem{Messias}{2008}{rogercom}
+Messias, Ant{\^o}nio~Rog{\'e}rio  \harvardyearleft 2008\harvardyearright ,
+  `Controle remoto e aquisi\c{c}{\~a}o de dados via xbee/zigbee (ieee
+  802.15.4)', {\em www.rogercom.com} .
+\newline\harvardurl{www.rogercom.com}
+
+\end{thebibliography}

@@ -1,0 +1,116 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package br.ufrn.dca.ia.view;
+
+import java.awt.Color;
+import java.awt.Component;
+import java.awt.Dimension;
+import java.awt.Point;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Vector;
+import javax.swing.JLabel;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableCellRenderer;
+import javax.swing.table.TableCellRenderer;
+
+/**
+ *
+ * @author Marco Olimpio
+ */
+public class CellRederizador extends DefaultTableCellRenderer {
+
+
+    public int itsRow;
+    public int itsColumn;
+    public Vector<Point> pontos;
+    ArrayList<String[]> map = new ArrayList<String[]>();
+
+    private Map _cores = new HashMap();
+    private Point _tempCel = new Point(0, 0);
+    private Color _defaultBG;
+
+    public int getItsColumn() {
+        return itsColumn;
+    }
+
+    public void setItsColumn(int itsColumn) {
+        this.itsColumn = itsColumn;
+    }
+
+    public int getItsRow() {
+        return itsRow;
+    }
+
+    public void setItsRow(int itsRow) {
+        this.itsRow = itsRow;
+    }
+
+    public CellRederizador() {
+        //setOpaque(true);
+        this._defaultBG = getBackground();
+    }
+
+    public ArrayList<String[]> getMap() {
+        return map;
+    }
+
+    public void setMap(ArrayList<String[]> map) {
+        this.map = map;
+    }
+
+    public void addPoint(Point ponto){
+        pontos.add(ponto);
+    }
+
+    public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus, int row, int column) {
+       
+        Component c = super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, column);
+
+         this._tempCel.x = row;
+         this._tempCel.y = column;
+         if (this._cores.containsKey(this._tempCel)) {
+             c.setBackground((Color) this._cores.get(this._tempCel));
+         } else {
+            c.setBackground(this._defaultBG);
+         }
+
+         return c;
+        
+        
+        //String[] line = null;
+
+        //this.setBackground(new Color(0x3B,0xB0,0x03));//3BB003
+        //this.setForeground(Color.white);
+//        if(!map.isEmpty()){
+//            if(row == 1 && column == 3){
+//                line = map.get(column);
+//                if(line[row].toString().equals("1")){
+//                    this.setBackground(new Color(0x3B,0xB0,0x03));//3BB003
+//                    this.setForeground(Color.white);
+//                }
+//            }
+//        }
+        //if (row == itsRow && column == itsColumn) {
+        //    this.setBackground(new Color(0x3B,0xB0,0x03));//3BB003
+        //    this.setForeground(Color.white);
+        //}
+
+
+//        else {
+//            this.setBackground(Color.cyan);
+//            this.setForeground(Color.darkGray);
+//        }
+//        String aStr = "Row " + row + "Column" + column;
+//        this.setText(aStr);
+        
+        //return this;
+    }
+
+    public void colorirCelula(int row, int col, Color cor) {
+         this._cores.put(new Point(row, col), cor);
+     }
+}

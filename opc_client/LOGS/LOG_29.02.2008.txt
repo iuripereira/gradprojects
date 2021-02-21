@@ -1,0 +1,335 @@
+12:07:12AM - Listou servidores locais
+12:07:14AM - Conectou Local
+12:07:17AM - Falha ao tentar criar a seguinte EventSubscription: Teste chave:TesteMatrikon.OPC.Simu
+08:51:41AM - Listou servidores locais
+08:51:57AM - Conectou Local  - ICONICS.SimulatorOPCAE.1
+08:52:56AM - Listou servidores locais
+08:52:58AM - Conectou Local  - ICONICS.SimulatorOPCAE.1
+08:53:01AM - Criou a Subscription Teste no localhost [127.0.0.1] - ICONICS.SimulatorOPCAE.1
+08:53:02AM - Buffer não cheio
+08:53:04AM - Buffer não cheio
+08:53:07AM - Buffer não cheio
+08:53:08AM - Buffer não cheio
+08:53:09AM - Buffer não cheio
+08:53:10AM - Buffer não cheio
+08:53:11AM - Buffer não cheio
+08:53:12AM - Buffer não cheio
+08:53:15AM - Buffer não cheio
+08:53:16AM - Buffer não cheio
+08:53:17AM - Buffer não cheio
+08:53:18AM - Buffer não cheio
+08:53:21AM - Buffer não cheio
+08:53:25AM - Buffer não cheio
+08:53:27AM - Buffer não cheio
+08:53:28AM - Buffer não cheio
+08:53:29AM - Buffer não cheio
+08:53:30AM - Buffer não cheio
+08:53:31AM - Buffer não cheio
+08:53:32AM - Buffer não cheio
+08:53:36AM - Buffer cheio. Perda de DADOS!!!
+09:03:55AM - Listou servidores locais
+09:03:56AM - Conectou Local  - ICONICS.SimulatorOPCAE.1
+09:05:02AM - Listou servidores locais
+09:05:03AM - Conectou Local  - ICONICS.SimulatorOPCAE.1
+09:05:39AM - Listou servidores locais
+09:05:40AM - Conectou Local  - ICONICS.SimulatorOPCAE.1
+09:05:51AM - Criou a Subscription Teste no localhost [127.0.0.1] - ICONICS.SimulatorOPCAE.1
+09:05:52AM - Send Buffer não cheio
+09:05:53AM - Send Buffer não cheio
+09:05:54AM - Send Buffer não cheio
+09:05:55AM - Send Buffer não cheio
+09:05:59AM - Send Buffer não cheio
+09:06:01AM - Send Buffer não cheio
+09:06:51AM - Listou servidores locais
+09:06:52AM - Conectou Local  - ICONICS.SimulatorOPCAE.1
+09:07:08AM - Criou a Subscription Teste no localhost [127.0.0.1] - ICONICS.SimulatorOPCAE.1
+09:07:09AM - Send Buffer não cheio
+09:07:11AM - Send Buffer não cheio
+09:07:12AM - Send Buffer não cheio
+09:07:12AM - Send Buffer não cheio
+09:07:24AM - Listou servidores locais
+09:07:26AM - Conectou Local  - ICONICS.SimulatorOPCAE.1
+09:08:53AM - Listou servidores locais
+09:08:54AM - Conectou Local  - ICONICS.SimulatorOPCAE.1
+09:09:21AM - Listou servidores locais
+09:09:22AM - Conectou Local  - ICONICS.SimulatorOPCAE.1
+09:14:33AM - Listou servidores remotos!
+09:34:51AM - Listou servidores remotos!
+09:34:58AM - Listou servidores remotos!
+09:35:14AM - Conectou Remotolii-01 - ICONICS.SimulatorOPCAE.1
+09:35:19AM - Criou a Subscription Teste no LII-01 [10.13.98.41] - ICONICS.SimulatorOPCAE.1
+09:35:19AM - Send Buffer não cheio
+09:35:20AM - Send Buffer não cheio
+09:35:20AM - Send Buffer não cheio
+09:35:20AM - Send Buffer não cheio
+09:35:20AM - Send Buffer não cheio
+09:35:21AM - Send Buffer não cheio
+09:35:21AM - Send Buffer não cheio
+09:35:21AM - Send Buffer não cheio
+09:35:21AM - Send Buffer não cheio
+09:35:21AM - Send Buffer não cheio
+09:35:22AM - Send Buffer não cheio
+09:35:22AM - Send Buffer não cheio
+09:35:22AM - Send Buffer não cheio
+09:35:22AM - Send Buffer não cheio
+09:35:23AM - Send Buffer não cheio
+09:35:23AM - Send Buffer não cheio
+09:35:23AM - Send Buffer não cheio
+09:35:23AM - Send Buffer não cheio
+09:35:25AM - Send Buffer não cheio
+09:35:26AM - Send Buffer não cheio
+09:35:26AM - Send Buffer cheio. Perda de DADOS!!!
+09:35:39AM - Listou servidores remotos!
+09:35:54AM - Conectou Remotolii-05 - ICONICS.SimulatorOPCAE.1
+09:35:57AM - Criou a Subscription Teste no LII-05 [10.13.98.45] - ICONICS.SimulatorOPCAE.1
+09:39:33AM - Listou servidores remotos!
+09:47:36AM - Listou servidores remotos!
+09:47:42AM - Conectou Local  - IntegrationObjects.OPCAE.VB.Simulation
+09:49:25AM - Listou servidores remotos!
+09:50:04AM - Listou servidores remotos!
+09:50:08AM - Conectou Local  - IntegrationObjects.OPCAE.VB.Simulation
+09:50:29AM - Listou servidores remotos!
+09:50:44AM - Conectou Local  - IntegrationObjects.OPCAE.VB.Simulation
+09:56:01AM - Listou servidores remotos!
+09:56:02AM - Conectou Local  - IntegrationObjects.OPCAE.VB.Simulation
+09:56:49AM - Listou servidores remotos!
+09:57:17AM - Conectou Local  - IntegrationObjects.OPCAE.VB.Simulation
+09:57:20AM - Criou a Subscription Teste no localhost [127.0.0.1] - IntegrationObjects.OPCAE.VB.Simu
+09:57:21AM - Send Buffer não cheio
+09:57:22AM - Send Buffer não cheio
+09:57:23AM - Send Buffer não cheio
+09:57:24AM - Send Buffer não cheio
+09:57:25AM - Send Buffer não cheio
+09:57:26AM - Send Buffer não cheio
+10:00:41AM - Listou servidores remotos!
+10:00:45AM - Conectou Local  - IntegrationObjects.OPCAE.VB.Simulation
+10:01:15AM - Listou servidores remotos!
+10:01:19AM - Conectou Local  - IntegrationObjects.OPCAE.VB.Simulation
+10:01:54AM - Listou servidores remotos!
+10:01:56AM - Conectou Local  - ICONICS.SimulatorOPCAE.1
+10:02:01AM - Listou servidores remotos!
+10:02:04AM - Conectou Local  - IntegrationObjects.OPCAE.VB.Simulation
+10:04:23AM - Listou servidores remotos!
+10:09:35AM - Listou servidores remotos!
+10:09:37AM - Conectou Local  - IntegrationObjects.OPCAE.VB.Simulation
+10:09:57AM - Listou servidores remotos!
+10:10:30AM - Listou servidores remotos!
+10:11:06AM - Listou servidores remotos!
+10:11:34AM - Conectou Local  - IntegrationObjects.OPCAE.VB.Simulation
+10:16:12AM - Listou servidores remotos!
+10:16:18AM - Conectou Local  - IntegrationObjects.OPCAE.Simulation
+10:22:09AM - Listou servidores remotos!
+10:22:46AM - Listou servidores remotos!
+10:23:17AM - Conectou Local  - IntegrationObjects.OPCAE.VB.Simulation
+10:26:16AM - Listou servidores remotos!
+10:26:17AM - Conectou Local  - IntegrationObjects.OPCAE.VB.Simulation
+10:27:36AM - Listou servidores remotos!
+10:28:23AM - Conectou Local  - IntegrationObjects.OPCAE.VB.Simulation
+10:28:52AM - Listou servidores remotos!
+10:29:19AM - Conectou Local  - ICONICS.SimulatorOPCAE.1
+10:31:16AM - Listou servidores remotos!
+10:31:41AM - Conectou Local  - IntegrationObjects.OPCAE.Simulation
+10:34:07AM - Listou servidores remotos!
+10:34:29AM - Conectou Local  - IntegrationObjects.OPCAE.VB.Simulation
+10:36:23AM - Listou servidores remotos!
+10:36:40AM - Conectou Local  - IntegrationObjects.OPCAE.VB.Simulation
+10:40:16AM - Listou servidores remotos!
+10:40:55AM - Conectou Local  - IntegrationObjects.OPCAE.VB.Simulation
+10:42:51AM - Listou servidores remotos!
+10:45:56AM - Listou servidores remotos!
+10:46:07AM - Conectou Local  - IntegrationObjects.OPCAE.VB.Simulation
+10:49:02AM - Listou servidores remotos!
+10:49:16AM - Conectou Local  - IntegrationObjects.OPCAE.VB.Simulation
+10:49:33AM - Listou servidores remotos!
+10:50:09AM - Conectou Local  - IntegrationObjects.OPCAE.VB.Simulation
+10:51:26AM - Listou servidores remotos!
+10:51:29AM - Conectou Local  - IntegrationObjects.OPCAE.Simulation
+10:51:53AM - Listou servidores remotos!
+10:51:56AM - Conectou Local  - IntegrationObjects.OPCAE.VB.Simulation
+10:52:13AM - Listou servidores remotos!
+10:52:15AM - Conectou Local  - IntegrationObjects.OPCAE.VB.Simulation
+10:54:41AM - Listou servidores remotos!
+10:54:44AM - Conectou Local  - IntegrationObjects.OPCAE.VB.Simulation
+10:55:35AM - Listou servidores remotos!
+10:55:42AM - Conectou Local  - IntegrationObjects.OPCAE.VB.Simulation
+10:56:15AM - Listou servidores remotos!
+10:57:11AM - Conectou Local  - IntegrationObjects.OPCAE.VB.Simulation
+10:57:19AM - Listou servidores remotos!
+10:57:21AM - Conectou Local  - ICONICS.SimulatorOPCAE.1
+10:57:29AM - Listou servidores remotos!
+10:57:31AM - Conectou Local  - Matrikon.OPC.Simulation.1
+11:02:14AM - Listou servidores remotos!
+11:02:15AM - Conectou Local  - IntegrationObjects.OPCAE.VB.Simulation
+11:03:10AM - Listou servidores remotos!
+11:03:13AM - Conectou Local  - IntegrationObjects.OPCAE.VB.Simulation
+11:03:17AM - Criou a Subscription Teste no localhost [127.0.0.1] - IntegrationObjects.OPCAE.VB.Simu
+11:03:18AM - Send Buffer não cheio
+11:03:19AM - Send Buffer não cheio
+11:03:20AM - Send Buffer não cheio
+11:03:21AM - Send Buffer não cheio
+11:07:08AM - Listou servidores remotos!
+11:07:10AM - Conectou Local  - ICONICS.SimulatorOPCAE.1
+11:07:52AM - Criou a Subscription Teste no localhost [127.0.0.1] - ICONICS.SimulatorOPCAE.1
+11:07:53AM - Send Buffer não cheio
+11:07:55AM - Send Buffer não cheio
+11:07:56AM - Send Buffer não cheio
+11:07:56AM - Send Buffer não cheio
+11:19:12AM - Listou servidores remotos!
+11:19:14AM - Conectou Local  - ICONICS.SimulatorOPCAE.1
+11:51:38AM - Listou servidores remotos!
+11:51:43AM - Conectou Local  - IntegrationObjects.OPCAE.VB.Simulation
+11:52:08AM - Listou servidores remotos!
+11:52:22AM - Conectou Local  - IntegrationObjects.OPCAE.VB.Simulation
+11:54:40AM - Listou servidores remotos!
+11:54:45AM - Conectou Local  - IntegrationObjects.OPCAE.VB.Simulation
+11:55:53AM - Listou servidores remotos!
+11:55:54AM - Conectou Local  - IntegrationObjects.OPCAE.VB.Simulation
+11:56:34AM - Listou servidores remotos!
+11:56:36AM - Conectou Local  - IntegrationObjects.OPCAE.VB.Simulation
+11:56:36AM - Erro ao tentar se conectar a um servidor --> Servidor já em conexão.
+12:14:05PM - Listou servidores remotos!
+12:14:10PM - Conectou Local  - IntegrationObjects.OPCAE.VB.Simulation
+12:14:30PM - Listou servidores remotos!
+12:14:36PM - Conectou Local  - IntegrationObjects.OPCAE.VB.Simulation
+12:14:53PM - Listou servidores remotos!
+12:14:54PM - Conectou Local  - IntegrationObjects.OPCAE.VB.Simulation
+12:15:05PM - Listou servidores remotos!
+12:15:12PM - Conectou Local  - IntegrationObjects.OPCAE.Simulation
+12:15:46PM - Listou servidores remotos!
+12:15:48PM - Conectou Local  - IntegrationObjects.OPCAE.Simulation
+12:16:11PM - Listou servidores remotos!
+12:16:16PM - Conectou Local  - IntegrationObjects.OPCAE.Simulation
+12:17:08PM - Listou servidores remotos!
+12:17:13PM - Conectou Local  - IntegrationObjects.OPCAE.Simulation
+12:18:17PM - Listou servidores remotos!
+12:18:21PM - Conectou Local  - IntegrationObjects.OPCAE.Simulation
+12:18:48PM - Listou servidores remotos!
+12:18:53PM - Conectou Local  - IntegrationObjects.OPCAE.Simulation
+12:19:37PM - Listou servidores remotos!
+12:19:42PM - Conectou Local  - IntegrationObjects.OPCAE.Simulation
+12:21:41PM - Listou servidores remotos!
+12:22:08PM - Conectou Local  - IntegrationObjects.OPCAE.Simulation
+12:22:13PM - Criou a Subscription Teste no localhost [127.0.0.1] - IntegrationObjects.OPCAE.Simulat
+12:22:14PM - Send Buffer não cheio
+12:22:15PM - Send Buffer não cheio
+12:22:16PM - Send Buffer não cheio
+12:22:17PM - Send Buffer não cheio
+12:22:17PM - Send Buffer não cheio
+12:23:20PM - Listou servidores remotos!
+12:23:57PM - Conectou Local  - IntegrationObjects.OPCAE.VB.Simulation
+12:24:26PM - Listou servidores remotos!
+12:24:26PM - Tentativa de listagem remota com ip ou nome da máquina vazio
+12:24:31PM - Listou servidores remotos!
+12:24:43PM - Conectou Local  - IntegrationObjects.OPCAE.VB.Simulation
+12:24:46PM - Criou a Subscription Teste no localhost [127.0.0.1] - IntegrationObjects.OPCAE.VB.Simu
+12:24:47PM - Send Buffer não cheio
+12:24:49PM - Send Buffer não cheio
+12:24:50PM - Send Buffer não cheio
+12:25:16PM - Listou servidores remotos!
+12:25:21PM - Conectou Local  - Matrikon.OPC.Simulation.1
+12:26:02PM - Listou servidores remotos!
+12:26:05PM - Conectou Local  - Matrikon.OPC.Simulation.1
+12:27:23PM - Listou servidores remotos!
+12:27:31PM - Conectou Local  - ICONICS.SimulatorOPCAE.1
+12:27:57PM - Criou a Subscription Teste no localhost [127.0.0.1] - ICONICS.SimulatorOPCAE.1
+12:27:58PM - Send Buffer não cheio
+12:27:59PM - Send Buffer não cheio
+12:28:01PM - Send Buffer não cheio
+12:28:05PM - Send Buffer não cheio
+12:28:06PM - Send Buffer não cheio
+12:28:07PM - Send Buffer não cheio
+12:28:10PM - Send Buffer não cheio
+12:28:23PM - Falha ao tentar criar a seguinte EventSubscription: Teste chave:TesteICONICS.Simulator
+12:28:58PM - Listou servidores remotos!
+12:29:20PM - Conectou Local  - IntegrationObjects.OPCAE.Simulation
+12:32:29PM - Listou servidores remotos!
+12:32:37PM - Conectou Local  - IntegrationObjects.OPCAE.Simulation
+12:34:02PM - Listou servidores remotos!
+12:34:13PM - Conectou Local  - IntegrationObjects.OPCAE.Simulation
+12:36:18PM - Listou servidores remotos!
+12:36:24PM - Conectou Local  - IntegrationObjects.OPCAE.Simulation
+12:36:58PM - Listou servidores remotos!
+12:37:03PM - Conectou Local  - IntegrationObjects.OPCAE.Simulation
+12:38:20PM - Listou servidores remotos!
+12:38:24PM - Conectou Local  - IntegrationObjects.OPCAE.Simulation
+12:39:37PM - Listou servidores remotos!
+12:39:41PM - Conectou Local  - IntegrationObjects.OPCAE.Simulation
+12:42:50PM - Listou servidores remotos!
+12:42:53PM - Conectou Local  - IntegrationObjects.OPCAE.Simulation
+12:43:38PM - Listou servidores remotos!
+12:43:42PM - Conectou Local  - IntegrationObjects.OPCAE.Simulation
+02:46:20PM - Listou servidores remotos!
+02:46:24PM - Conectou Local  - IntegrationObjects.OPCAE.Simulation
+02:46:52PM - Listou servidores remotos!
+02:46:57PM - Conectou Local  - IntegrationObjects.OPCAE.Simulation
+02:47:33PM - Listou servidores remotos!
+02:47:36PM - Conectou Local  - IntegrationObjects.OPCAE.Simulation
+02:54:07PM - Listou servidores remotos!
+02:54:11PM - Conectou Local  - IntegrationObjects.OPCAE.Simulation
+02:56:22PM - Listou servidores remotos!
+02:56:35PM - Conectou Local  - IntegrationObjects.OPCAE.Simulation
+02:57:34PM - Listou servidores remotos!
+02:57:38PM - Conectou Local  - IntegrationObjects.OPCAE.Simulation
+03:03:47PM - Listou servidores remotos!
+03:04:41PM - Conectou Local  - IntegrationObjects.OPCAE.Simulation
+03:05:13PM - Listou servidores remotos!
+03:05:21PM - Conectou Local  - ICONICS.SimulatorOPCAE.1
+03:05:29PM - Listou servidores remotos!
+03:05:37PM - Conectou Local  - IntegrationObjects.OPCAE.VB.Simulation
+03:09:50PM - Listou servidores remotos!
+03:10:24PM - Listou servidores remotos!
+03:19:03PM - Listou servidores remotos!
+03:22:17PM - Conectou Local  - IntegrationObjects.OPCAE.Simulation
+03:23:26PM - Listou servidores remotos!
+03:25:02PM - Listou servidores remotos!
+03:26:20PM - Conectou Local  - IntegrationObjects.OPCAE.Simulation
+03:28:00PM - Listou servidores remotos!
+03:29:28PM - Conectou Local  - IntegrationObjects.OPCAE.Simulation
+03:30:25PM - Listou servidores remotos!
+03:30:36PM - Conectou Local  - IntegrationObjects.OPCAE.Simulation
+03:38:08PM - Listou servidores remotos!
+03:38:51PM - Conectou Local  - IntegrationObjects.OPCAE.Simulation
+03:39:59PM - Listou servidores remotos!
+03:40:06PM - Conectou Local  - IntegrationObjects.OPCAE.Simulation
+03:49:32PM - Listou servidores remotos!
+03:50:00PM - Conectou Local  - IntegrationObjects.OPCAE.Simulation
+03:51:56PM - Listou servidores remotos!
+03:52:09PM - Conectou Local  - IntegrationObjects.OPCAE.Simulation
+03:53:54PM - Listou servidores remotos!
+03:54:06PM - Conectou Local  - ICONICS.SimulatorOPCAE.1
+03:54:41PM - Listou servidores remotos!
+03:54:47PM - Conectou Local  - IntegrationObjects.OPCAE.VB.Simulation
+05:14:36PM - Listou servidores remotos!
+05:14:40PM - Conectou Local  - IntegrationObjects.OPCAE.VB.Simulation
+05:16:08PM - Listou servidores remotos!
+05:16:10PM - Conectou Local  - IntegrationObjects.OPCAE.VB.Simulation
+05:16:38PM - Listou servidores remotos!
+05:16:41PM - Conectou Local  - ICONICS.SimulatorOPCAE.1
+05:16:46PM - Listou servidores remotos!
+05:16:48PM - Conectou Local  - ICONICS.SimulatorOPCAE.1
+05:16:50PM - Criou a Subscription Teste no localhost [127.0.0.1] - ICONICS.SimulatorOPCAE.1
+05:16:52PM - Send Buffer não cheio
+05:16:53PM - Send Buffer não cheio
+05:16:54PM - Send Buffer não cheio
+05:16:55PM - Send Buffer não cheio
+05:17:01PM - Send Buffer não cheio
+05:17:04PM - Listou servidores remotos!
+05:17:06PM - Conectou Local  - IntegrationObjects.OPCAE.VB.Simulation
+05:17:11PM - Criou a Subscription Teste no localhost [127.0.0.1] - IntegrationObjects.OPCAE.VB.Simu
+05:17:12PM - Send Buffer não cheio
+05:17:13PM - Send Buffer não cheio
+05:17:14PM - Send Buffer não cheio
+05:17:15PM - Send Buffer não cheio
+05:17:17PM - Send Buffer não cheio
+05:17:28PM - Listou servidores remotos!
+05:17:32PM - Conectou Local  - IntegrationObjects.OPCAE.VB.Simulation
+05:17:42PM - Listou servidores remotos!
+05:17:45PM - Conectou Local  - IntegrationObjects.OPCAE.Simulation
+05:20:51PM - Listou servidores remotos!
+05:20:59PM - Conectou Local  - IntegrationObjects.OPCAE.Simulation
+05:23:14PM - Listou servidores remotos!
+05:23:18PM - Conectou Local  - IntegrationObjects.OPCAE.VB.Simulation
+05:29:23PM - Listou servidores remotos!
+05:29:28PM - Conectou Local  - IntegrationObjects.OPCAE.VB.Simulation
+05:29:36PM - Listou servidores remotos!
+05:29:40PM - Conectou Local  - IntegrationObjects.OPCAE.VB.Simulation

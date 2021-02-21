@@ -1,0 +1,130 @@
+%%
+%% Capítulo 3: Protocolo ZigBee
+%%
+
+\mychapter{O protocolo ZigBee}
+\label{Cap:zigbee}
+
+O ZigBee nada mais é do que um dos muitos protocolos que utilizam o padrão 802.15.4 em sua camada MAC. É com certeza o mais conhecido e foco
+do tema desta monografia. A seguir tentaremos entender o funcionamento deste protocolo para então termos base para discutir suas implementações
+de segurança.
+
+\section{Entendendo o ZigBee}
+
+O ZigBee basicamente oferece quatro tipos diferentes de serviços:
+
+\begin{itemize}
+	\item \textbf{Serviço de encriptação extra:} chaves de rede e aplicação implementam 128b estre de encriptação AES;
+	\item \textbf{Associação e autenticação:} somente nós válidados podem ingressar na rede;
+	\item \textbf{Protocolo de roteamento:} \textit{AODV}, um protocolo ad hoc reativo, tem sido implementado para realizar o roteamento de dados
+	      e processo de encaminhamento para qualquer nó na rede
+	\item \textbf{Serviços de aplicações:} um termo abstrato denominado \textbf{"cluster"} é introduzido. Cada nó pertence a um cluster
+	      pré-definido e pode obter um pré-definido número de ações. Por exemplo: o \textit{cluster do sistema de luz da casa} pode realizar duas
+	      ações; ligar a luz e desligar a luz. 
+\end{itemize}
+
+O ZigBee é uma camada pensada para organizar a rede. A primeira coisa que um nó, seja ele roteador ou dispositivo final, que deseje ingressar
+na rede deve fazer é perguntar ao coordenador por um endereço de rede (\textbf{16 bits}), como parte do processo de associação. Toda a
+informação na rede é roteada utilizando esse endereço e não o endereço de 64 bits da camada MAC. Neste passo, processos de autenticação e 
+encriptação são realizados.
+
+Uma vez que um nó tenha ingressado na rede, ele pode enviar informações para os seus "irmãos" através dos roteadores, os quais estão sempre
+acordados à espera de pacotes. Quando o roteador recebe o pacote e o destino esta no seu sinal de rádio, o roteador da uma primeira olhada e 
+verifica se o destino final esta acordado ou dormindo. Se estiver acordado, o roteador envia o pacote para o destino final, entretanto, em
+caso contrário, o roteador irá bufferizar o pacote até que o dispositivo final acorde e pergunte por um novo roteador.
+
+\subsection{Como trabalha uma rede ZigBee} 
+
+No protocolo ZigBee existem três classes de dispositivos lógicos (Coordenador, Roteador e Dispositivo final) que definem a rede:
+
+\begin{itemize}
+	\item \textbf{Coordenador:} Só pode ser implementado através de um dispositivo FFD. O coordenador é responsável pela inicialização, 
+	      distribuição de endereços, manutenção da rede, reconhecimento de todos os nós, entre outras funções podendo servir como ponte
+	      entre várias outras redes que utilizem o mesmo padrão.
+	\item \textbf{Roteador:} Só pode ser implementado através de um dispositivo FFD. Tem as características de um nó normal na rede, mas
+	      com poderes extras de também exercer a função de roteador intermediário entre nós, sem precisar do coordenador. Por intermédio 
+	      de um roteador uma rede 802.15.4 pode ser expandida, e assim ter mais alcance. Na prática um roteador pode ser usado para 
+	      amplificar o sinal da rede entre andares de um prédio.
+	\item \textbf{Dispositivo Final (End Device):} É onde os atuadores ou sensores serão hospedados. Pode ser implementado através de um 
+	      dos dispositivos FFD ou RFD. Assim ele é o nó que consome menos energia, pois na maioria das vezes ele fica em modo de
+	      hibernação (Sleep).
+\end{itemize}
+
+A redes podem ser construidas em topologias tanto ponto-a-ponto quanto estrela. Entretanto, toda rede necessita de ao menos um dispositivo
+FFD para funcionar como coordenador da rede. Essas redes são, portanto, formadas por grupos de dispositivos separados por uma determinada
+distância. Cada dispositivo tem um identificador único de 64 bits.\cite{rogercom} \cite{siteZig}
+
+Redes ponto-a-ponto podem formar padrões arbitrários de conexões entre dispositivos, e suas extensões são limitadas apenas pela distância
+entre cada par de nós. Foram destinados para servir de base para redes ad hoc capazes de realizar auto-gestão e organização. Uma vez que o
+padrão não defina uma camada de rede, o roteamento não é diretamente suportado, mas uma camada adicional pode adicionar suporte para uma
+comunicação multihop. Algumas restrições topológicas podem ser adicionadas adiante; o padrão menciona \textit{cluster free} como uma
+estrutura que pode explorar o fato de que um dispositivo RFD pode apenas se associar com um dispositivo FFD por vez para formar uma rede
+onde os dispositivos RFDs são exclusivamente as folhas de uma árvore na topologia e a maioria dos nós são FFD. A estrutura também pode
+ser extendida como uma rede \textit{mesh} genérica onde o nós são aglomerados em árvore da rede com um coordenador local para cada
+aglomeração, em adição ao coordenador global.
+
+Uma padrão mais estruturado seria a topologia em formato estrela, onde o coordenador da rede irá necessariamente ser o nó central. Tal rede
+pode ser originada quando um dispositivo FFD decide criar o seu próprio PAN e se auto declara coordenador, após escolher um único
+identificador PAN. Após isso, outros dispotisitivos podem se juntar a rede, os quais serão totalmente independentes de todas as outras redes
+estrela.
+
+de forma a simplificar o que já foi escrito, uma rede no padrão 802.15.4 aceita basicamente as seguintes topologias:
+
+\begin{figure}[htbp!]
+	\begin{center}
+		\fbox{\includegraphics[width=0.5\linewidth]
+		{figuras/TopologiaZigBee}}
+		\caption{Topologias do protocolo ZigBee}
+		\label{Fig:topologiazigbee}
+	\end{center}
+\end{figure} 
+
+\begin{itemize}
+	\item \textbf{Malha ou Ponto-a-Ponto:} Na topologia em Malha a rede pode se ajustar automaticamente, tanto na sua inicialização 
+	      como na entrada ou saídas de dispositivos na Rede. A Rede se auto-organiza para otimizar o trafego de dados. Com vários 
+	      caminhos possíveis para a comunicação entre os nós, este tipo de rede pode abranger em extensão, uma longa área geográfica, 
+	      podendo ser implementada numa fábrica com vários galpões distantes; controle de irrigação ou mesmo num prédio com vários 
+	      andares.
+	\item \textbf{Árvore (Cluster Tree):} Semelhante à topologia de Malha, uma rede em árvore, tem uma hierarquia muito maior e o 
+	      coordenador assume o papel de nó mestre para a troca de informação entre os nós roteadores e finais.
+	\item \textbf{Estrela:} É uma das topologias de rede mais simples de serem implantadas, é composta de um nó Coordenador, e quantos 
+	      nós End Device forem precisos. Este tipo de rede deve ser instalada em locais com poucos obstáculos à transmissão e recepção 
+	      dos sinais, como por exemplo, em uma sala sem muitas paredes ou locais abertos.
+\end{itemize}
+
+\section{ZigBee vs ZigBee Pro}
+
+Em 2007, foi lançada uma nova versão do protocolo ZigBee denominada ZigBee Pro. A seguir serão estabelecidas as principais diferenças entre
+o protocolo ZigBee de 2006 e esse novo modelo.\cite{zigpro}
+
+\begin{itemize}
+	\item \textbf{Endereçamento Estocástico:} Na primeira implementação do ZigBee, o endereço era escolhido pelo coordenador de acordo
+	      com a posição do nó na árvore de rede. Agora o endereço de 16 bits é escolhido de forma randômica. Se os nós escolherem o
+	      mesmo endereço, então o endereço é resolvido através do padrão da camada MAC de 64 bits do IEEE 802.15.4;
+	\item \textbf{Malha de gerenciamento de dados:} No ZigBee convencional, cada nó tinha que manter uma tabela de qualquer uma das rotas
+	      de e para o gateway para um dispositivo (se estivesse no caminho de rotas), agora o nós apenas salvam o caminho até chegarem
+	      no gateway (reduzindo o espaço de memória necessário). O gateway (um nó que suporta maiores recursos de memória RAM) guarda a 
+	      rota (com todos os pulos) para algum nó. Quando o gateway tem que enviar um pacote para um nó específico, ele acrescenta a 
+	      informação a respeito dos passos que tem que ser dados no mesmo pacote. Este procedimento é denominado /textbf{textit{muitos para um}}
+	\item \textbf{Fragmentação:} Pacotes de dados extensos podem ser facilmente fragmentados.
+	\item \textbf{Escolha dinâmica do melhor canal:} Os nós irão mudar de canal se o canal em que estão possuir interferências ou ruído
+	      seguindo um parâmetro de threshold.
+	\item \textbf{Conexões assimétricas:} Os links entre os nós nem sempre são simétricos e a qualidade da conexão é diferente de um nó
+	      A para um nó B do que de B para A, isto é devido a várias razões que incluem interefências entre canais e ruídos. Por esse
+	      motivo a versão PRO tenta levar isso em conta para construir as melhores rotas possíveis.
+	\item \textbf{Segurança:} Na versão de 2006, a implementação do ZigBee utilizava de 128 bits acima do AES e uma chave de rede
+	      global para criar comunicações seguras. A nova versão tem um sistema mais complexo que permite que cada par de nós tenha sua
+	      própria chave para que assim a encriptação p2p possa ser realizada. Uma camada peer to peer de link de encriptação é adicionada.
+\end{itemize}
+
+\section{802.15.4 vs ZigBee}
+
+Resumidamente, neste ponto do texto, podemos estabelecer algumas comparações entre o padrão IEEE 802.15.4 e o padrão de protocolo ZigBee:
+
+\begin{itemize}
+	\item 802.15.4 foi idealizado para ser um protocolo que estabelece comunicações ponto-a-ponto com eficiência de energia. 
+	\item ZigBee define serviços extras (roteamento em topologia estrela, encriptação, serviços de aplicação) acima da camada 802.15.4.
+	\item ZigBee cria redes semi-centralizadas aonde apenas o dispositivo final pode ficar em estado de hibernação (sleep).
+	\item Diferentes algoritmos de malha completamente distribuídos estão sendo usados acima do 802.15.4 que é o protocolo usado para criá-los.
+\end{itemize}
+

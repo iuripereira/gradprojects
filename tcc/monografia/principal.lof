@@ -1,0 +1,30 @@
+\select@language {brazil}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Localiza\c c\~ao do padr\~ao no modelo OSI}}{5}{figure.2.1}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Exemplo de modula\c c\~ao de uma onda utilizando a t\'ecnica DSSS}}{6}{figure.2.2}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Estrutura do dataframe}}{8}{figure.2.3}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Estrutura do ACK Frame}}{8}{figure.2.4}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Estrutura do frame de comando MAC}}{9}{figure.2.5}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Estrutura do frame para o Beacon}}{9}{figure.2.6}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Estrutura do superframe}}{9}{figure.2.7}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Topologias do protocolo ZigBee}}{13}{figure.2.8}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Quadro MAC do padr\~ao IEEE 802.15.4}}{15}{figure.2.9}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Seguran\c ca na camada MAC do padr\~ao IEEE 802.15.4}}{16}{figure.2.10}
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Seguran\c ca na camada MAC do padr\~ao IEEE 802.15.4}}{17}{figure.2.11}
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Pol\IeC {\'\i }tica de seguran\c ca do modo comercial}}{20}{figure.2.12}
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Pol\IeC {\'\i }tica de seguran\c ca do modo residencial}}{20}{figure.2.13}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Pinagem do PIC16F628A}}{22}{figure.3.1}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces M\'odulo sonar da Tato Equipamentos Eletr\^onicos}}{24}{figure.3.2}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Esquema do funcionamento b\'asico do sonar}}{26}{figure.3.3}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Esquema geral do modelo de estacionamento.}}{28}{figure.4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Trecho de c\'odigo que trata a interrup\c c\~ao externa do PIC16F628A para medir o comprimento de onda do sinal gerado pelo sonar .}}{29}{figure.4.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Fluxograma que explica a l\'ogica por tr\'as do c\'odigo no PIC .}}{30}{figure.4.3}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Adaptador/Conversor USB da Rogercom para m\'odulos XBee Pro .}}{32}{figure.4.4}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Detalhes dos indicadores da placa USB .}}{32}{figure.4.5}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Print Screen do software em funcionamento .}}{33}{figure.4.6}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Fluxograma que explica a l\'ogica do m\'odulo base .}}{34}{figure.4.7}
+\addvspace {10\p@ }
+\addvspace {10\p@ }

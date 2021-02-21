@@ -1,0 +1,9 @@
+%%
+%% Capítulo 5: Conclusões
+%%
+
+\mychapter{Conclusões}
+\label{Cap:conclusao}
+Dentre as diversas vantagens encontradas foi observada a reutilização de uma forma organizada e estratégica implicando em uma produtividade considerável, não tendo sido alcançada antes no desenvolvimento sem uma modelagem bem definida. Foi observada também uma notável facilidade no desenvolvimento, uma vez que durante toda a implementação da camada de persistência o foco foi mantido na codificação não tendo sido gasto tempo com configurações de \textit{frameworks} e preocupações com as outras camadas do simulador. 
+
+Por um outro lado é importante ressaltar que a modelagem e implementação da camada de persistência ainda se encontra num estágio inicial onde é observado seu potencial crescimento e amadurecimento com utilização de novos padrões e inclusão de novas funcionalidades ou serviços ao simulador, sendo necessário também uma validação mais efetiva.

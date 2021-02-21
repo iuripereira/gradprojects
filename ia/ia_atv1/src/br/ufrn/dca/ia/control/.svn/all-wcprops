@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/5/src/br/ufrn/dca/ia/control
+END
+MaskLoader.java
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/3/src/br/ufrn/dca/ia/control/MaskLoader.java
+END
+aStar.java
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/3/src/br/ufrn/dca/ia/control/aStar.java
+END
+glutton.java
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/5/src/br/ufrn/dca/ia/control/glutton.java
+END

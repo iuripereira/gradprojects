@@ -1,0 +1,87 @@
+%
+% ********** Pagina de Rosto
+%
+
+% titlepage gera paginas sem numeraçao
+\begin{titlepage}
+
+\begin{center}
+
+\small
+
+% O comando @{} no ambiente tabular x  para criar um novo delimitador
+% entre colunas que no a barra vertical | que  normalmente utilizada.
+% O delimitador desejado vai entre as chaves. No exemplo, no h nada,
+% de modo que o delimitador  vazio. Este recurso est sendo usado para
+% eliminar o espao que geralmente existe entre as colunas
+\begin{tabularx}{\linewidth}{@{}l@{}C@{}r@{}}
+% A figura foi colocada dentro de um parbox para que fique verticalmente
+% centralizada em relao ao resto da linha
+\parbox[c]{3cm}{\includegraphics[width=\linewidth]{LogoUFRN}} &
+\begin{center}
+\textsf{\textsc{Universidade Federal do Rio Grande do Norte\\
+Centro de Tecnologia\\
+Departamento de Engenharia de Computação e Automação\\
+Curso de Engenharia de Computação}}
+\end{center}
+\end{tabularx}
+
+
+% O vfill  um espao vertical que assume a mxima dimenso possvel
+% Os vfill's desta pgina foram utilizados para que o texto ocupe
+% toda a folha
+\vfill
+
+\LARGE
+
+\textbf{Modelo de estacionamento automatizado utilizando sensoriamento sem fio}
+
+\vfill
+
+\Large
+
+\textbf{Iuri Guerra de Freitas Pereira}
+
+\vfill
+
+\normalsize
+
+Orientador: Prof. Dr. Luiz Eduardo Cunha Leite
+% Se no houver co-orientador, comente a próxima linha
+%\\[2ex] Co-orientador: Prof. Dr. Beltrano Catandura do Amaral
+
+\vfill
+
+\hfill
+\parbox{0.5\linewidth}{
+% Descomente as opes que se aplicam ao seu caso
+\textbf{Monografia}
+apresentada à Banca Examinadora do Trabalho de Conclusão do Curso de Engenharia de Computação 
+e Automação em cumprimento às exigências legais como requisito parcial à obtenção
+do título de Engenheiro de Computação e Automação.}
+
+%\textbf{Dissertação de Mestrado}
+%\textbf{Tese de Doutorado}
+%apresentada ao Programa de Pós-Gradução em Engenharia Elétrica da UFRN
+%(área de concentração: Automação e Sistemas)
+%(área de concentração: Telecomunicações)
+%como parte dos requisitos para obtenção do título de
+%Mestre em Ciências.}
+%Doutor em Ciências.}
+
+\vfill
+
+\large
+
+% Este número de ordem deve ser obtido na coordenao do PPgEE
+% Corresponde ao número sequencial da sua tese ou dissertao:
+% por exemplo, a 25 tese de doutorado ter o nmero de ordem D25
+% Evidentemente, este dado no existe para propostas de tema, caso
+% em que a prxima linha deve ser comentada.
+%Nmero de ordem PPgEE: M000
+Natal, RN, Dezembro de 2010
+
+\end{center}
+
+\end{titlepage}
+

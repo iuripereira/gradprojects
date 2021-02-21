@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/siga/!svn/ver/855/OPC%20AE%20Coletor/bibliotecas
+END
+OpcEnum_i.c
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/siga/!svn/ver/586/OPC%20AE%20Coletor/bibliotecas/OpcEnum_i.c
+END
+Opcda_i.c
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/siga/!svn/ver/586/OPC%20AE%20Coletor/bibliotecas/Opcda_i.c
+END
+opc_ae_i.c
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/siga/!svn/ver/586/OPC%20AE%20Coletor/bibliotecas/opc_ae_i.c
+END
+opccomn.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/siga/!svn/ver/586/OPC%20AE%20Coletor/bibliotecas/opccomn.h
+END
+opccomn_i.c
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/siga/!svn/ver/586/OPC%20AE%20Coletor/bibliotecas/opccomn_i.c
+END
+defOPCSiga.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/siga/!svn/ver/820/OPC%20AE%20Coletor/bibliotecas/defOPCSiga.h
+END
+OpcEnum.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/siga/!svn/ver/586/OPC%20AE%20Coletor/bibliotecas/OpcEnum.h
+END
+Opcda.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/siga/!svn/ver/586/OPC%20AE%20Coletor/bibliotecas/Opcda.h
+END
+opc_ae.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/siga/!svn/ver/586/OPC%20AE%20Coletor/bibliotecas/opc_ae.h
+END
+opcaedef.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/siga/!svn/ver/855/OPC%20AE%20Coletor/bibliotecas/opcaedef.h
+END

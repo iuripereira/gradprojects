@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/siga/!svn/ver/3412/OPC%20AE%20Coletor/Dominio
+END
+EventCategory.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/siga/!svn/ver/1109/OPC%20AE%20Coletor/Dominio/EventCategory.cpp
+END
+Source.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/siga/!svn/ver/586/OPC%20AE%20Coletor/Dominio/Source.cpp
+END
+EventCategory.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/siga/!svn/ver/1109/OPC%20AE%20Coletor/Dominio/EventCategory.h
+END
+Subscription.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/siga/!svn/ver/1109/OPC%20AE%20Coletor/Dominio/Subscription.cpp
+END
+Filter.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/siga/!svn/ver/1109/OPC%20AE%20Coletor/Dominio/Filter.cpp
+END
+Source.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/siga/!svn/ver/622/OPC%20AE%20Coletor/Dominio/Source.h
+END
+Attributes.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/siga/!svn/ver/2074/OPC%20AE%20Coletor/Dominio/Attributes.cpp
+END
+Area.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/siga/!svn/ver/586/OPC%20AE%20Coletor/Dominio/Area.cpp
+END
+OPCServer.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/siga/!svn/ver/586/OPC%20AE%20Coletor/Dominio/OPCServer.cpp
+END
+Subscription.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/siga/!svn/ver/1109/OPC%20AE%20Coletor/Dominio/Subscription.h
+END
+Filter.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/siga/!svn/ver/1109/OPC%20AE%20Coletor/Dominio/Filter.h
+END
+Attributes.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/siga/!svn/ver/3412/OPC%20AE%20Coletor/Dominio/Attributes.h
+END
+Area.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/siga/!svn/ver/622/OPC%20AE%20Coletor/Dominio/Area.h
+END
+OPCServer.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/siga/!svn/ver/622/OPC%20AE%20Coletor/Dominio/OPCServer.h
+END
